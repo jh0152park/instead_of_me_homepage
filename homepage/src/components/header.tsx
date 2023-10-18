@@ -1,4 +1,5 @@
 import { Box, HStack, Text, Image } from "@chakra-ui/react";
+import { GoToTop } from "../util/utils";
 
 export default function Header() {
     const logo =
@@ -18,7 +19,15 @@ export default function Header() {
                 md: "space-between",
             }}
         >
-            <Box minW="150px" maxW="150px" mt="15px">
+            <Box
+                minW="150px"
+                maxW="150px"
+                mt="15px"
+                _hover={{ cursor: "pointer" }}
+                onClick={() => {
+                    GoToTop(0);
+                }}
+            >
                 <Image src={logo} objectFit="cover" />
             </Box>
             <HStack
@@ -36,6 +45,9 @@ export default function Header() {
                         color: "rgba(0, 0, 0, 0.6)",
                         cursor: "pointer",
                         transition: "all 0.2s linear",
+                    }}
+                    onClick={() => {
+                        GoToTop(0);
                     }}
                 >
                     About us
