@@ -9,10 +9,10 @@ export default function Header() {
             w="100%"
             h="70px"
             bgColor="green.500"
-            px="250px"
             justifyContent="space-between"
             position="fixed"
             top="0"
+            px="50px"
         >
             <Box w="150px">
                 <Image src={logo} objectFit="cover" />
