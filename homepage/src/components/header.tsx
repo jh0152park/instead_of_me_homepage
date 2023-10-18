@@ -1,21 +1,26 @@
-import { Box, HStack, Text } from "@chakra-ui/react";
+import { Box, HStack, Text, Image } from "@chakra-ui/react";
 
 export default function Header() {
+    const logo =
+        "https://github.com/jh0152park/instead_of_me_homepage/blob/main/images/logo/whiteLogo/textLogo3.png?raw=true";
+
     return (
         <HStack
             w="100%"
             h="70px"
-            bgColor="green.400"
+            bgColor="green.500"
             px="250px"
             justifyContent="space-between"
             position="fixed"
             top="0"
         >
-            <Box id="logo"></Box>
+            <Box w="150px">
+                <Image src={logo} objectFit="cover" />
+            </Box>
             <HStack
                 fontSize="20px"
                 fontWeight="bold"
-                color="rgba(255, 255, 255, 0.7)"
+                color="rgba(255, 255, 255, 0.9)"
                 spacing="5"
             >
                 <Text
