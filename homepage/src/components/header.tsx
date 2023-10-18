@@ -1,16 +1,26 @@
 import { Box, HStack, Text, Image } from "@chakra-ui/react";
 import { GoToTop } from "../util/utils";
+import { useMotionValueEvent, useScroll } from "framer-motion";
+import { useState } from "react";
 
 export default function Header() {
     const logo =
         "https://github.com/jh0152park/instead_of_me_homepage/blob/main/images/logo/whiteLogo/textLogo3.png?raw=true";
+
+    const { scrollY } = useScroll();
+    const [opacity, setOpacity] = useState<boolean>(false);
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        if (latest > 100) setOpacity(true);
+        else setOpacity(false);
+    });
 
     return (
         <HStack
             w="100%"
             h="70px"
             zIndex="99"
-            bgColor="green.500"
+            bgColor={opacity ? "rgba(56, 161, 105, 0.7)" : "rgb(56, 161, 105)"}
             position="fixed"
             top="0"
             px="100px"
@@ -18,6 +28,7 @@ export default function Header() {
                 sm: "center",
                 md: "space-between",
             }}
+            transition="0.5s linear"
         >
             <Box
                 minW="150px"
