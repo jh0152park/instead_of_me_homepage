@@ -8,7 +8,7 @@ import ReactDOM from "react-dom/client";
 const GlobalStyle = createGlobalStyle`
   ${reset};
   body {
-    background-color: #e8dfdf;
+    background-color: #cccccc;
     color: black;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
