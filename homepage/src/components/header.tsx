@@ -8,13 +8,17 @@ export default function Header() {
         <HStack
             w="100%"
             h="70px"
+            zIndex="99"
             bgColor="green.500"
-            justifyContent="space-between"
             position="fixed"
             top="0"
-            px="50px"
+            px="100px"
+            justifyContent={{
+                sm: "center",
+                md: "space-between",
+            }}
         >
-            <Box w="150px">
+            <Box minW="150px" maxW="150px" mt="15px">
                 <Image src={logo} objectFit="cover" />
             </Box>
             <HStack
@@ -22,6 +26,10 @@ export default function Header() {
                 fontWeight="bold"
                 color="rgba(255, 255, 255, 0.9)"
                 spacing="5"
+                display={{
+                    sm: "none",
+                    md: "inherit",
+                }}
             >
                 <Text
                     _hover={{
