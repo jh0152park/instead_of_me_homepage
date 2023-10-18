@@ -5,7 +5,7 @@ export default function Header() {
         <HStack
             w="100%"
             h="70px"
-            bgColor="green.300"
+            bgColor="green.400"
             px="250px"
             justifyContent="space-between"
             position="fixed"
