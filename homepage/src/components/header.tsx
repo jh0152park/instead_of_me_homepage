@@ -86,7 +86,7 @@ export default function Header() {
                         transition: "all 0.2s linear",
                     }}
                     onClick={() => {
-                        go_to_top(8000);
+                        go_to_top(7800);
                     }}
                 >
                     Process of production
@@ -96,6 +96,9 @@ export default function Header() {
                         color: "rgba(0, 0, 0, 0.6)",
                         cursor: "pointer",
                         transition: "all 0.2s linear",
+                    }}
+                    onClick={() => {
+                        go_to_top(9000);
                     }}
                 >
                     Contact us
