@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import AboutUs from "./aboutus";
 import Business from "./business";
 import Process from "./process";
+import ContactUS from "./contactus";
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
             <AboutUs />
             <Business />
             <Process />
+            <ContactUS />
         </>
     );
 }
