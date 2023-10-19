@@ -32,11 +32,11 @@ export default function Global() {
                     scale: scale,
                 }}
             >
-                <Image w="200px" h="200px" objectFit="cover" src={image} />
-                <Box position="absolute" bottom="0">
+                <Image w="250px" h="250px" objectFit="cover" src={image} />
+                <Box position="absolute" bottom="-50px">
                     <VStack spacing="0">
-                        <Heading fontSize="10px">Wherever</Heading>
-                        <Heading fontSize="10px">
+                        <Heading fontSize="20px">Wherever</Heading>
+                        <Heading fontSize="20px">
                             Global Co-Work경험을 토대로 의뢰인의 국가, 시간을
                             뛰어넘습니다.
                         </Heading>
