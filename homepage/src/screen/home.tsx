@@ -8,7 +8,7 @@ export default function Home() {
             <Helmet>
                 <title>Home / Instead of me</title>
             </Helmet>
-            <Box id="buffer" h="70px"></Box>
+            <Box id="buffer" w="100%" h="70px"></Box>
             <AboutUs />
         </>
     );
