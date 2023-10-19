@@ -1,58 +1,59 @@
 아이콘 파일 출처
 <a target="_blank" href="https://icons8.com/icon/s9k2rXOtb7lB/android-os">Android</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--Android
+- (Android)
 <a target="_blank" href="https://icons8.com/icon/ZoxjA0jZDdFZ/kotlin">Kotlin</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--kotlin
+- (kotlin)
 
 <a target="_blank" href="https://icons8.com/icon/XgA6HnFK8wbr/ios-logo">iOS</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--ios
+- (ios)
 <a target="_blank" href="https://icons8.com/icon/24465/swift">Swift</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--swift
+- (swift)
 
 <a target="_blank" href="https://icons8.com/icon/20909/html-5">HTML</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-- HTML
+- (HTML)
 <a target="_blank" href="https://icons8.com/icon/3BTBsJs5myRy/css3">CSS</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-- CSS
+- (CSS)
 
 <a target="_blank" href="https://icons8.com/icon/Nkym0Ujb8VGI/javascript">JavaScript</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--javascript
+- (javascript)
 <a target="_blank" href="https://icons8.com/icon/108784/javascript">JavaScript</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--javascript2
+- (javascript2)
 <a target="_blank" href="https://icons8.com/icon/uJM6fQYqDaZK/typescript">TypeScript</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--typescript
-
+- (typescript)
 
 <a target="_blank" href="https://icons8.com/icon/54087/nodejs">Nodejs</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--node.js
+- (node.js)
 <a target="_blank" href="https://icons8.com/icon/MWiBjkuHeMVq/next.js">Nextjs</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--next.js
+- (next.js)
 
 <a target="_blank" href="https://icons8.com/icon/wPohyHO_qO1a/react">React</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--react
+- (react)
 <a target="_blank" href="https://icons8.com/icon/Vra58PN2KmI5/react">React</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--react2
+- (react2)
 <a target="_blank" href="https://icons8.com/icon/lVitPDXqQKP8/react">React</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--react3
+- (react3)
 <a target="_blank" href="https://icons8.com/icon/t4YbEbA834uH/react-native">React Native</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--reactnative
+- (reactnative)
 
 <a target="_blank" href="https://icons8.com/icon/rY6agKizO9eb/vue-js">Vue Js</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--vue.js
+- (vue.js)
 
 <a target="_blank" href="https://icons8.com/icon/hGdCwhSHUe6L/python">Python</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--python
+- (python)
 <a target="_blank" href="https://icons8.com/icon/XPdRFanRZtNK/django">Django</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--django
+- (django)
 <a target="_blank" href="https://icons8.com/icon/mUBILbYvUMq8/django">Django</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--django2
+- (django2)
 <a target="_blank" href="https://icons8.com/icon/42965/microsoft-excel">Excel</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--excel
+- (excel)
 <a target="_blank" href="https://icons8.com/icon/13654/microsoft-excel">Excel</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--excel2
-
+- (excel2)
 
 <a target="_blank" href="https://icons8.com/icon/7AFcZ2zirX6Y/dart">Dart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--dart
+- (dart)
 <a target="_blank" href="https://icons8.com/icon/7I3BjCqe9rjG/flutter">Flutter</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
--flutter
+- (flutter)
  
+<a target="_blank" href="https://icons8.com/icon/TLI9oiMzpREF/selenium">Selenium</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+- (selenium)
+
