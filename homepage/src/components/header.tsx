@@ -15,6 +15,7 @@ export default function Header() {
         if (latest > 100) setOpacity(true);
         else setOpacity(false);
         setCurrentY(latest);
+        // console.log(latest);
     });
 
     return (
@@ -71,6 +72,9 @@ export default function Header() {
                         color: "rgba(0, 0, 0, 0.6)",
                         cursor: "pointer",
                         transition: "all 0.2s linear",
+                    }}
+                    onClick={() => {
+                        go_to_top(4800);
                     }}
                 >
                     Business
