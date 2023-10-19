@@ -39,7 +39,7 @@ export default function Header() {
                 _hover={{ cursor: "pointer" }}
                 onClick={() => {
                     go_to_top(0);
-                    if (!setCurrentY) refresh();
+                    if (currentY === 0) refresh();
                 }}
             >
                 <Image src={logo} objectFit="cover" />
