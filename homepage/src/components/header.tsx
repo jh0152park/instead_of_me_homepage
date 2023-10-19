@@ -1,5 +1,5 @@
 import { Box, HStack, Text, Image } from "@chakra-ui/react";
-import { GoToTop } from "../util/utils";
+import { go_to_top, refresh } from "../util/utils";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
 
@@ -9,10 +9,12 @@ export default function Header() {
 
     const { scrollY } = useScroll();
     const [opacity, setOpacity] = useState<boolean>(false);
+    const [currentY, setCurrentY] = useState<number>(0);
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         if (latest > 100) setOpacity(true);
         else setOpacity(false);
+        setCurrentY(latest);
     });
 
     return (
@@ -36,7 +38,8 @@ export default function Header() {
                 mt="15px"
                 _hover={{ cursor: "pointer" }}
                 onClick={() => {
-                    GoToTop(0);
+                    go_to_top(0);
+                    if (!setCurrentY) refresh();
                 }}
             >
                 <Image src={logo} objectFit="cover" />
@@ -58,7 +61,7 @@ export default function Header() {
                         transition: "all 0.2s linear",
                     }}
                     onClick={() => {
-                        GoToTop(0);
+                        go_to_top(0);
                     }}
                 >
                     About us
