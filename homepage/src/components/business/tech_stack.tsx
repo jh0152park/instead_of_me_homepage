@@ -103,7 +103,7 @@ export default function TechStack() {
         <Center w="100%" h="1000px" color="black" bgColor="whitesmoke">
             <VStack>
                 <Heading fontSize="50px" mb="100px">
-                    So, What's your skill?{" "}
+                    So, What's your skill?
                 </Heading>
 
                 <GRID variants={boxAnimation} animate={trigger} initial="start">
