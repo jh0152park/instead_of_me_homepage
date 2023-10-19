@@ -1,4 +1,3 @@
-import { Box } from "@chakra-ui/react";
 import Banner from "../components/aboutus/banner";
 import Global from "../components/aboutus/global";
 import Introduce from "../components/aboutus/introduce";
