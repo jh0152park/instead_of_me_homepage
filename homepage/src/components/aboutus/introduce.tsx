@@ -11,6 +11,7 @@ export default function Introduce() {
             position="relative"
             color="black"
             bgColor="whitesmoke"
+            // background="linear-gradient(180deg, #606163, #F7FAFC)"
         >
             <Box pl="200px" pt="200px">
                 <Heading>Instead of me,</Heading>

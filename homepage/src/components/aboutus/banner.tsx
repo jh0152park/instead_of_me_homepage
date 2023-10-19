@@ -98,7 +98,7 @@ export default function Banner() {
             <VStack
                 position="absolute"
                 left="200px"
-                bottom="0"
+                bottom="50px"
                 alignItems="flex-start"
                 color="whitesmoke"
             >
