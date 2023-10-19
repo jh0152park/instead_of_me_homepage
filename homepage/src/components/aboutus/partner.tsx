@@ -1,7 +1,7 @@
 import { Center, Box, VStack, Heading, Image } from "@chakra-ui/react";
 
 export default function Partner() {
-    const iamge =
+    const image =
         "https://github.com/jh0152park/instead_of_me_homepage/blob/main/images/icons/partner.png?raw=true";
 
     return (
@@ -11,7 +11,6 @@ export default function Partner() {
             position="relative"
             color="black"
             bgColor="whitesmoke"
-            // background="linear-gradient(180deg, #606163, #F7FAFC)"
         >
             <VStack>
                 <Heading>Instead of me,</Heading>
@@ -23,7 +22,7 @@ export default function Partner() {
                     목표입니다.
                 </Heading>
                 <Box w="600px" h="400px">
-                    <Image w="100%" h="100%" objectFit="cover" src={iamge} />
+                    <Image w="100%" h="100%" objectFit="cover" src={image} />
                 </Box>
             </VStack>
         </Center>
