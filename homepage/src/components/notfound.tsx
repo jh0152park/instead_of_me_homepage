@@ -14,6 +14,7 @@ export default function NotFound() {
                 w="100%"
                 h="100vh"
                 background="linear-gradient(180deg, #70e391, #c9c7c7)"
+                color="black"
             >
                 <VStack>
                     <Heading fontSize="60px" mt="-200px">
