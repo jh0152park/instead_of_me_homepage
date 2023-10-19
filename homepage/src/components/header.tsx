@@ -85,6 +85,9 @@ export default function Header() {
                         cursor: "pointer",
                         transition: "all 0.2s linear",
                     }}
+                    onClick={() => {
+                        go_to_top(8000);
+                    }}
                 >
                     Process of production
                 </Text>
