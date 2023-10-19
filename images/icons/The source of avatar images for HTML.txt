@@ -1,4 +1,4 @@
-아바타 파일 출처
+아이콘 파일 출처
 
 출처 <a href="https://kr.freepik.com/free-psd/3d-rendering-of-usa-icon_54050093.htm#page=16&query=3d%20%EC%82%AC%EB%9E%8C&position=14&from_view=search&track=ais">Freepik</a>
 // - (항해사 얼굴)
@@ -48,6 +48,12 @@
 <a href="https://kr.freepik.com/free-psd/handshake-hand-gesture-icon-isolated-3d-render-illustration_32704407.htm#page=16&query=3d%20%EC%82%AC%EB%9E%8C&position=11&from_view=search&track=ais">작가 xvector</a> 출처 Freepik
 (핸드제스쳐 2번)
 
+<a href="https://www.freepik.com/free-photo/cute-global-world-earth-model-pink-background-icon-symbol-3d-rendering_24452667.htm#query=3d%20earth%20icon&position=2&from_view=search&track=ais">Image by mamewmy</a> on Freepik
+(지구 모양)
+Image by <a href="https://www.freepik.com/free-psd/3d-rendering-gps-travel-icon_25778699.htm#query=3d%20location%20icon&position=0&from_view=search&track=ais">Freepik</a>
+(위치 아이콘)
+<a href="https://www.freepik.com/free-photo/hand-holding-mobile-smartphone-touchscreen-technology-business-concept-3d-cartoon-illustration_27654409.htm#query=3d%20phone&position=7&from_view=search&track=ais">Image by mamewmy</a> on Freepik
+(빈 핸드폰 화면)
 
 # Partner Image
 <a href="https://kr.freepik.com/free-vector/handshake-gesture-3d-cartoon-style-icon-businesspeople-or-partners-shaking-hands-making-successful-deal-flat-vector-illustration-partnership-agreement-teamwork-concept_29119262.htm#query=partner&position=14&from_view=search&track=sph">작가 pch.vector</a> 출처 Freepik
