@@ -30,6 +30,7 @@ export default function Global() {
             position="relative"
             color="black"
             bgColor="whitesmoke"
+            overflowX={"hidden"}
         >
             <BOX
                 style={{
