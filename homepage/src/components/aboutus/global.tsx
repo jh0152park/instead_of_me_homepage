@@ -1,6 +1,9 @@
 import { Center, Box, VStack, Heading, Image } from "@chakra-ui/react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { styled } from "styled-components";
+import { languageState } from "../../global/project_common";
+import { useRecoilValue } from "recoil";
+import LANGUAGE from "../../global/language";
 
 const BOX = styled(motion.div)`
     width: 1000px;
@@ -13,6 +16,7 @@ const BOX = styled(motion.div)`
 `;
 
 export default function Global() {
+    const currentLanguage = useRecoilValue(languageState);
     const { scrollYProgress } = useViewportScroll();
     const scale = useTransform(scrollYProgress, [0, 1], [1, 5]);
 
@@ -26,6 +30,7 @@ export default function Global() {
             position="relative"
             color="black"
             bgColor="whitesmoke"
+            overflowX={"hidden"}
         >
             <BOX
                 style={{
@@ -37,8 +42,18 @@ export default function Global() {
                     <VStack spacing="0">
                         <Heading fontSize="20px">Wherever</Heading>
                         <Heading fontSize="20px">
-                            Global Co-Work경험을 토대로 의뢰인의 국가, 시간을
-                            뛰어넘습니다.
+                            {
+                                LANGUAGE[currentLanguage][
+                                    "Global Co-Work경험을 토대로"
+                                ]
+                            }
+                        </Heading>
+                        <Heading fontSize="20px">
+                            {
+                                LANGUAGE[currentLanguage][
+                                    "의뢰인의 국가, 시간을 뛰어넘습니다."
+                                ]
+                            }
                         </Heading>
                     </VStack>
                 </Box>

@@ -1,12 +1,4 @@
-import {
-    Box,
-    Center,
-    Grid,
-    GridItem,
-    Heading,
-    Image,
-    VStack,
-} from "@chakra-ui/react";
+import { Center, Heading, Image, VStack } from "@chakra-ui/react";
 import {
     motion,
     useAnimation,

@@ -7,9 +7,14 @@ export default function Business() {
     return (
         <>
             <IntroBuffer />
-            <Intro />
-            <TechStack />
-            <Service />
+            <div id="business">
+                <div
+                    style={{ height: 70, backgroundColor: "whitesmoke" }}
+                ></div>
+                <Intro />
+                <TechStack />
+                <Service />
+            </div>
         </>
     );
 }

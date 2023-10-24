@@ -11,8 +11,13 @@ import { TbListSearch } from "react-icons/tb";
 import { BsFolderSymlink } from "react-icons/bs";
 import { FaTools } from "react-icons/fa";
 import { ImHappy } from "react-icons/im";
+import { languageState } from "../../global/project_common";
+import { useRecoilValue } from "recoil";
+import LANGUAGE from "../../global/language";
 
 export default function Sequence() {
+    const currentLanguage = useRecoilValue(languageState);
+
     return (
         <Center w="100%" h="1000px" color="black" bgColor="whitesmoke">
             <VStack>
@@ -44,8 +49,12 @@ export default function Sequence() {
                                     w="70px"
                                     h="70px"
                                 />
-                                <Heading fontSize="20px">
-                                    제작문의 및 견적상담
+                                <Heading fontSize="20px" textAlign={"center"}>
+                                    {
+                                        LANGUAGE[currentLanguage][
+                                            "제작문의 및 견적상담"
+                                        ]
+                                    }
                                 </Heading>
                             </VStack>
                         </Center>
@@ -72,8 +81,12 @@ export default function Sequence() {
                                     w="70px"
                                     h="70px"
                                 />
-                                <Heading fontSize="20px">
-                                    견적검토 및 계약진행
+                                <Heading fontSize="20px" textAlign={"center"}>
+                                    {
+                                        LANGUAGE[currentLanguage][
+                                            "견적검토 및 계약진행"
+                                        ]
+                                    }
                                 </Heading>
                             </VStack>
                         </Center>
@@ -100,8 +113,12 @@ export default function Sequence() {
                                     w="70px"
                                     h="70px"
                                 />
-                                <Heading fontSize="20px">
-                                    의뢰인 자료 전달
+                                <Heading fontSize="20px" textAlign={"center"}>
+                                    {
+                                        LANGUAGE[currentLanguage][
+                                            "의뢰인 자료 전달"
+                                        ]
+                                    }
                                 </Heading>
                             </VStack>
                         </Center>
@@ -128,7 +145,9 @@ export default function Sequence() {
                                     w="70px"
                                     h="70px"
                                 />
-                                <Heading fontSize="20px">제작</Heading>
+                                <Heading fontSize="20px" textAlign={"center"}>
+                                    {LANGUAGE[currentLanguage]["제작"]}
+                                </Heading>
                             </VStack>
                         </Center>
                     </GridItem>
@@ -154,7 +173,9 @@ export default function Sequence() {
                                     w="70px"
                                     h="70px"
                                 />
-                                <Heading fontSize="20px">수정 및 확정</Heading>
+                                <Heading fontSize="20px" textAlign={"center"}>
+                                    {LANGUAGE[currentLanguage]["수정 및 확정"]}
+                                </Heading>
                             </VStack>
                         </Center>
                     </GridItem>
@@ -180,7 +201,9 @@ export default function Sequence() {
                                     w="70px"
                                     h="70px"
                                 />
-                                <Heading fontSize="20px">제작완료</Heading>
+                                <Heading fontSize="20px" textAlign={"center"}>
+                                    {LANGUAGE[currentLanguage]["제작완료"]}
+                                </Heading>
                             </VStack>
                         </Center>
                     </GridItem>

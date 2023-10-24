@@ -1,14 +1,11 @@
-import {
-    Box,
-    Center,
-    HStack,
-    Heading,
-    Image,
-    Text,
-    VStack,
-} from "@chakra-ui/react";
+import { Box, Center, HStack, Heading, Image, VStack } from "@chakra-ui/react";
+import { languageState } from "../../global/project_common";
+import { useRecoilValue } from "recoil";
+import LANGUAGE from "../../global/language";
 
 export default function Service() {
+    const currentLanguage = useRecoilValue(languageState);
+
     const android =
         "https://github.com/jh0152park/instead_of_me_homepage/blob/main/images/tech-stack_logos/android_icon.png?raw=true";
     const ios =
@@ -48,9 +45,11 @@ export default function Service() {
                             <VStack>
                                 <Heading>Cross Platform Applications</Heading>
                                 <Box w="450px" fontWeight="bold">
-                                    효율적인 프레임워크를 사용해 iOS 및
-                                    Android에서 모두 동작하는 고품질의
-                                    어플리케이션을 개발하고 제공합니다.
+                                    {
+                                        LANGUAGE[currentLanguage][
+                                            "효율적인 프레임워크를 사용해 iOS 및 Android에서 모두 동작하는 고품질의 어플리케이션을 개발하고 제공합니다."
+                                        ]
+                                    }
                                 </Box>
                             </VStack>
                         </Center>
@@ -75,8 +74,11 @@ export default function Service() {
                             <VStack>
                                 <Heading>Web Site</Heading>
                                 <Box w="450px" fontWeight="bold">
-                                    PC 및 Mobile에서 모두 사용가능한 고품질의
-                                    Web사이트를 개발하고 제공합니다.
+                                    {
+                                        LANGUAGE[currentLanguage][
+                                            "PC 및 Mobile에서 모두 사용가능한 고품질의 Web사이트를 개발하고 제공합니다."
+                                        ]
+                                    }
                                 </Box>
                             </VStack>
                         </Center>
@@ -101,10 +103,11 @@ export default function Service() {
                             <VStack>
                                 <Heading>RPA</Heading>
                                 <Box w="450px" fontWeight="bold">
-                                    휴먼에러를 야기하는 단순하고 반복적인 업무를
-                                    자동화 합니다. 웹크롤링, 웹자동화을 비롯해
-                                    핵심적인 업무툴인 엑셀 자동화를 통해 업무의
-                                    효율을 대폭 높힐수 있습니다.
+                                    {
+                                        LANGUAGE[currentLanguage][
+                                            "휴먼에러를 야기하는 단순하고 반복적인 업무를 자동화 합니다. 웹크롤링, 웹자동화을 비롯해 핵심적인 업무툴인 엑셀 자동화를 통해 업무의 효율을 대폭 높힐수 있습니다."
+                                        ]
+                                    }
                                 </Box>
                             </VStack>
                         </Center>

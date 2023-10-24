@@ -1,15 +1,10 @@
-import {
-    Box,
-    Center,
-    Heading,
-    Icon,
-    Image,
-    Text,
-    VStack,
-} from "@chakra-ui/react";
+import { Box, Center, Heading, Icon, Image, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import { useRecoilValue } from "recoil";
 import styled from "styled-components";
+import { languageState } from "../../global/project_common";
+import LANGUAGE from "../../global/language";
 
 const BOX = styled(motion.div)`
     width: 40px;
@@ -36,6 +31,8 @@ const ArrowAnimation = {
 };
 
 export default function Banner() {
+    const currentLanguage = useRecoilValue(languageState);
+
     return (
         <Box w="100%" h="1200px" position="relative" bgColor="whitesmoke">
             <Image
@@ -64,7 +61,7 @@ export default function Banner() {
                             md: "80px",
                         }}
                     >
-                        외주, 그 이상의
+                        {LANGUAGE[currentLanguage]["외주, 그 이상의"]}
                     </Heading>
                     <Heading
                         fontWeight="extrabold"
@@ -73,7 +70,7 @@ export default function Banner() {
                             md: "80px",
                         }}
                     >
-                        가치를 만들고 있습니다
+                        {LANGUAGE[currentLanguage]["가치를 만들고 있습니다."]}
                     </Heading>
 
                     <BOX
@@ -103,10 +100,18 @@ export default function Banner() {
                 color="whitesmoke"
             >
                 <Heading fontWeight="extrabold" fontSize="60px">
-                    도전을 열망하는 사람들이 모여,
+                    {
+                        LANGUAGE[currentLanguage][
+                            "도전을 열망하는 사람들이 모여,"
+                        ]
+                    }
                 </Heading>
                 <Heading fontWeight="extrabold" fontSize="60px">
-                    새로운 도전자분들의 시작을 함께합니다.
+                    {
+                        LANGUAGE[currentLanguage][
+                            "새로운 도전자분들의 시작을 함께합니다."
+                        ]
+                    }
                 </Heading>
             </VStack>
         </Box>
