@@ -2,7 +2,7 @@ import { Box, HStack, Text, Image, Menu, MenuButton, MenuList } from '@chakra-ui
 import { go_to_top, refresh } from '../util/utils';
 import { useMotionValueEvent, useScroll } from 'framer-motion';
 import { useState } from 'react';
-import LanuageItem from './language/lanuageItem';
+import LanguageItem from './language/languageItem';
 import { useTranslation } from 'react-i18next';
 
 export default function Header() {
@@ -117,8 +117,8 @@ export default function Header() {
                         </Text>
                     </MenuButton>
                     <MenuList backgroundColor={'white'}>
-                        <LanuageItem language="English" onClick={() => changeLanguage('en-US')} />
-                        <LanuageItem language="한국어" onClick={() => changeLanguage('ko-KR')} />
+                        <LanguageItem language="English" onClick={() => changeLanguage('en-US')} />
+                        <LanguageItem language="한국어" onClick={() => changeLanguage('ko-KR')} />
                     </MenuList>
                 </Menu>
             </HStack>
