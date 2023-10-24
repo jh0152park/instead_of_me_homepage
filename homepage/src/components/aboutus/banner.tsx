@@ -1,15 +1,7 @@
-import {
-    Box,
-    Center,
-    Heading,
-    Icon,
-    Image,
-    Text,
-    VStack,
-} from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import { MdKeyboardDoubleArrowDown } from "react-icons/md";
-import styled from "styled-components";
+import { Box, Center, Heading, Icon, Image, Text, VStack } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import { MdKeyboardDoubleArrowDown } from 'react-icons/md';
+import styled from 'styled-components';
 
 const BOX = styled(motion.div)`
     width: 40px;
@@ -26,7 +18,7 @@ const ArrowAnimation = {
         y: 30,
         opacity: 0,
         transition: {
-            type: "spring",
+            type: 'spring',
             duration: 3,
             // ease: "linear",
             repeat: Infinity,
@@ -60,8 +52,8 @@ export default function Banner() {
                     <Heading
                         fontWeight="extrabold"
                         fontSize={{
-                            sm: "40px",
-                            md: "80px",
+                            sm: '40px',
+                            md: '80px',
                         }}
                     >
                         외주, 그 이상의
@@ -69,39 +61,29 @@ export default function Banner() {
                     <Heading
                         fontWeight="extrabold"
                         fontSize={{
-                            sm: "40px",
-                            md: "80px",
+                            sm: '40px',
+                            md: '80px',
                         }}
                     >
                         가치를 만들고 있습니다
                     </Heading>
 
-                    <BOX
-                        variants={ArrowAnimation}
-                        initial="start"
-                        animate="end"
-                    >
+                    <BOX variants={ArrowAnimation} initial="start" animate="end">
                         <Icon
                             w={{
-                                sm: "20px",
-                                md: "40px",
+                                sm: '20px',
+                                md: '40px',
                             }}
                             h={{
-                                sm: "20px",
-                                md: "40px",
+                                sm: '20px',
+                                md: '40px',
                             }}
                             as={MdKeyboardDoubleArrowDown}
                         />
                     </BOX>
                 </VStack>
             </Center>
-            <VStack
-                position="absolute"
-                left="200px"
-                bottom="50px"
-                alignItems="flex-start"
-                color="whitesmoke"
-            >
+            <VStack position="absolute" left="200px" bottom="50px" alignItems="flex-start" color="whitesmoke">
                 <Heading fontWeight="extrabold" fontSize="60px">
                     도전을 열망하는 사람들이 모여,
                 </Heading>
