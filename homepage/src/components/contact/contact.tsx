@@ -3,6 +3,11 @@ import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
     const { t } = useTranslation();
+
+    function onClickKakaoPlusChannel() {
+        window.open('http://pf.kakao.com/_aSGjG', 'Instead of me', 'popup=yes');
+    }
+
     return (
         <Center w="100%" h="1000px" color="black" bgColor="whitesmoke">
             <VStack mt="-200px">
@@ -25,7 +30,9 @@ export default function Contact() {
                         <Text fontWeight="bold" color="green.400">
                             {t('contact_2')}
                         </Text>
-                        <Text>insteadofme(야,해줘)</Text>
+                        <Text onClick={onClickKakaoPlusChannel} cursor={'pointer'}>
+                            insteadofme(야,해줘)
+                        </Text>
                     </HStack>
                 </VStack>
             </VStack>
