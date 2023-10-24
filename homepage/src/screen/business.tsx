@@ -8,7 +8,9 @@ export default function Business() {
         <>
             <IntroBuffer />
             <div id="business">
-                <div style={{ height: 70, backgroundColor: "whitesmoke" }}></div>
+                <div
+                    style={{ height: 70, backgroundColor: "whitesmoke" }}
+                ></div>
                 <Intro />
                 <TechStack />
                 <Service />

@@ -1,22 +1,26 @@
-import { Center, HStack, Heading, Text, VStack } from '@chakra-ui/react';
-import { useTranslation } from 'react-i18next';
+import { Center, HStack, Heading, Text, VStack } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
     const { t } = useTranslation();
 
     function onClickKakaoPlusChannel() {
-        window.open('http://pf.kakao.com/_aSGjG', 'Instead of me', 'popup=yes');
+        window.open("http://pf.kakao.com/_aSGjG", "Instead of me", "popup=yes");
     }
 
     return (
         <Center w="100%" h="1000px" color="black" bgColor="whitesmoke">
             <VStack mt="-200px">
-                <Heading fontSize="80px" fontWeight="extrabold" color="green.400">
+                <Heading
+                    fontSize="80px"
+                    fontWeight="extrabold"
+                    color="green.400"
+                >
                     Contact US
                 </Heading>
 
                 <Text mt="100px" fontWeight="bold" fontSize="20px">
-                    {t('contact_1')}
+                    {t("contact_1")}
                 </Text>
 
                 <VStack mt="50px">
@@ -28,9 +32,12 @@ export default function Contact() {
                     </HStack>
                     <HStack>
                         <Text fontWeight="bold" color="green.400">
-                            {t('contact_2')}
+                            {t("contact_2")}
                         </Text>
-                        <Text onClick={onClickKakaoPlusChannel} cursor={'pointer'}>
+                        <Text
+                            onClick={onClickKakaoPlusChannel}
+                            cursor={"pointer"}
+                        >
                             insteadofme(야,해줘)
                         </Text>
                     </HStack>
