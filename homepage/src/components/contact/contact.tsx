@@ -47,8 +47,11 @@ export default function Contact() {
                         <Text
                             onClick={onClickKakaoPlusChannel}
                             cursor={"pointer"}
+                            _hover={{
+                                textDecoration: "underline",
+                            }}
                         >
-                            insteadofme(야,해줘)
+                            @insteadofme(야, 해줘)
                         </Text>
                     </HStack>
                 </VStack>
