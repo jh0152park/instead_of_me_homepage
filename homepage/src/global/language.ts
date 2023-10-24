@@ -1,4 +1,4 @@
-interface Ilanguage {
+interface ILanguage {
     "외주, 그 이상의": string;
     "가치를 만들고 있습니다.": string;
     "도전을 열망하는 사람들이 모여,": string;
@@ -26,15 +26,15 @@ interface Ilanguage {
     "카카오톡 플러스친구 채널:": string;
 }
 
-const language: Ilanguage[] = [
+const LANGUAGE: ILanguage[] = [
     {
         "외주, 그 이상의": "외주, 그 이상의",
         "가치를 만들고 있습니다.": "가치를 만들고 있습니다.",
-        "도전을 열망하는 사람들이 모여,": "도전을 열망하는 사람들이 모여;",
+        "도전을 열망하는 사람들이 모여,": "도전을 열망하는 사람들이 모여,",
         "새로운 도전자분들의 시작을 함께합니다.":
             "새로운 도전자분들의 시작을 함께합니다.",
         "우리는 글로벌 마켓에서 Smart Device, IoT, 반도체등":
-            "우리는 글로벌 마켓에서 Smart Device, IoT, 반도체등",
+            "우리는 글로벌 마켓에서 Smart Device, IoT, 반도체 등",
         "다양한 분야에서 1위를 달리는 삼성전자 출신 S/W Engineer 그룹입니다.":
             "다양한 분야에서 1위를 달리는 삼성전자 출신 S/W Engineer 그룹입니다.",
         "우리는 경험과 소통을 중심으로 단순 외주를 뛰어넘어":
@@ -110,4 +110,4 @@ const language: Ilanguage[] = [
     },
 ];
 
-export default language;
+export default LANGUAGE;

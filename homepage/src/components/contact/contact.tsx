@@ -1,7 +1,7 @@
 import { Center, HStack, Heading, Text, VStack } from "@chakra-ui/react";
-import { languageState } from "../../recoil/atom";
+import { languageState } from "../../global/project_common";
 import { useRecoilValue } from "recoil";
-import language from "../../language";
+import LANGUAGE from "../../global/language";
 
 export default function Contact() {
     const currentLanguage = useRecoilValue(languageState);
@@ -23,7 +23,7 @@ export default function Contact() {
 
                 <Text mt="100px" fontWeight="bold" fontSize="20px">
                     {
-                        language[currentLanguage][
+                        LANGUAGE[currentLanguage][
                             "협업문의는 아래 비즈니스이메일 또는 카카오톡 플러스친구 채널을 통해 연락주세요."
                         ]
                     }
@@ -39,7 +39,7 @@ export default function Contact() {
                     <HStack>
                         <Text fontWeight="bold" color="green.400">
                             {
-                                language[currentLanguage][
+                                LANGUAGE[currentLanguage][
                                     "카카오톡 플러스친구 채널:"
                                 ]
                             }

@@ -1,9 +1,9 @@
 import { Center, Box, VStack, Heading, Image } from "@chakra-ui/react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { styled } from "styled-components";
-import { languageState } from "../../recoil/atom";
+import { languageState } from "../../global/project_common";
 import { useRecoilValue } from "recoil";
-import language from "../../language";
+import LANGUAGE from "../../global/language";
 
 const BOX = styled(motion.div)`
     width: 1000px;
@@ -43,14 +43,14 @@ export default function Global() {
                         <Heading fontSize="20px">Wherever</Heading>
                         <Heading fontSize="20px">
                             {
-                                language[currentLanguage][
+                                LANGUAGE[currentLanguage][
                                     "Global Co-Work경험을 토대로"
                                 ]
                             }
                         </Heading>
                         <Heading fontSize="20px">
                             {
-                                language[currentLanguage][
+                                LANGUAGE[currentLanguage][
                                     "의뢰인의 국가, 시간을 뛰어넘습니다."
                                 ]
                             }

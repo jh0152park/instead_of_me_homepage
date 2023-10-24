@@ -1,7 +1,7 @@
 import { Box, Center, Heading, Image } from "@chakra-ui/react";
 import { useRecoilValue } from "recoil";
-import { languageState } from "../../recoil/atom";
-import language from "../../language";
+import { languageState } from "../../global/project_common";
+import LANGUAGE from "../../global/language";
 
 export default function Introduce() {
     const currentLanguage = useRecoilValue(languageState);
@@ -20,14 +20,14 @@ export default function Introduce() {
                 <Heading>Instead of me,</Heading>
                 <Heading my="20px">
                     {
-                        language[currentLanguage][
+                        LANGUAGE[currentLanguage][
                             "우리는 글로벌 마켓에서 Smart Device, IoT, 반도체등"
                         ]
                     }
                 </Heading>
                 <Heading>
                     {
-                        language[currentLanguage][
+                        LANGUAGE[currentLanguage][
                             "다양한 분야에서 1위를 달리는 삼성전자 출신 S/W Engineer 그룹입니다."
                         ]
                     }

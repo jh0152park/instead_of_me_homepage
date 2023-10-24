@@ -12,7 +12,7 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
 import LanguageItem from "./language/languageItem";
 import { useSetRecoilState } from "recoil";
-import { languageCode, languageState } from "../recoil/atom";
+import { languageCode, languageState } from "../global/project_common";
 
 export default function Header() {
     const logo =

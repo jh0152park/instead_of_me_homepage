@@ -1,7 +1,7 @@
 import { Box, Center, HStack, Heading, Image, VStack } from "@chakra-ui/react";
-import { languageState } from "../../recoil/atom";
+import { languageState } from "../../global/project_common";
 import { useRecoilValue } from "recoil";
-import language from "../../language";
+import LANGUAGE from "../../global/language";
 
 export default function Service() {
     const currentLanguage = useRecoilValue(languageState);
@@ -46,7 +46,7 @@ export default function Service() {
                                 <Heading>Cross Platform Applications</Heading>
                                 <Box w="450px" fontWeight="bold">
                                     {
-                                        language[currentLanguage][
+                                        LANGUAGE[currentLanguage][
                                             "효율적인 프레임워크를 사용해 iOS 및 Android에서 모두 동작하는 고품질의 어플리케이션을 개발하고 제공합니다."
                                         ]
                                     }
@@ -75,7 +75,7 @@ export default function Service() {
                                 <Heading>Web Site</Heading>
                                 <Box w="450px" fontWeight="bold">
                                     {
-                                        language[currentLanguage][
+                                        LANGUAGE[currentLanguage][
                                             "PC 및 Mobile에서 모두 사용가능한 고품질의 Web사이트를 개발하고 제공합니다."
                                         ]
                                     }
@@ -104,7 +104,7 @@ export default function Service() {
                                 <Heading>RPA</Heading>
                                 <Box w="450px" fontWeight="bold">
                                     {
-                                        language[currentLanguage][
+                                        LANGUAGE[currentLanguage][
                                             "휴먼에러를 야기하는 단순하고 반복적인 업무를 자동화 합니다. 웹크롤링, 웹자동화을 비롯해 핵심적인 업무툴인 엑셀 자동화를 통해 업무의 효율을 대폭 높힐수 있습니다."
                                         ]
                                     }

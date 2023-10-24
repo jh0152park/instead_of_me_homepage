@@ -1,7 +1,7 @@
 import { Center, Box, VStack, Heading, Image } from "@chakra-ui/react";
 import { useRecoilValue } from "recoil";
-import { languageState } from "../../recoil/atom";
-import language from "../../language";
+import { languageState } from "../../global/project_common";
+import LANGUAGE from "../../global/language";
 
 export default function Partner() {
     const currentLanguage = useRecoilValue(languageState);
@@ -20,14 +20,14 @@ export default function Partner() {
                 <Heading>Instead of me,</Heading>
                 <Heading>
                     {
-                        language[currentLanguage][
+                        LANGUAGE[currentLanguage][
                             "우리는 경험과 소통을 중심으로 단순 외주를 뛰어넘어"
                         ]
                     }
                 </Heading>
                 <Heading>
                     {
-                        language[currentLanguage][
+                        LANGUAGE[currentLanguage][
                             "새로운 도전을 함께 시작하는 비즈니스 파트너가 되는것이 목표입니다."
                         ]
                     }

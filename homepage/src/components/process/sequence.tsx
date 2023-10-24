@@ -11,9 +11,9 @@ import { TbListSearch } from "react-icons/tb";
 import { BsFolderSymlink } from "react-icons/bs";
 import { FaTools } from "react-icons/fa";
 import { ImHappy } from "react-icons/im";
-import { languageState } from "../../recoil/atom";
+import { languageState } from "../../global/project_common";
 import { useRecoilValue } from "recoil";
-import language from "../../language";
+import LANGUAGE from "../../global/language";
 
 export default function Sequence() {
     const currentLanguage = useRecoilValue(languageState);
@@ -51,7 +51,7 @@ export default function Sequence() {
                                 />
                                 <Heading fontSize="20px" textAlign={"center"}>
                                     {
-                                        language[currentLanguage][
+                                        LANGUAGE[currentLanguage][
                                             "제작문의 및 견적상담"
                                         ]
                                     }
@@ -83,7 +83,7 @@ export default function Sequence() {
                                 />
                                 <Heading fontSize="20px" textAlign={"center"}>
                                     {
-                                        language[currentLanguage][
+                                        LANGUAGE[currentLanguage][
                                             "견적검토 및 계약진행"
                                         ]
                                     }
@@ -115,7 +115,7 @@ export default function Sequence() {
                                 />
                                 <Heading fontSize="20px" textAlign={"center"}>
                                     {
-                                        language[currentLanguage][
+                                        LANGUAGE[currentLanguage][
                                             "의뢰인 자료 전달"
                                         ]
                                     }
@@ -146,7 +146,7 @@ export default function Sequence() {
                                     h="70px"
                                 />
                                 <Heading fontSize="20px" textAlign={"center"}>
-                                    {language[currentLanguage]["제작"]}
+                                    {LANGUAGE[currentLanguage]["제작"]}
                                 </Heading>
                             </VStack>
                         </Center>
@@ -174,7 +174,7 @@ export default function Sequence() {
                                     h="70px"
                                 />
                                 <Heading fontSize="20px" textAlign={"center"}>
-                                    {language[currentLanguage]["수정 및 확정"]}
+                                    {LANGUAGE[currentLanguage]["수정 및 확정"]}
                                 </Heading>
                             </VStack>
                         </Center>
@@ -202,7 +202,7 @@ export default function Sequence() {
                                     h="70px"
                                 />
                                 <Heading fontSize="20px" textAlign={"center"}>
-                                    {language[currentLanguage]["제작완료"]}
+                                    {LANGUAGE[currentLanguage]["제작완료"]}
                                 </Heading>
                             </VStack>
                         </Center>

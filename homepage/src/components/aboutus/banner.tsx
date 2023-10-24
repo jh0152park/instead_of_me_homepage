@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { useRecoilValue } from "recoil";
 import styled from "styled-components";
-import { languageState } from "../../recoil/atom";
-import language from "../../language";
+import { languageState } from "../../global/project_common";
+import LANGUAGE from "../../global/language";
 
 const BOX = styled(motion.div)`
     width: 40px;
@@ -61,7 +61,7 @@ export default function Banner() {
                             md: "80px",
                         }}
                     >
-                        {language[currentLanguage]["외주, 그 이상의"]}
+                        {LANGUAGE[currentLanguage]["외주, 그 이상의"]}
                     </Heading>
                     <Heading
                         fontWeight="extrabold"
@@ -70,7 +70,7 @@ export default function Banner() {
                             md: "80px",
                         }}
                     >
-                        {language[currentLanguage]["가치를 만들고 있습니다."]}
+                        {LANGUAGE[currentLanguage]["가치를 만들고 있습니다."]}
                     </Heading>
 
                     <BOX
@@ -101,14 +101,14 @@ export default function Banner() {
             >
                 <Heading fontWeight="extrabold" fontSize="60px">
                     {
-                        language[currentLanguage][
+                        LANGUAGE[currentLanguage][
                             "도전을 열망하는 사람들이 모여,"
                         ]
                     }
                 </Heading>
                 <Heading fontWeight="extrabold" fontSize="60px">
                     {
-                        language[currentLanguage][
+                        LANGUAGE[currentLanguage][
                             "새로운 도전자분들의 시작을 함께합니다."
                         ]
                     }
