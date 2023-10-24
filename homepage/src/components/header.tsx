@@ -15,6 +15,7 @@ export default function Header() {
         if (latest > 100) setOpacity(true);
         else setOpacity(false);
         setCurrentY(latest);
+        // console.log(latest);
     });
 
     return (
@@ -39,7 +40,7 @@ export default function Header() {
                 _hover={{ cursor: "pointer" }}
                 onClick={() => {
                     go_to_top(0);
-                    if (!setCurrentY) refresh();
+                    if (currentY === 0) refresh();
                 }}
             >
                 <Image src={logo} objectFit="cover" />
@@ -72,6 +73,9 @@ export default function Header() {
                         cursor: "pointer",
                         transition: "all 0.2s linear",
                     }}
+                    onClick={() => {
+                        go_to_top(4800);
+                    }}
                 >
                     Business
                 </Text>
@@ -81,6 +85,9 @@ export default function Header() {
                         cursor: "pointer",
                         transition: "all 0.2s linear",
                     }}
+                    onClick={() => {
+                        go_to_top(7800);
+                    }}
                 >
                     Process of production
                 </Text>
@@ -89,6 +96,9 @@ export default function Header() {
                         color: "rgba(0, 0, 0, 0.6)",
                         cursor: "pointer",
                         transition: "all 0.2s linear",
+                    }}
+                    onClick={() => {
+                        go_to_top(9000);
                     }}
                 >
                     Contact us

@@ -2,7 +2,7 @@ import { Box, Center, Heading, Image } from "@chakra-ui/react";
 
 export default function Introduce() {
     const hand_image =
-        "https://github.com/jh0152park/instead_of_me_homepage/blob/main/images/avatars/three_hands.png?raw=true";
+        "https://github.com/jh0152park/instead_of_me_homepage/blob/main/images/icons/three_hands.png?raw=true";
 
     return (
         <Box

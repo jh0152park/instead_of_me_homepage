@@ -29,7 +29,7 @@ const ArrowAnimation = {
 
 export default function Banner() {
     return (
-        <Box w="100%" h="1200px" position="relative">
+        <Box w="100%" h="1200px" position="relative" bgColor="whitesmoke">
             <Image
                 w="100%"
                 h="100%"

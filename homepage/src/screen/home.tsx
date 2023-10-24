@@ -1,6 +1,9 @@
 import { Box } from "@chakra-ui/react";
 import { Helmet } from "react-helmet";
 import AboutUs from "./aboutus";
+import Business from "./business";
+import Process from "./process";
+import ContactUS from "./contactus";
 
 export default function Home() {
     return (
@@ -8,8 +11,12 @@ export default function Home() {
             <Helmet>
                 <title>Home / Instead of me</title>
             </Helmet>
-            <Box id="buffer" h="70px"></Box>
+            <Box id="buffer" w="100%" h="70px"></Box>
+
             <AboutUs />
+            <Business />
+            <Process />
+            <ContactUS />
         </>
     );
 }
