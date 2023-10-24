@@ -95,8 +95,13 @@ export default function Contact() {
                             @insteadofme(야, 해줘)
                         </Text>
                     </HStack>
-                    <Box mt={3}>
-                        <Image src={qrImage} objectFit={"cover"} />
+                    <Box
+                        mt={3}
+                        border="2px"
+                        padding={3}
+                        borderColor="yellow.300"
+                    >
+                        <Image src={qrImage} objectFit="cover" />
                     </Box>
                 </VStack>
             </VStack>
