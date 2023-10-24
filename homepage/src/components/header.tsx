@@ -1,5 +1,5 @@
 import { Box, HStack, Text, Image, Menu, MenuButton, MenuList } from '@chakra-ui/react';
-import { go_to_top, refresh } from '../util/utils';
+import { go_to_id, go_to_top, refresh } from '../util/utils';
 import { useMotionValueEvent, useScroll } from 'framer-motion';
 import { useState } from 'react';
 import LanguageItem from './language/languageItem';
@@ -45,7 +45,7 @@ export default function Header() {
                 mt="15px"
                 _hover={{ cursor: 'pointer' }}
                 onClick={() => {
-                    go_to_top(0);
+                    go_to_id('top');
                     if (currentY === 0) refresh();
                 }}
             >
@@ -68,7 +68,7 @@ export default function Header() {
                         transition: 'all 0.2s linear',
                     }}
                     onClick={() => {
-                        go_to_top(0);
+                        go_to_id('top');
                     }}
                 >
                     About us
@@ -80,7 +80,7 @@ export default function Header() {
                         transition: 'all 0.2s linear',
                     }}
                     onClick={() => {
-                        go_to_top(4800);
+                        go_to_id('business');
                     }}
                 >
                     Business
@@ -92,7 +92,7 @@ export default function Header() {
                         transition: 'all 0.2s linear',
                     }}
                     onClick={() => {
-                        go_to_top(7800);
+                        go_to_id('process');
                     }}
                 >
                     Process of production
@@ -104,7 +104,7 @@ export default function Header() {
                         transition: 'all 0.2s linear',
                     }}
                     onClick={() => {
-                        go_to_top(9000);
+                        go_to_id('contact');
                     }}
                 >
                     Contact us
