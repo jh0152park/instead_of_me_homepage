@@ -21,7 +21,9 @@ export default function Sequence() {
                                     1
                                 </Center>
                                 <Icon my="30px" as={LuNewspaper} w="70px" h="70px" />
-                                <Heading fontSize="20px">{t('process_sequence_1')}</Heading>
+                                <Heading fontSize="20px" textAlign={'center'}>
+                                    {t('process_sequence_1')}
+                                </Heading>
                             </VStack>
                         </Center>
                     </GridItem>
@@ -33,7 +35,9 @@ export default function Sequence() {
                                     2
                                 </Center>
                                 <Icon my="30px" as={TbListSearch} w="70px" h="70px" />
-                                <Heading fontSize="20px">{t('process_sequence_2')}</Heading>
+                                <Heading fontSize="20px" textAlign={'center'}>
+                                    {t('process_sequence_2')}
+                                </Heading>
                             </VStack>
                         </Center>
                     </GridItem>
@@ -45,7 +49,9 @@ export default function Sequence() {
                                     3
                                 </Center>
                                 <Icon my="30px" as={BsFolderSymlink} w="70px" h="70px" />
-                                <Heading fontSize="20px">{t('process_sequence_3')}</Heading>
+                                <Heading fontSize="20px" textAlign={'center'}>
+                                    {t('process_sequence_3')}
+                                </Heading>
                             </VStack>
                         </Center>
                     </GridItem>
@@ -57,7 +63,9 @@ export default function Sequence() {
                                     4
                                 </Center>
                                 <Icon my="30px" as={FaTools} w="70px" h="70px" />
-                                <Heading fontSize="20px">{t('process_sequence_4')}</Heading>
+                                <Heading fontSize="20px" textAlign={'center'}>
+                                    {t('process_sequence_4')}
+                                </Heading>
                             </VStack>
                         </Center>
                     </GridItem>
@@ -69,7 +77,9 @@ export default function Sequence() {
                                     5
                                 </Center>
                                 <Icon my="30px" as={LuEraser} w="70px" h="70px" />
-                                <Heading fontSize="20px">{t('process_sequence_5')}</Heading>
+                                <Heading fontSize="20px" textAlign={'center'}>
+                                    {t('process_sequence_5')}
+                                </Heading>
                             </VStack>
                         </Center>
                     </GridItem>
@@ -81,7 +91,9 @@ export default function Sequence() {
                                     6
                                 </Center>
                                 <Icon my="30px" as={ImHappy} w="70px" h="70px" />
-                                <Heading fontSize="20px">{t('process_sequence_6')}</Heading>
+                                <Heading fontSize="20px" textAlign={'center'}>
+                                    {t('process_sequence_6')}
+                                </Heading>
                             </VStack>
                         </Center>
                     </GridItem>

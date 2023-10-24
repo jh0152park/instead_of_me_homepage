@@ -8,9 +8,11 @@ export default function Introduce() {
     return (
         <Box w="100%" h="1000px" position="relative" color="black" bgColor="whitesmoke">
             <Box pl="200px" pt="200px">
-                <Heading>Instead of me,</Heading>
-                <Heading my="20px">{t('aboutus_introduce_1')}</Heading>
-                <Heading>{t('aboutus_introduce_2')}</Heading>
+                <Heading fontSize={'28px'}>Instead of me,</Heading>
+                <Heading my="20px" fontSize={'28px'}>
+                    {t('aboutus_introduce_1')}
+                </Heading>
+                <Heading fontSize={'28px'}>{t('aboutus_introduce_2')}</Heading>
                 <Box w="450px" h="80px" mt="20px">
                     <Image w="100%" h="100%" objectFit="cover" src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png" />
                 </Box>

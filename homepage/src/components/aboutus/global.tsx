@@ -28,10 +28,11 @@ export default function Global() {
                 }}
             >
                 <Image w="250px" h="250px" objectFit="cover" src={image} />
-                <Box position="absolute" bottom="-50px">
+                <Box position="absolute" bottom="-80px">
                     <VStack spacing="0">
-                        <Heading fontSize="20px">Wherever</Heading>
-                        <Heading fontSize="20px">{t('aboutus_global_1')}</Heading>
+                        <Heading fontSize="24px">Wherever</Heading>
+                        <Heading fontSize="24px">{t('aboutus_global_1')}</Heading>
+                        <Heading fontSize="24px">{t('aboutus_global_2')}</Heading>
                     </VStack>
                 </Box>
             </BOX>

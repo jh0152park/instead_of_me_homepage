@@ -87,10 +87,10 @@ export default function Banner() {
                 </VStack>
             </Center>
             <VStack position="absolute" left="200px" bottom="50px" alignItems="flex-start" color="whitesmoke">
-                <Heading fontWeight="extrabold" fontSize="60px">
+                <Heading fontWeight="extrabold" fontSize="50px">
                     {t('aboutus_banner_3')}
                 </Heading>
-                <Heading fontWeight="extrabold" fontSize="60px">
+                <Heading fontWeight="extrabold" fontSize="50px">
                     {t('aboutus_banner_4')}
                 </Heading>
             </VStack>
