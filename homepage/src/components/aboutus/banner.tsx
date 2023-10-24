@@ -1,8 +1,8 @@
-import { Box, Center, Heading, Icon, Image, VStack } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import { MdKeyboardDoubleArrowDown } from 'react-icons/md';
-import styled from 'styled-components';
+import { Box, Center, Heading, Icon, Image, VStack } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import styled from "styled-components";
 
 const BOX = styled(motion.div)`
     width: 40px;
@@ -19,7 +19,7 @@ const ArrowAnimation = {
         y: 30,
         opacity: 0,
         transition: {
-            type: 'spring',
+            type: "spring",
             duration: 3,
             // ease: "linear",
             repeat: Infinity,
@@ -55,43 +55,53 @@ export default function Banner() {
                     <Heading
                         fontWeight="extrabold"
                         fontSize={{
-                            sm: '40px',
-                            md: '80px',
+                            sm: "40px",
+                            md: "80px",
                         }}
                     >
-                        {t('aboutus_banner_1')}
+                        {t("aboutus_banner_1")}
                     </Heading>
                     <Heading
                         fontWeight="extrabold"
                         fontSize={{
-                            sm: '40px',
-                            md: '80px',
+                            sm: "40px",
+                            md: "80px",
                         }}
                     >
-                        {t('aboutus_banner_2')}
+                        {t("aboutus_banner_2")}
                     </Heading>
 
-                    <BOX variants={ArrowAnimation} initial="start" animate="end">
+                    <BOX
+                        variants={ArrowAnimation}
+                        initial="start"
+                        animate="end"
+                    >
                         <Icon
                             w={{
-                                sm: '20px',
-                                md: '40px',
+                                sm: "20px",
+                                md: "40px",
                             }}
                             h={{
-                                sm: '20px',
-                                md: '40px',
+                                sm: "20px",
+                                md: "40px",
                             }}
                             as={MdKeyboardDoubleArrowDown}
                         />
                     </BOX>
                 </VStack>
             </Center>
-            <VStack position="absolute" left="200px" bottom="50px" alignItems="flex-start" color="whitesmoke">
-                <Heading fontWeight="extrabold" fontSize="50px">
-                    {t('aboutus_banner_3')}
+            <VStack
+                position="absolute"
+                left="200px"
+                bottom="50px"
+                alignItems="flex-start"
+                color="whitesmoke"
+            >
+                <Heading fontWeight="extrabold" fontSize="60px">
+                    {t("aboutus_banner_3")}
                 </Heading>
-                <Heading fontWeight="extrabold" fontSize="50px">
-                    {t('aboutus_banner_4')}
+                <Heading fontWeight="extrabold" fontSize="60px">
+                    {t("aboutus_banner_4")}
                 </Heading>
             </VStack>
         </Box>
