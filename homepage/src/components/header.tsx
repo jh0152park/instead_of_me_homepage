@@ -121,12 +121,14 @@ export default function Header() {
                 </Text>
 
                 <Menu isLazy>
-                    <MenuButton>
-                        <Text
-                            fontSize="20px"
-                            fontWeight="bold"
-                            color="rgba(255, 255, 255, 0.9)"
-                        >
+                    <MenuButton
+                        _hover={{
+                            color: "rgba(0, 0, 0, 0.6)",
+                            cursor: "pointer",
+                            transition: "all 0.2s linear",
+                        }}
+                    >
+                        <Text fontSize="20px" fontWeight="bold">
                             Language
                         </Text>
                     </MenuButton>
