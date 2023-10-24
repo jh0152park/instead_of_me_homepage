@@ -1,32 +1,20 @@
-import { Box, Center, HStack, Heading, Image, VStack } from "@chakra-ui/react";
+import { Box, Center, HStack, Heading, Image, VStack } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 
 export default function Intro() {
+    const { t } = useTranslation();
     const image =
-        "https://images.unsplash.com/photo-1529119368496-2dfda6ec2804?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+        'https://images.unsplash.com/photo-1529119368496-2dfda6ec2804?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
     return (
-        <Box
-            w="100%"
-            h="1000px"
-            position="relative"
-            color="black"
-            bgColor="whitesmoke"
-        >
+        <Box w="100%" h="1000px" position="relative" color="black" bgColor="whitesmoke">
             <Image w="100%" h="100%" objectFit="cover" src={image} />
 
-            <VStack
-                alignItems={"flex-end"}
-                right="100px"
-                top="300px"
-                position="absolute"
-                color="whitesmoke"
-            >
+            <VStack alignItems={'flex-end'} right="100px" top="300px" position="absolute" color="whitesmoke">
                 <Heading>Instead of me </Heading>
-                <Heading>우리는 선택과 집중을 합니다</Heading>
-                <Heading>양보단 질을, 높은 완성도의 가치를 믿습니다</Heading>
-                <Heading mt="30px">CAPA를 초과하는 Workload로 인해</Heading>
-                <Heading>
-                    작업의 완성도를 떨어뜨리지 않겠다고 약속 드립니다
-                </Heading>
+                <Heading>{t('business_intro_1')}</Heading>
+                <Heading>{t('business_intro_2')}</Heading>
+                <Heading mt="30px">{t('business_intro_3')}</Heading>
+                <Heading>{t('business_intro_4')}</Heading>
             </VStack>
         </Box>
     );

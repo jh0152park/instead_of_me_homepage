@@ -1,3 +1,33 @@
 {
-    "we": "We"
+    "aboutus_banner_1": "We are creating value",
+    "aboutus_banner_2": "that goes beyond outsourcing.",
+    "aboutus_banner_3": "People who are eager for a challenge gather together,",
+    "aboutus_banner_4": "to join new challengers in their beginnings.",
+
+    "aboutus_introduce_1": "We are a group of S/W Engineers from Samsung Electronics who are ranked first in various fields",
+    "aboutus_introduce_2": "such as smart devices, IoT, and semiconductors in the global market.",
+
+    "aboutus_partner_1": "Our goal is to become a business partner that goes beyond simple outsourcing",
+    "aboutus_partner_2": "and starts new challenges together, focusing on experience and communication.",
+
+    "aboutus_global_1": "Based on our Global Co-Work experience, we transcend the client's country and time.",
+
+    "business_intro_1": "We make choices and focus.",
+    "business_intro_2": "We believe in quality over quantity and the value of high perfection.",
+    "business_intro_3": "We promise that we will not degrade work completion",
+    "business_intro_4": "due to workload exceeding CAPA.",
+
+    "business_service_1": "We use efficient frameworks to develop and deliver high-quality applications that run on both iOS and Android.",
+    "business_service_2": "We develop and provide high-quality websites that can be used on both PC and mobile.",
+    "business_service_3": "Automates simple and repetitive tasks that cause human errors. Work efficiency can be greatly increased through web crawling, web automation, and Excel automation, a core work tool.",
+
+    "process_sequence_1": "Production inquiries and quote consultation",
+    "process_sequence_2": "Quotation review and contract progress",
+    "process_sequence_3": "Delivery of client data",
+    "process_sequence_4": "Produce",
+    "process_sequence_5": "Modification and Confirmation",
+    "process_sequence_6": "Complete Production",
+
+    "contact_1": "For collaboration inquiries, please contact us via the business email below or the KakaoTalk Plus Friend channel.",
+    "contact_2": "KakaoTalk Plus Friend Channel:"
 }

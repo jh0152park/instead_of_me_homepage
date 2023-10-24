@@ -1,5 +1,6 @@
-import { Box, Center, Heading, Icon, Image, Text, VStack } from '@chakra-ui/react';
+import { Box, Center, Heading, Icon, Image, VStack } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { MdKeyboardDoubleArrowDown } from 'react-icons/md';
 import styled from 'styled-components';
 
@@ -28,6 +29,8 @@ const ArrowAnimation = {
 };
 
 export default function Banner() {
+    const { t } = useTranslation();
+
     return (
         <Box w="100%" h="1200px" position="relative" bgColor="whitesmoke">
             <Image
@@ -56,7 +59,7 @@ export default function Banner() {
                             md: '80px',
                         }}
                     >
-                        외주, 그 이상의
+                        {t('aboutus_banner_1')}
                     </Heading>
                     <Heading
                         fontWeight="extrabold"
@@ -65,7 +68,7 @@ export default function Banner() {
                             md: '80px',
                         }}
                     >
-                        가치를 만들고 있습니다
+                        {t('aboutus_banner_2')}
                     </Heading>
 
                     <BOX variants={ArrowAnimation} initial="start" animate="end">
@@ -85,10 +88,10 @@ export default function Banner() {
             </Center>
             <VStack position="absolute" left="200px" bottom="50px" alignItems="flex-start" color="whitesmoke">
                 <Heading fontWeight="extrabold" fontSize="60px">
-                    도전을 열망하는 사람들이 모여,
+                    {t('aboutus_banner_3')}
                 </Heading>
                 <Heading fontWeight="extrabold" fontSize="60px">
-                    새로운 도전자분들의 시작을 함께합니다.
+                    {t('aboutus_banner_4')}
                 </Heading>
             </VStack>
         </Box>

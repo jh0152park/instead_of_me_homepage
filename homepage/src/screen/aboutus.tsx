@@ -10,7 +10,6 @@ export default function AboutUs() {
             <Introduce />
             <Partner />
             <Global />
-            <div style={{ width: 150, height: 150 }}></div>
         </>
     );
 }
