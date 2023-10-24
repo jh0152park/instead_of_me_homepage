@@ -8,6 +8,7 @@ interface ILanguage {
     "우리는 경험과 소통을 중심으로 단순 외주를 뛰어넘어": string;
     "새로운 도전을 함께 시작하는 비즈니스 파트너가 되는것이 목표입니다.": string;
     "Global Co-Work경험을 토대로": string;
+    Wherever: string;
     "의뢰인의 국가, 시간을 뛰어넘습니다.": string;
     "우리는 선택과 집중을 합니다.": string;
     "양보단 질을, 높은 완성도의 가치를 믿습니다.": string;
@@ -44,6 +45,7 @@ const LANGUAGE: ILanguage[] = [
             "우리는 경험과 소통을 중심으로 단순 외주를 뛰어넘어",
         "새로운 도전을 함께 시작하는 비즈니스 파트너가 되는것이 목표입니다.":
             "새로운 도전을 함께 시작하는 비즈니스 파트너가 되는것이 목표입니다.",
+        Wherever: "Wherever",
         "Global Co-Work경험을 토대로": "Global Co-Work경험을 토대로",
         "의뢰인의 국가, 시간을 뛰어넘습니다.":
             "의뢰인의 국가, 시간을 뛰어넘습니다.",
@@ -87,6 +89,7 @@ const LANGUAGE: ILanguage[] = [
             "Our goal is to become a business partner that goes beyond simple outsourcing",
         "새로운 도전을 함께 시작하는 비즈니스 파트너가 되는것이 목표입니다.":
             "and starts new challenges together, focusing on experience and communication.",
+        Wherever: "Wherever",
         "Global Co-Work경험을 토대로":
             "Based on our Global Co-Work experience,",
         "의뢰인의 국가, 시간을 뛰어넘습니다.":
