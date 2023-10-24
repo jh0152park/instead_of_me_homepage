@@ -24,6 +24,9 @@ interface ILanguage {
     제작완료: string;
     "협업문의는 아래 비즈니스이메일 또는 카카오톡 플러스친구 채널을 통해 연락주세요.": string;
     "카카오톡 플러스친구 채널:": string;
+    "복사가 완료되었습니다.": string;
+    "복사에 실패하였습니다.": string;
+    "문제가 발생하였습니다.": string;
 }
 
 const LANGUAGE: ILanguage[] = [
@@ -65,6 +68,9 @@ const LANGUAGE: ILanguage[] = [
         "협업문의는 아래 비즈니스이메일 또는 카카오톡 플러스친구 채널을 통해 연락주세요.":
             "협업문의는 아래 비즈니스이메일 또는 카카오톡 플러스친구 채널을 통해 연락주세요.",
         "카카오톡 플러스친구 채널:": "카카오톡 플러스친구 채널:",
+        "복사가 완료되었습니다.": "복사가 완료되었습니다.",
+        "복사에 실패하였습니다.": "복사에 실패하였습니다.",
+        "문제가 발생하였습니다.": "문제가 발생했습니다. 다시 시도해 주세요.",
     },
     {
         "외주, 그 이상의": "We are creating value",
@@ -107,6 +113,9 @@ const LANGUAGE: ILanguage[] = [
         "협업문의는 아래 비즈니스이메일 또는 카카오톡 플러스친구 채널을 통해 연락주세요.":
             "For collaboration inquiries, please contact us via the business email below or the KakaoTalk Plus Friend channel.",
         "카카오톡 플러스친구 채널:": "KakaoTalk Plus Friend Channel:",
+        "복사가 완료되었습니다.": "Copy done.",
+        "복사에 실패하였습니다.": "Copy failed.",
+        "문제가 발생하였습니다.": "Something went to wrong… please try again",
     },
 ];
 
