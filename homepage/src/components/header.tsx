@@ -11,7 +11,8 @@ import { go_to_id, refresh } from "../util/utils";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
 import LanguageItem from "./language/languageItem";
-import { useTranslation } from "react-i18next";
+import { useSetRecoilState } from "recoil";
+import { languageCode, languageState } from "../recoil/atom";
 
 export default function Header() {
     const logo =
@@ -21,10 +22,10 @@ export default function Header() {
     const [opacity, setOpacity] = useState<boolean>(false);
     const [currentY, setCurrentY] = useState<number>(0);
 
-    const { i18n } = useTranslation();
+    const setCurrentLanguage = useSetRecoilState(languageState);
 
-    function changeLanguage(language: string) {
-        i18n.changeLanguage(language);
+    function changeLanguage(language: languageCode) {
+        setCurrentLanguage(language);
     }
 
     useMotionValueEvent(scrollY, "change", (latest) => {
@@ -132,11 +133,11 @@ export default function Header() {
                     <MenuList backgroundColor={"white"}>
                         <LanguageItem
                             language="English"
-                            onClick={() => changeLanguage("en-US")}
+                            onClick={() => changeLanguage(languageCode.ENG)}
                         />
                         <LanguageItem
                             language="한국어"
-                            onClick={() => changeLanguage("ko-KR")}
+                            onClick={() => changeLanguage(languageCode.KOR)}
                         />
                     </MenuList>
                 </Menu>

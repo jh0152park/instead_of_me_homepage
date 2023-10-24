@@ -1,8 +1,10 @@
 import { Box, Center, Heading, Image } from "@chakra-ui/react";
-import { useTranslation } from "react-i18next";
+import { useRecoilValue } from "recoil";
+import { languageState } from "../../recoil/atom";
+import language from "../../language";
 
 export default function Introduce() {
-    const { t } = useTranslation();
+    const currentLanguage = useRecoilValue(languageState);
     const hand_image =
         "https://github.com/jh0152park/instead_of_me_homepage/blob/main/images/icons/three_hands.png?raw=true";
 
@@ -16,8 +18,20 @@ export default function Introduce() {
         >
             <Box pl="200px" pt="200px">
                 <Heading>Instead of me,</Heading>
-                <Heading my="20px">{t("aboutus_introduce_1")}</Heading>
-                <Heading>{t("aboutus_introduce_2")}</Heading>
+                <Heading my="20px">
+                    {
+                        language[currentLanguage][
+                            "우리는 글로벌 마켓에서 Smart Device, IoT, 반도체등"
+                        ]
+                    }
+                </Heading>
+                <Heading>
+                    {
+                        language[currentLanguage][
+                            "다양한 분야에서 1위를 달리는 삼성전자 출신 S/W Engineer 그룹입니다."
+                        ]
+                    }
+                </Heading>
                 <Box w="450px" h="80px" mt="20px">
                     <Image
                         w="100%"

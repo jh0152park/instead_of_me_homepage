@@ -4,7 +4,6 @@ import { RecoilRoot } from "recoil";
 import reset from "styled-reset";
 import App from "./App";
 import ReactDOM from "react-dom/client";
-import "./i18n/index";
 
 const GlobalStyle = createGlobalStyle`
   ${reset};

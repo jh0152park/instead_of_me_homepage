@@ -1,8 +1,10 @@
 import { Center, HStack, Heading, Text, VStack } from "@chakra-ui/react";
-import { useTranslation } from "react-i18next";
+import { languageState } from "../../recoil/atom";
+import { useRecoilValue } from "recoil";
+import language from "../../language";
 
 export default function Contact() {
-    const { t } = useTranslation();
+    const currentLanguage = useRecoilValue(languageState);
 
     function onClickKakaoPlusChannel() {
         window.open("http://pf.kakao.com/_aSGjG", "Instead of me", "popup=yes");
@@ -20,7 +22,11 @@ export default function Contact() {
                 </Heading>
 
                 <Text mt="100px" fontWeight="bold" fontSize="20px">
-                    {t("contact_1")}
+                    {
+                        language[currentLanguage][
+                            "협업문의는 아래 비즈니스이메일 또는 카카오톡 플러스친구 채널을 통해 연락주세요."
+                        ]
+                    }
                 </Text>
 
                 <VStack mt="50px">
@@ -32,7 +38,11 @@ export default function Contact() {
                     </HStack>
                     <HStack>
                         <Text fontWeight="bold" color="green.400">
-                            {t("contact_2")}
+                            {
+                                language[currentLanguage][
+                                    "카카오톡 플러스친구 채널:"
+                                ]
+                            }
                         </Text>
                         <Text
                             onClick={onClickKakaoPlusChannel}
