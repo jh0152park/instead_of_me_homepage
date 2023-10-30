@@ -13,12 +13,14 @@ import { languageState } from "../../global/project_common";
 import { useRecoilValue } from "recoil";
 import LANGUAGE from "../../global/language";
 import { MdContentCopy } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
     const qrImage =
         "https://github.com/jh0152park/instead_of_me_homepage/blob/yuhyeon/images/QR/qrcode.png?raw=true";
     const currentLanguage = useRecoilValue(languageState);
     const toast = useToast();
+    const navigate = useNavigate();
 
     function onClickKakaoPlusChannel() {
         window.open("http://pf.kakao.com/_aSGjG", "Instead of me", "popup=yes");
@@ -41,6 +43,10 @@ export default function Contact() {
                     LANGUAGE[currentLanguage]["문제가 발생하였습니다."],
             });
         }
+    }
+
+    function onClickContact() {
+        navigate("/contact");
     }
 
     return (
@@ -111,7 +117,7 @@ export default function Contact() {
                         mt={15}
                         borderRadius={"20px"}
                         cursor={"pointer"}
-                        onClick={() => {}}
+                        onClick={onClickContact}
                     >
                         <Text
                             color={"whitesmoke"}
