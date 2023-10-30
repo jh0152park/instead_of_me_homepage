@@ -103,6 +103,25 @@ export default function Contact() {
                     >
                         <Image src={qrImage} objectFit="cover" />
                     </Box>
+
+                    <Box
+                        px={"30px"}
+                        py={"10px"}
+                        backgroundColor={"green.400"}
+                        mt={15}
+                        borderRadius={"20px"}
+                        cursor={"pointer"}
+                        onClick={() => {}}
+                    >
+                        <Text
+                            color={"whitesmoke"}
+                            fontSize={16}
+                            fontWeight={"bold"}
+                            textAlign={"center"}
+                        >
+                            {LANGUAGE[currentLanguage].문의하기}
+                        </Text>
+                    </Box>
                 </VStack>
             </VStack>
         </Center>

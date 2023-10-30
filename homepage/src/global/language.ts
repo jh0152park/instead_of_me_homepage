@@ -28,6 +28,7 @@ interface ILanguage {
     "복사가 완료되었습니다.": string;
     "복사에 실패하였습니다.": string;
     "문제가 발생하였습니다.": string;
+    문의하기: string;
 }
 
 const LANGUAGE: ILanguage[] = [
@@ -73,6 +74,7 @@ const LANGUAGE: ILanguage[] = [
         "복사가 완료되었습니다.": "복사가 완료되었습니다.",
         "복사에 실패하였습니다.": "복사에 실패하였습니다.",
         "문제가 발생하였습니다.": "문제가 발생했습니다. 다시 시도해 주세요.",
+        문의하기: "문의하기",
     },
     {
         "외주, 그 이상의": "We are creating value",
@@ -119,6 +121,7 @@ const LANGUAGE: ILanguage[] = [
         "복사가 완료되었습니다.": "Copy done.",
         "복사에 실패하였습니다.": "Copy failed.",
         "문제가 발생하였습니다.": "Something went to wrong… please try again",
+        문의하기: "Contact",
     },
 ];
 
