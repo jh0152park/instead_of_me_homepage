@@ -4,23 +4,15 @@ interface ITextForm {
     select?: boolean;
     title: string;
     engTitle: string;
-    value?: string;
-    setValue?: React.Dispatch<React.SetStateAction<string>>;
+    name: string;
 }
 
 export default function TextForm({
     select = false,
     title,
     engTitle,
-    value,
-    setValue,
+    name,
 }: ITextForm) {
-    function handleChangeForm(
-        e: React.ChangeEvent<HTMLSelectElement | HTMLTextAreaElement>
-    ) {
-        setValue?.(e.target.value);
-    }
-
     return (
         <HStack
             alignSelf={"center"}
@@ -47,16 +39,12 @@ export default function TextForm({
             </VStack>
 
             {select ? (
-                <Select
-                    maxWidth={"60%"}
-                    onChange={handleChangeForm}
-                    value={value}
-                >
-                    <option value={"individual"}>네(Yes)</option>
-                    <option value={"company"}>아니오(No)</option>
+                <Select maxWidth={"60%"} name={name}>
+                    <option value={"개인(individual)"}>네(Yes)</option>
+                    <option value={"회사(company)"}>아니오(No)</option>
                 </Select>
             ) : (
-                <Textarea maxWidth={"60%"} onChange={handleChangeForm} />
+                <Textarea maxWidth={"60%"} name={name} />
             )}
         </HStack>
     );
