@@ -7,7 +7,7 @@ export default function AboutUs() {
     return (
         <div id="top">
             <Banner />
-            {/* <Introduce /> */}
+            <Introduce />
             {/* <Partner /> */}
             {/* <Global /> */}
         </div>
