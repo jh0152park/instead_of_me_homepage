@@ -13,10 +13,10 @@ export default function Home() {
             </Helmet>
             <Box id="buffer" w="100dvw" h="70px"></Box>
 
-            {/* <AboutUs />
-            <Business />
-            <Process />
-            <ContactUS /> */}
+            <AboutUs />
+            {/* <Business /> */}
+            {/* <Process /> */}
+            {/* <ContactUS /> */}
         </>
     );
 }

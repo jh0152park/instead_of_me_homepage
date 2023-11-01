@@ -7,9 +7,9 @@ export default function AboutUs() {
     return (
         <div id="top">
             <Banner />
-            <Introduce />
-            <Partner />
-            <Global />
+            {/* <Introduce /> */}
+            {/* <Partner /> */}
+            {/* <Global /> */}
         </div>
     );
 }

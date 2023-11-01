@@ -52,12 +52,14 @@ export default function Header() {
         >
             <Box
                 minW={{
-                    base: "120px",
-                    md: "150px",
+                    base: "100px",
+                    md: "120px",
+                    lg: "150px",
                 }}
                 maxW={{
-                    base: "120px",
-                    md: "150px",
+                    base: "100px",
+                    md: "120px",
+                    lg: "150px",
                 }}
                 mt="15px"
                 _hover={{ cursor: "pointer" }}
