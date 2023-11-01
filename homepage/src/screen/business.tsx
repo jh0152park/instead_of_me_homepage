@@ -12,8 +12,8 @@ export default function Business() {
                     style={{ height: 70, backgroundColor: "whitesmoke" }}
                 ></div>
                 <Intro />
-                <TechStack />
-                <Service />
+                {/* <TechStack /> */}
+                {/* <Service /> */}
             </div>
         </>
     );
