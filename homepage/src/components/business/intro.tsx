@@ -12,9 +12,9 @@ export default function Intro() {
         <Box
             w="100dvw"
             h={{
-                base: "150dvw",
-                md: "130dvw",
-                lg: "100dvh",
+                base: "500px",
+                md: "800px",
+                lg: "1000px",
             }}
             position="relative"
             color="black"

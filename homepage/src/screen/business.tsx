@@ -13,7 +13,7 @@ export default function Business() {
                 ></div>
                 <Intro />
                 <TechStack />
-                {/* <Service /> */}
+                <Service />
             </div>
         </>
     );

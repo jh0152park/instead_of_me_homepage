@@ -1,17 +1,11 @@
-import {
-    Center,
-    Heading,
-    Image,
-    VStack,
-    useFocusOnShow,
-} from "@chakra-ui/react";
+import { Center, Heading, Image, VStack } from "@chakra-ui/react";
 import {
     motion,
     useAnimation,
     useMotionValueEvent,
     useScroll,
 } from "framer-motion";
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import styled from "styled-components";
 
 const GRID = styled(motion.div)`
@@ -123,7 +117,7 @@ export default function TechStack() {
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         const triggerPosition =
-            deviceType === "base" ? 1500 : deviceType === "md" ? 3000 : 4500;
+            deviceType === "base" ? 2500 : deviceType === "md" ? 4000 : 5000;
         if (latest > triggerPosition) {
             trigger.start("end");
         }
@@ -133,9 +127,9 @@ export default function TechStack() {
         <Center
             w="100dvw"
             h={{
-                base: "130dvw",
-                md: "130dvw",
-                lg: "100dvh",
+                base: "500px",
+                md: "800px",
+                lg: "1000px",
             }}
             color="black"
             bgColor="whitesmoke"

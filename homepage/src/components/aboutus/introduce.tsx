@@ -12,9 +12,9 @@ export default function Introduce() {
         <Box
             w="100dvw"
             h={{
-                base: "130dvw",
-                md: "100dvw",
-                lg: "100dvh",
+                base: "500px",
+                md: "800px",
+                lg: "1000px",
             }}
             position="relative"
             color="black"
@@ -104,7 +104,7 @@ export default function Introduce() {
                         md: "450px",
                         lg: "500px",
                     }}
-                    objectFit="cover"
+                    objectFit="fill"
                     src={hand_image}
                 />
             </Center>
