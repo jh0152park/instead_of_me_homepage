@@ -37,7 +37,7 @@ export default function Banner() {
         <Box
             w="100dvw"
             h={{
-                base: "150dvw",
+                base: "130dvw",
                 md: "100dvw",
                 lg: "100dvh",
             }}
