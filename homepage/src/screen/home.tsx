@@ -11,12 +11,12 @@ export default function Home() {
             <Helmet>
                 <title>Home / Instead of me</title>
             </Helmet>
-            <Box id="buffer" w="100%" h="70px"></Box>
+            <Box id="buffer" w="100dvw" h="70px"></Box>
 
-            <AboutUs />
+            {/* <AboutUs />
             <Business />
             <Process />
-            <ContactUS />
+            <ContactUS /> */}
         </>
     );
 }
