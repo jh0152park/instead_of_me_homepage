@@ -48,24 +48,43 @@ export default function ContactForm() {
     }
 
     return (
-        <Center width={"100%"} height={"1000px"} p={"20px"}>
-            <VStack alignItems={"flex-start"} spacing={5} minWidth={"100%"}>
-                <Box
-                    minW="150px"
-                    maxW="150px"
-                    _hover={{ cursor: "pointer" }}
-                    alignSelf={"center"}
+        <Center w="100dvw">
+            <VStack spacing={5} minWidth={"100%"}>
+                <Image
+                    w={{
+                        base: "100px",
+                        md: "150px",
+                        lg: "200px",
+                    }}
+                    mt={"10px"}
+                    src={logo}
+                    objectFit="cover"
+                    cursor={"pointer"}
                     onClick={onClickLogo}
-                >
-                    <Image src={logo} objectFit="cover" />
-                </Box>
+                />
 
-                <VStack m={"20px"} alignSelf={"center"}>
-                    <Text color={"black"} fontWeight={"bold"} fontSize={"30px"}>
+                <VStack alignSelf={"center"}>
+                    <Text
+                        color={"black"}
+                        fontWeight={"bold"}
+                        fontSize={{
+                            base: "18px",
+                            md: "24px",
+                            lg: "30px",
+                        }}
+                    >
                         문의하기
                     </Text>
 
-                    <Text color={"black"} fontWeight={"bold"} fontSize={"30px"}>
+                    <Text
+                        color={"black"}
+                        fontWeight={"bold"}
+                        fontSize={{
+                            base: "18px",
+                            md: "24px",
+                            lg: "30px",
+                        }}
+                    >
                         Contact
                     </Text>
                 </VStack>
@@ -113,18 +132,34 @@ export default function ContactForm() {
                     />
                 </form>
                 <Box
-                    px={"30px"}
-                    py={"10px"}
+                    px={{
+                        base: "20px",
+                        md: "25px",
+                        lg: "30px",
+                    }}
+                    py={{
+                        base: "5px",
+                        md: "7px",
+                        lg: "10px",
+                    }}
                     backgroundColor={"green.400"}
                     mt={15}
-                    borderRadius={"20px"}
+                    borderRadius={{
+                        base: "15px",
+                        md: "18px",
+                        lg: "20px",
+                    }}
                     cursor={"pointer"}
                     onClick={onSubmit}
                     alignSelf={"center"}
                 >
                     <Text
                         color={"whitesmoke"}
-                        fontSize={16}
+                        fontSize={{
+                            base: "12px",
+                            md: "14px",
+                            lg: "16px",
+                        }}
                         fontWeight={"bold"}
                         textAlign={"center"}
                     >
@@ -132,7 +167,11 @@ export default function ContactForm() {
                     </Text>
                     <Text
                         color={"whitesmoke"}
-                        fontSize={16}
+                        fontSize={{
+                            base: "12px",
+                            md: "14px",
+                            lg: "16px",
+                        }}
                         fontWeight={"bold"}
                         textAlign={"center"}
                     >

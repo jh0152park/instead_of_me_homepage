@@ -16,35 +16,60 @@ export default function TextForm({
     return (
         <HStack
             alignSelf={"center"}
-            minWidth={"70%"}
+            minWidth={{
+                base: "100%",
+                md: "85%",
+                lg: "70%",
+            }}
             justifyContent={"space-between"}
+            px={"10px"}
         >
             <VStack alignItems={"flex-start"}>
                 <Text
                     color={"black"}
                     fontWeight={"semibold"}
-                    minW={"250px"}
-                    fontSize={"18px"}
+                    fontSize={{
+                        base: "10px",
+                        md: "14px",
+                        lg: "18px",
+                    }}
                 >
                     {title}
                 </Text>
                 <Text
                     color={"black"}
                     fontWeight={"semibold"}
-                    minW={"250px"}
-                    fontSize={"18px"}
+                    fontSize={{
+                        base: "10px",
+                        md: "14px",
+                        lg: "18px",
+                    }}
                 >
                     {engTitle}
                 </Text>
             </VStack>
 
             {select ? (
-                <Select maxWidth={"60%"} name={name}>
+                <Select
+                    maxWidth={{
+                        base: "45%",
+                        md: "50%",
+                        lg: "60%",
+                    }}
+                    name={name}
+                >
                     <option value={"개인(individual)"}>네(Yes)</option>
                     <option value={"회사(company)"}>아니오(No)</option>
                 </Select>
             ) : (
-                <Textarea maxWidth={"60%"} name={name} />
+                <Textarea
+                    maxWidth={{
+                        base: "45%",
+                        md: "50%",
+                        lg: "60%",
+                    }}
+                    name={name}
+                />
             )}
         </HStack>
     );
