@@ -37,9 +37,9 @@ export default function Banner() {
         <Box
             w="100dvw"
             h={{
-                base: "130dvw",
-                md: "100dvw",
-                lg: "100dvh",
+                base: "500px",
+                md: "800px",
+                lg: "1000px",
             }}
             position="relative"
             bgColor="whitesmoke"
@@ -47,7 +47,7 @@ export default function Banner() {
             <Image
                 w="100%"
                 h="100%"
-                objectFit="cover"
+                objectFit="fill"
                 src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2070"
             />
             <Center

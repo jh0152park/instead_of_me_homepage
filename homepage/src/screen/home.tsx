@@ -14,7 +14,7 @@ export default function Home() {
             <Box id="buffer" w="100dvw" h="70px"></Box>
 
             <AboutUs />
-            {/* <Business /> */}
+            <Business />
             {/* <Process /> */}
             {/* <ContactUS /> */}
         </>

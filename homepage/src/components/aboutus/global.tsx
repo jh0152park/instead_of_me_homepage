@@ -6,13 +6,25 @@ import { useRecoilValue } from "recoil";
 import LANGUAGE from "../../global/language";
 
 const BOX = styled(motion.div)`
-    width: 1000px;
-    height: 200px;
-    margin-bottom: 100px;
+    width: 250px;
+    height: 50px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    @media screen and (min-width: 48em) {
+        width: 500px;
+        height: 100px;
+        margin-bottom: 50px;
+    }
+
+    @media screen and (min-width: 62em) {
+        width: 1000px;
+        height: 200px;
+        margin-bottom: 100px;
+    }
 `;
 
 export default function Global() {
@@ -27,9 +39,9 @@ export default function Global() {
         <Center
             w="100dvw"
             h={{
-                base: "110dvw",
-                md: "100dvw",
-                lg: "100dvh",
+                base: "500px",
+                md: "800px",
+                lg: "1000px",
             }}
             position="relative"
             color="black"
@@ -52,22 +64,15 @@ export default function Global() {
                         md: "200px",
                         lg: "250px",
                     }}
-                    objectFit="cover"
+                    objectFit="fill"
                     src={image}
                 />
-                <Box
-                    position="absolute"
-                    bottom={{
-                        base: "30px",
-                        md: "-10px",
-                        lg: "-50px",
-                    }}
-                >
+                <Box position="absolute" bottom="-50px">
                     <VStack spacing="0">
                         <Heading
                             fontSize={{
-                                base: "4px",
-                                md: "8px",
+                                base: "5px",
+                                md: "12px",
                                 lg: "16px",
                             }}
                         >
@@ -75,8 +80,8 @@ export default function Global() {
                         </Heading>
                         <Heading
                             fontSize={{
-                                base: "4px",
-                                md: "8px",
+                                base: "5px",
+                                md: "12px",
                                 lg: "16px",
                             }}
                         >
