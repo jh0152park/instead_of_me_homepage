@@ -1,22 +1,47 @@
-import { Center, Heading, Image, VStack } from "@chakra-ui/react";
+import {
+    Center,
+    Heading,
+    Image,
+    VStack,
+    useFocusOnShow,
+} from "@chakra-ui/react";
 import {
     motion,
     useAnimation,
     useMotionValueEvent,
     useScroll,
 } from "framer-motion";
+import { useEffect, useMemo } from "react";
 import styled from "styled-components";
 
 const GRID = styled(motion.div)`
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 100px;
+    gap: 10px;
+
+    @media screen and (min-width: 48em) {
+        gap: 50px;
+    }
+
+    @media screen and (min-width: 62em) {
+        gap: 100px;
+    }
 `;
 
 const GRID_ITEM = styled(motion.div)`
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
+
+    @media screen and (min-width: 48em) {
+        width: 100px;
+        height: 100px;
+    }
+
+    @media screen and (min-width: 62em) {
+        width: 150px;
+        height: 150px;
+    }
 `;
 
 const boxAnimation = {
@@ -84,17 +109,49 @@ export default function TechStack() {
 
     const { scrollY } = useScroll();
     const trigger = useAnimation();
+    const innerWidth = window.innerWidth;
+
+    const deviceType = useMemo(() => {
+        if (innerWidth < 768) {
+            return "base";
+        } else if (innerWidth < 992) {
+            return "md";
+        } else {
+            return "lg";
+        }
+    }, [innerWidth]);
 
     useMotionValueEvent(scrollY, "change", (latest) => {
-        if (latest > 5000) {
+        const triggerPosition =
+            deviceType === "base" ? 1500 : deviceType === "md" ? 3000 : 4500;
+        if (latest > triggerPosition) {
             trigger.start("end");
         }
     });
 
     return (
-        <Center w="100%" h="1000px" color="black" bgColor="whitesmoke">
+        <Center
+            w="100dvw"
+            h={{
+                base: "130dvw",
+                md: "130dvw",
+                lg: "100dvh",
+            }}
+            color="black"
+            bgColor="whitesmoke"
+        >
             <VStack>
-                <Heading fontSize="50px" mb="100px">
+                <Heading
+                    fontSize={{
+                        base: "24px",
+                        md: "50px",
+                    }}
+                    mb={{
+                        base: "10px",
+                        md: "80px",
+                        lg: "100px",
+                    }}
+                >
                     So, What's your skill?
                 </Heading>
 
