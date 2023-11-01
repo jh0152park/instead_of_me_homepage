@@ -9,7 +9,7 @@ export default function AboutUs() {
             <Banner />
             <Introduce />
             <Partner />
-            {/* <Global /> */}
+            <Global />
         </div>
     );
 }

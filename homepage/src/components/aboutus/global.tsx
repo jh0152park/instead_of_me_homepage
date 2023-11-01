@@ -18,15 +18,19 @@ const BOX = styled(motion.div)`
 export default function Global() {
     const currentLanguage = useRecoilValue(languageState);
     const { scrollYProgress } = useViewportScroll();
-    const scale = useTransform(scrollYProgress, [0, 1], [1, 5]);
+    const scale = useTransform(scrollYProgress, [0, 1], [1, 3]);
 
     const image =
         "https://github.com/jh0152park/instead_of_me_homepage/blob/main/images/icons/earth2.png?raw=true";
 
     return (
         <Center
-            w="100%"
-            h="1000px"
+            w="100dvw"
+            h={{
+                base: "110dvw",
+                md: "100dvw",
+                lg: "100dvh",
+            }}
             position="relative"
             color="black"
             bgColor="whitesmoke"
@@ -37,13 +41,45 @@ export default function Global() {
                     scale: scale,
                 }}
             >
-                <Image w="250px" h="250px" objectFit="cover" src={image} />
-                <Box position="absolute" bottom="-50px">
+                <Image
+                    w={{
+                        base: "150px",
+                        md: "200px",
+                        lg: "250px",
+                    }}
+                    h={{
+                        base: "150px",
+                        md: "200px",
+                        lg: "250px",
+                    }}
+                    objectFit="cover"
+                    src={image}
+                />
+                <Box
+                    position="absolute"
+                    bottom={{
+                        base: "30px",
+                        md: "-10px",
+                        lg: "-50px",
+                    }}
+                >
                     <VStack spacing="0">
-                        <Heading fontSize="20px">
+                        <Heading
+                            fontSize={{
+                                base: "4px",
+                                md: "8px",
+                                lg: "16px",
+                            }}
+                        >
                             {LANGUAGE[currentLanguage].Wherever}
                         </Heading>
-                        <Heading fontSize="20px">
+                        <Heading
+                            fontSize={{
+                                base: "4px",
+                                md: "8px",
+                                lg: "16px",
+                            }}
+                        >
                             {
                                 LANGUAGE[currentLanguage][
                                     "Global Co-Work경험을 토대로"
