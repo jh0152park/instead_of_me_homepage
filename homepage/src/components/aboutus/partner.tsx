@@ -10,29 +10,64 @@ export default function Partner() {
 
     return (
         <Center
-            w="100%"
-            h="1000px"
+            w="100dvw"
+            h={{
+                base: "130dvw",
+                md: "100dvw",
+                lg: "100dvh",
+            }}
             position="relative"
             color="black"
             bgColor="whitesmoke"
         >
             <VStack>
-                <Heading>Instead of me,</Heading>
-                <Heading>
+                <Heading
+                    fontSize={{
+                        base: "12px",
+                        md: "24px",
+                        lg: "36px",
+                    }}
+                >
+                    Instead of me,
+                </Heading>
+                <Heading
+                    fontSize={{
+                        base: "12px",
+                        md: "24px",
+                        lg: "36px",
+                    }}
+                >
                     {
                         LANGUAGE[currentLanguage][
                             "우리는 경험과 소통을 중심으로 단순 외주를 뛰어넘어"
                         ]
                     }
                 </Heading>
-                <Heading>
+                <Heading
+                    fontSize={{
+                        base: "12px",
+                        md: "24px",
+                        lg: "36px",
+                    }}
+                >
                     {
                         LANGUAGE[currentLanguage][
                             "새로운 도전을 함께 시작하는 비즈니스 파트너가 되는것이 목표입니다."
                         ]
                     }
                 </Heading>
-                <Box w="600px" h="400px">
+                <Box
+                    w={{
+                        base: "300px",
+                        md: "500px",
+                        lg: "600px",
+                    }}
+                    h={{
+                        base: "200px",
+                        md: "300px",
+                        lg: "400px",
+                    }}
+                >
                     <Image w="100%" h="100%" objectFit="cover" src={image} />
                 </Box>
             </VStack>

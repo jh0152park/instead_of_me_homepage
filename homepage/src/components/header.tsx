@@ -36,22 +36,31 @@ export default function Header() {
 
     return (
         <HStack
-            w="100%"
+            w="100dvw"
             h="70px"
             zIndex="99"
             bgColor={opacity ? "rgba(56, 161, 105, 0.9)" : "rgb(56, 161, 105)"}
             position="fixed"
             top="0"
-            px="100px"
-            justifyContent={{
-                sm: "center",
-                md: "space-between",
+            px={{
+                base: "10px",
+                md: "30px",
+                xl: "100px",
             }}
+            justifyContent={"space-between"}
             transition="0.5s linear"
         >
             <Box
-                minW="150px"
-                maxW="150px"
+                minW={{
+                    base: "100px",
+                    md: "120px",
+                    lg: "150px",
+                }}
+                maxW={{
+                    base: "100px",
+                    md: "120px",
+                    lg: "150px",
+                }}
                 mt="15px"
                 _hover={{ cursor: "pointer" }}
                 onClick={() => {
@@ -62,64 +71,70 @@ export default function Header() {
                 <Image src={logo} objectFit="cover" />
             </Box>
             <HStack
-                fontSize="20px"
+                fontSize={{
+                    base: "14px",
+                    lg: "20px",
+                }}
                 fontWeight="bold"
                 color="rgba(255, 255, 255, 0.9)"
                 spacing="5"
-                display={{
-                    sm: "none",
-                    md: "inherit",
-                }}
             >
-                <Text
-                    _hover={{
-                        color: "rgba(0, 0, 0, 0.6)",
-                        cursor: "pointer",
-                        transition: "all 0.2s linear",
-                    }}
-                    onClick={() => {
-                        go_to_id("top");
+                <HStack
+                    spacing={"5"}
+                    display={{
+                        base: "none",
+                        md: "inherit",
                     }}
                 >
-                    About us
-                </Text>
-                <Text
-                    _hover={{
-                        color: "rgba(0, 0, 0, 0.6)",
-                        cursor: "pointer",
-                        transition: "all 0.2s linear",
-                    }}
-                    onClick={() => {
-                        go_to_id("business");
-                    }}
-                >
-                    Business
-                </Text>
-                <Text
-                    _hover={{
-                        color: "rgba(0, 0, 0, 0.6)",
-                        cursor: "pointer",
-                        transition: "all 0.2s linear",
-                    }}
-                    onClick={() => {
-                        go_to_id("process");
-                    }}
-                >
-                    Process of production
-                </Text>
-                <Text
-                    _hover={{
-                        color: "rgba(0, 0, 0, 0.6)",
-                        cursor: "pointer",
-                        transition: "all 0.2s linear",
-                    }}
-                    onClick={() => {
-                        go_to_id("contact");
-                    }}
-                >
-                    Contact us
-                </Text>
-
+                    <Text
+                        _hover={{
+                            color: "rgba(0, 0, 0, 0.6)",
+                            cursor: "pointer",
+                            transition: "all 0.2s linear",
+                        }}
+                        onClick={() => {
+                            go_to_id("top");
+                        }}
+                    >
+                        About us
+                    </Text>
+                    <Text
+                        _hover={{
+                            color: "rgba(0, 0, 0, 0.6)",
+                            cursor: "pointer",
+                            transition: "all 0.2s linear",
+                        }}
+                        onClick={() => {
+                            go_to_id("business");
+                        }}
+                    >
+                        Business
+                    </Text>
+                    <Text
+                        _hover={{
+                            color: "rgba(0, 0, 0, 0.6)",
+                            cursor: "pointer",
+                            transition: "all 0.2s linear",
+                        }}
+                        onClick={() => {
+                            go_to_id("process");
+                        }}
+                    >
+                        Process of production
+                    </Text>
+                    <Text
+                        _hover={{
+                            color: "rgba(0, 0, 0, 0.6)",
+                            cursor: "pointer",
+                            transition: "all 0.2s linear",
+                        }}
+                        onClick={() => {
+                            go_to_id("contact");
+                        }}
+                    >
+                        Contact us
+                    </Text>
+                </HStack>
                 <Menu isLazy>
                     <MenuButton
                         _hover={{
@@ -128,9 +143,7 @@ export default function Header() {
                             transition: "all 0.2s linear",
                         }}
                     >
-                        <Text fontSize="20px" fontWeight="bold">
-                            Language
-                        </Text>
+                        <Text fontWeight="bold">Language</Text>
                     </MenuButton>
                     <MenuList backgroundColor={"white"}>
                         <LanguageItem

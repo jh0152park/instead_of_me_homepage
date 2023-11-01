@@ -10,29 +10,72 @@ export default function Introduce() {
 
     return (
         <Box
-            w="100%"
-            h="1000px"
+            w="100dvw"
+            h={{
+                base: "130dvw",
+                md: "100dvw",
+                lg: "100dvh",
+            }}
             position="relative"
             color="black"
             bgColor="whitesmoke"
         >
-            <Box pl="200px" pt="200px">
-                <Heading>Instead of me,</Heading>
-                <Heading my="20px">
+            <Box
+                pl={{
+                    base: "20px",
+                    md: "50px",
+                    lg: "200px",
+                }}
+                pt={{
+                    base: "20px",
+                    md: "50px",
+                    lg: "200px",
+                }}
+            >
+                <Heading
+                    fontSize={{
+                        base: "12px",
+                        md: "24px",
+                        lg: "36px",
+                    }}
+                >
+                    Instead of me,
+                </Heading>
+                <Heading
+                    fontSize={{
+                        base: "12px",
+                        md: "24px",
+                        lg: "36px",
+                    }}
+                    my="20px"
+                >
                     {
                         LANGUAGE[currentLanguage][
                             "우리는 글로벌 마켓에서 Smart Device, IoT, 반도체등"
                         ]
                     }
                 </Heading>
-                <Heading>
+                <Heading
+                    fontSize={{
+                        base: "12px",
+                        md: "24px",
+                        lg: "36px",
+                    }}
+                >
                     {
                         LANGUAGE[currentLanguage][
                             "다양한 분야에서 1위를 달리는 삼성전자 출신 S/W Engineer 그룹입니다."
                         ]
                     }
                 </Heading>
-                <Box w="450px" h="80px" mt="20px">
+                <Box
+                    w={{
+                        base: "300px",
+                        md: "450px",
+                    }}
+                    h="80px"
+                    mt="20px"
+                >
                     <Image
                         w="100%"
                         h="100%"
@@ -41,8 +84,29 @@ export default function Introduce() {
                     />
                 </Box>
             </Box>
-            <Center w="100%" h="500px" mt="30px">
-                <Image w="500px" h="500px" objectFit="cover" src={hand_image} />
+            <Center
+                w="100%"
+                h={{
+                    base: "350px",
+                    md: "450px",
+                    lg: "500px",
+                }}
+                mt="30px"
+            >
+                <Image
+                    w={{
+                        base: "350px",
+                        md: "450px",
+                        lg: "500px",
+                    }}
+                    h={{
+                        base: "350px",
+                        md: "450px",
+                        lg: "500px",
+                    }}
+                    objectFit="cover"
+                    src={hand_image}
+                />
             </Center>
         </Box>
     );

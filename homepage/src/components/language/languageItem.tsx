@@ -8,7 +8,7 @@ interface ILanguageItem {
 export default function languageItem({ language, onClick }: ILanguageItem) {
     return (
         <MenuItem minH="48px" onClick={onClick}>
-            <Text fontSize="20px" fontWeight="bold" color="black">
+            <Text fontWeight="bold" color="black">
                 {language}
             </Text>
         </MenuItem>
