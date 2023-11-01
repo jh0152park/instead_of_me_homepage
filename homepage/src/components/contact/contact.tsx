@@ -50,17 +50,48 @@ export default function Contact() {
     }
 
     return (
-        <Center w="100%" h="1000px" color="black" bgColor="whitesmoke">
-            <VStack mt="-200px">
+        <Center
+            w="100dvw"
+            h={{
+                base: "500px",
+                md: "800px",
+                lg: "1000px",
+            }}
+            color="black"
+            bgColor="whitesmoke"
+        >
+            <VStack
+                mt={{
+                    base: "100px",
+                    md: "-100px",
+                    lg: "-200px",
+                }}
+            >
                 <Heading
-                    fontSize="80px"
+                    fontSize={{
+                        base: "30px",
+                        md: "50px",
+                        lg: "80px",
+                    }}
                     fontWeight="extrabold"
                     color="green.400"
                 >
                     Contact US
                 </Heading>
 
-                <Text mt="100px" fontWeight="bold" fontSize="20px">
+                <Text
+                    mt={{
+                        base: "50px",
+                        md: "80px",
+                        lg: "100px",
+                    }}
+                    fontWeight="bold"
+                    fontSize={{
+                        base: "10px",
+                        md: "16px",
+                        lg: "20px",
+                    }}
+                >
                     {
                         LANGUAGE[currentLanguage][
                             "협업문의는 아래 비즈니스이메일 또는 카카오톡 플러스친구 채널을 통해 연락주세요."
@@ -68,13 +99,37 @@ export default function Contact() {
                     }
                 </Text>
 
-                <VStack mt="50px">
+                <VStack
+                    mt={{
+                        base: "30px",
+                        md: "40px",
+                        lg: "50px",
+                    }}
+                >
                     <HStack>
-                        <Text fontWeight="bold" color="green.400">
+                        <Text
+                            fontSize={{
+                                base: "10px",
+                                md: "18px",
+                            }}
+                            fontWeight="bold"
+                            color="green.400"
+                        >
                             Business Email:
                         </Text>
-                        <Text>insteadofme.yuhyeon@gmail.com</Text>
+                        <Text
+                            fontSize={{
+                                base: "10px",
+                                md: "18px",
+                            }}
+                        >
+                            insteadofme.yuhyeon@gmail.com
+                        </Text>
                         <Icon
+                            fontSize={{
+                                base: "10px",
+                                md: "18px",
+                            }}
                             onClick={onClickCopy}
                             as={MdContentCopy}
                             color={"green.400"}
@@ -84,7 +139,14 @@ export default function Contact() {
                         />
                     </HStack>
                     <HStack>
-                        <Text fontWeight="bold" color="green.400">
+                        <Text
+                            fontSize={{
+                                base: "10px",
+                                md: "18px",
+                            }}
+                            fontWeight="bold"
+                            color="green.400"
+                        >
                             {
                                 LANGUAGE[currentLanguage][
                                     "카카오톡 플러스친구 채널:"
@@ -92,6 +154,10 @@ export default function Contact() {
                             }
                         </Text>
                         <Text
+                            fontSize={{
+                                base: "10px",
+                                md: "18px",
+                            }}
                             onClick={onClickKakaoPlusChannel}
                             cursor={"pointer"}
                             _hover={{
@@ -111,17 +177,28 @@ export default function Contact() {
                     </Box>
 
                     <Box
-                        px={"30px"}
-                        py={"10px"}
+                        px={{
+                            base: "20px",
+                            md: "25px",
+                            lg: "30px",
+                        }}
+                        py={{
+                            base: "5px",
+                            md: "7px",
+                            lg: "10px",
+                        }}
                         backgroundColor={"green.400"}
-                        mt={15}
+                        my={15}
                         borderRadius={"20px"}
                         cursor={"pointer"}
                         onClick={onClickContact}
                     >
                         <Text
                             color={"whitesmoke"}
-                            fontSize={16}
+                            fontSize={{
+                                base: "10px",
+                                md: "18px",
+                            }}
                             fontWeight={"bold"}
                             textAlign={"center"}
                         >

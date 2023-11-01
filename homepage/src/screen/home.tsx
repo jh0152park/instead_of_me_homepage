@@ -16,7 +16,7 @@ export default function Home() {
             <AboutUs />
             <Business />
             <Process />
-            {/* <ContactUS /> */}
+            <ContactUS />
         </>
     );
 }
