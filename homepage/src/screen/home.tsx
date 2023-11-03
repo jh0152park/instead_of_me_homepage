@@ -5,6 +5,7 @@ import Business from "./business";
 import Process from "./process";
 import ContactUS from "./contactus";
 
+// test: Im 신뢰에요~
 export default function Home() {
     return (
         <>
