@@ -9,10 +9,29 @@ import { useEffect } from "react";
 
 const router = createBrowserRouter([
 	{
-		path:
-			"/" ||
-			"https://jh0152park.github.io/instead_of_me_homepage/" ||
-			"https://jh0152park.github.io/",
+		path: "/",
+		element: <Layout />,
+		errorElement: <NotFound />,
+		children: [
+			{
+				path: "",
+				element: <Home />,
+			},
+		],
+	},
+	{
+		path: "https://jh0152park.github.io/",
+		element: <Layout />,
+		errorElement: <NotFound />,
+		children: [
+			{
+				path: "",
+				element: <Home />,
+			},
+		],
+	},
+	{
+		path: "https://jh0152park.github.io/instead_of_me_homepage/",
 		element: <Layout />,
 		errorElement: <NotFound />,
 		children: [
