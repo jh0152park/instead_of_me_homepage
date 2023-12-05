@@ -20,15 +20,17 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const root = ReactDOM.createRoot(
-    document.getElementById("root") as HTMLElement
+	document.getElementById("root") as HTMLElement
 );
 root.render(
-    <>
-        <GlobalStyle />
-        <ChakraProvider>
-            <RecoilRoot>
-                <App />
-            </RecoilRoot>
-        </ChakraProvider>
-    </>
+	<>
+		<GlobalStyle />
+		<RecoilRoot>
+			<ChakraProvider>
+				<RecoilRoot>
+					<App />
+				</RecoilRoot>
+			</ChakraProvider>
+		</RecoilRoot>
+	</>
 );
