@@ -9,6 +9,13 @@ import {
 	HStack,
 	Heading,
 	Image,
+	Popover,
+	PopoverArrow,
+	PopoverBody,
+	PopoverCloseButton,
+	PopoverContent,
+	PopoverHeader,
+	PopoverTrigger,
 	Radio,
 	Select,
 	Text,
@@ -189,15 +196,75 @@ export default function ContactForm() {
 				</Container>
 
 				<Box my="50px">
-					<Checkbox
-						defaultChecked={false}
-						colorScheme="green"
-						borderColor="green"
-						onChange={toggleAllow}
-					>
-						개인정보 제공동의 Consent to provision of personal
-						information
-					</Checkbox>
+					<VStack>
+						<Checkbox
+							defaultChecked={false}
+							colorScheme="green"
+							borderColor="green"
+							onChange={toggleAllow}
+						>
+							개인정보 제공동의 Consent to provision of personal
+							information
+						</Checkbox>
+
+						<Popover>
+							<PopoverTrigger>
+								<Button
+									colorScheme="green"
+									variant="link"
+									fontSize="15px"
+								>
+									자세히보기, See detail
+								</Button>
+							</PopoverTrigger>
+							<PopoverContent>
+								<PopoverArrow />
+								<PopoverCloseButton />
+								<PopoverHeader>
+									<Text>
+										Instead of me는 고객 문의사항 접수 및
+										답변을 위해 아래와 같이 개인정보를 수집,
+										이용합니다.
+									</Text>
+									<Text>
+										Instead of me collects personal
+										information as follows to receive and
+										respond to customer inquiries.
+									</Text>
+								</PopoverHeader>
+								<PopoverBody>
+									<Text>
+										목적: 고객 문의사항 접수 및 답변
+									</Text>
+									<Text>
+										Purpose: Receiving and responding to
+										customer inquiries
+									</Text>
+									<Box my="15px"></Box>
+									<Text>
+										항목: 회사명, 성함, 연락처, 이메일
+									</Text>
+									<Text>
+										Items: Company name, name, contact
+										information, email
+									</Text>
+									<Box my="15px"></Box>
+									<Text>
+										서비스 이용에 필요한 최소한의 수집 및
+										이용에 동의하지 않을 수 있으나, 동의를
+										거부할 경우 서비스 이용에 제한이 있을 수
+										있습니다.
+									</Text>
+									<Text>
+										Minimum collection and You may not agree
+										to the use, but If you refuse, your use
+										of the service may be restricted. there
+										is.
+									</Text>
+								</PopoverBody>
+							</PopoverContent>
+						</Popover>
+					</VStack>
 				</Box>
 
 				<Button
