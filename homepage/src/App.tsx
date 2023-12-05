@@ -11,8 +11,8 @@ const router = createBrowserRouter([
 	{
 		path:
 			"/" ||
-			"https://jh0152park.github.io" ||
-			"https://jh0152park.github.io/instead_of_me_homepage",
+			"https://jh0152park.github.io/instead_of_me_homepage/" ||
+			"https://jh0152park.github.io/",
 		element: <Layout />,
 		errorElement: <NotFound />,
 		children: [
