@@ -58,6 +58,7 @@ export default function TextForm({
 						lg: "60%",
 					}}
 					name={name}
+					id={name}
 				>
 					<option value={"개인(individual)"}>네(Yes)</option>
 					<option value={"회사(company)"}>아니오(No)</option>
@@ -70,6 +71,7 @@ export default function TextForm({
 						lg: "60%",
 					}}
 					name={name}
+					id={name}
 				/>
 			)}
 		</HStack>

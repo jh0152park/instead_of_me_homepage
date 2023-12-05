@@ -1,183 +1,228 @@
-// 개인 or 회사
-// 성함 혹은 회사명
-// 연락가능한 연락처
-// 답장받을이메일
-// 문의내용
-// 버튼
+import {
+	Box,
+	Button,
+	Center,
+	Checkbox,
+	Container,
+	FormControl,
+	FormLabel,
+	HStack,
+	Heading,
+	Image,
+	Radio,
+	Select,
+	Text,
+	Textarea,
+	VStack,
+	useToast,
+} from "@chakra-ui/react";
 
-import { Box, Center, Image, Text, VStack, useToast } from "@chakra-ui/react";
-import TextForm from "../components/contactForm/textForm";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
+import { useForm } from "react-hook-form";
 
 export default function ContactForm() {
 	const logo =
 		"https://raw.githubusercontent.com/jh0152park/instead_of_me_homepage/main/images/logo/blackLogo/boxLogo3.ico?raw=true";
 
-	const formElRef = useRef<HTMLFormElement>(null);
 	const toast = useToast();
 	const navigate = useNavigate();
+	const { register, handleSubmit, watch, reset } = useForm();
+
+	const [sendAllow, setSendAllow] = useState(false);
+	const [sending, setSending] = useState(false);
+
+	function toggleAllow() {
+		setSendAllow((prev) => !prev);
+	}
 
 	function onClickLogo() {
 		navigate("/");
 	}
 
-	async function onSubmit() {
+	async function onSubmit(data: any) {
+		if (!sendAllow) {
+			toast({
+				status: "warning",
+				title: "Can't send email",
+				description:
+					"개인정보 제공동의를 해야합니다. Please agree to provide personal information.",
+			});
+			return;
+		}
+
+		const is_personal = data.is_personal;
+		const name = data.name;
+		const contact = data.contact;
+		const email = data.email;
+		const detail = data.detail;
+
+		const forms = {
+			is_personal,
+			name,
+			contact,
+			email,
+			detail,
+		};
 		try {
-			await emailjs.sendForm(
+			setSending(true);
+
+			await emailjs.send(
 				process.env.REACT_APP_EMAILJS_SERVICE_ID as string,
 				process.env.REACT_APP_EMAILJS_TEMPLATES_ID as string,
-				formElRef.current!,
+				forms,
 				process.env.REACT_APP_EMAILJS_PUBLIC_KEY
 			);
 
 			toast({
 				status: "success",
-				title: "Success",
+				title: "Done",
+				isClosable: true,
+				description:
+					"검토 후 최대한 빠르게 답변 드리겠습니다. We'll reply as soon as possible with reviews.",
 			});
-
-			formElRef.current!.reset();
 		} catch (error) {
 			console.log(error);
 			toast({
 				status: "error",
 				title: "Failed",
+				description:
+					"잠시 후 다시 부탁드립니다. Something went wrong, please try again.",
 			});
+		} finally {
+			setSending(false);
+			reset();
+			navigate("/");
 		}
 	}
 
+	// console.log(watch());
+
 	return (
-		<Center w="100dvw">
-			<VStack spacing={5} minWidth={"100%"}>
-				<Image
-					w={{
-						base: "100px",
-						md: "150px",
-						lg: "200px",
-					}}
-					mt={"10px"}
-					src={logo}
-					objectFit="cover"
-					cursor={"pointer"}
-					onClick={onClickLogo}
-				/>
+		<Center w="100vw">
+			<VStack w="100%" as={"form"} onSubmit={handleSubmit(onSubmit)}>
+				<VStack minWidth="100%" spacing={0}>
+					<Image
+						w="200px"
+						my="50px"
+						src={logo}
+						objectFit="cover"
+						cursor={"pointer"}
+						onClick={onClickLogo}
+					/>
 
-				<VStack alignSelf={"center"}>
-					<Text
-						color={"black"}
-						fontWeight={"bold"}
-						fontSize={{
-							base: "18px",
-							md: "24px",
-							lg: "30px",
-						}}
-					>
-						문의하기
-					</Text>
-
-					<Text
-						color={"black"}
-						fontWeight={"bold"}
-						fontSize={{
-							base: "18px",
-							md: "24px",
-							lg: "30px",
-						}}
-					>
-						Contact
-					</Text>
+					<Heading>문의하기</Heading>
+					<Heading>Contact</Heading>
 				</VStack>
 
-				<form
-					style={{
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "center",
-						justifyContent: "center",
-						gap: 10,
-						width: "100%",
-					}}
-					ref={formElRef}
-				>
-					<TextForm
-						select
-						title="개인이신가요?"
-						engTitle="Are you personal?"
-						name="is_personal"
-					/>
+				<Container>
+					<FormControl mt="100px">
+						<FormLabel fontWeight="bold" fontSize="20px">
+							개인 이십니까?
+						</FormLabel>
+						<FormLabel fontWeight="bold" fontSize="20px" mb="20px">
+							Are you personal?
+						</FormLabel>
+						<Select
+							placeholder="선택해주세요. Select one"
+							{...register("is_personal", { required: true })}
+						>
+							<option value="yes">네, Yes</option>
+							<option value="no">아니오, No</option>
+						</Select>
+					</FormControl>
 
-					<TextForm
-						title="귀하 또는 회사의 이름을 입력해주세요."
-						engTitle="Please enter the name of your or company."
-						name="name"
-					/>
+					<FormControl mt="100px">
+						<FormLabel fontWeight="bold" fontSize="20px">
+							귀하 또는 회사의 이름을 입력해 주세요.
+						</FormLabel>
+						<FormLabel fontWeight="bold" fontSize="20px" mb="20px">
+							Please enter the name of your or company.
+						</FormLabel>
+						<Textarea
+							placeholder="Pleaes enter here"
+							{...register("name", { required: true })}
+						/>
+					</FormControl>
 
-					<TextForm
-						title="연락 가능한 연락처를 입력해주세요."
-						engTitle="Please enter contact information where you can be contacted."
-						name="contact"
-					/>
+					<FormControl mt="100px">
+						<FormLabel fontWeight="bold" fontSize="20px">
+							연락 가능한 연락처를 입력해 주세요.
+						</FormLabel>
+						<FormLabel fontWeight="bold" fontSize="20px" mb="20px">
+							Please enter contact imformation where you can be
+							contacted.
+						</FormLabel>
+						<Textarea
+							placeholder="Pleaes enter here"
+							{...register("contact", { required: true })}
+						/>
+					</FormControl>
 
-					<TextForm
-						title="답장 받을 이메일을 입력해주세요."
-						engTitle="Please enter your email address to receive a reply."
-						name="email"
-					/>
+					<FormControl mt="100px">
+						<FormLabel fontWeight="bold" fontSize="20px">
+							답장 받을 이메일을 입력해 주세요.
+						</FormLabel>
+						<FormLabel fontWeight="bold" fontSize="20px" mb="20px">
+							Please enter your email address to receive a reply.
+						</FormLabel>
+						<Textarea
+							placeholder="Pleaes enter here"
+							{...register("email", { required: true })}
+						/>
+					</FormControl>
 
-					<TextForm
-						title="문의하고싶은 내용을 가능한 자세히 입력해주세요."
-						engTitle="Please enter the information you wish to inquire about as detail as possible."
-						name="detail"
-					/>
-				</form>
-				<Box
-					px={{
-						base: "20px",
-						md: "25px",
-						lg: "30px",
-					}}
-					py={{
-						base: "5px",
-						md: "7px",
-						lg: "10px",
-					}}
-					backgroundColor={"green.400"}
-					my={15}
-					borderRadius={{
-						base: "15px",
-						md: "18px",
-						lg: "20px",
-					}}
-					cursor={"pointer"}
-					onClick={onSubmit}
-					alignSelf={"center"}
-				>
-					<Text
-						color={"whitesmoke"}
-						fontSize={{
-							base: "12px",
-							md: "14px",
-							lg: "16px",
-						}}
-						fontWeight={"bold"}
-						textAlign={"center"}
+					<FormControl mt="100px">
+						<FormLabel fontWeight="bold" fontSize="20px">
+							문의하고싶은 내용을 가능한 자세히 입력해주세요.
+						</FormLabel>
+						<FormLabel fontWeight="bold" fontSize="20px" mb="20px">
+							Please enter the information you wish to inquire
+							about as detail as possible.
+						</FormLabel>
+						<Textarea
+							placeholder="Pleaes enter here"
+							{...register("detail", { required: true })}
+						/>
+					</FormControl>
+				</Container>
+
+				<Box my="50px">
+					<Checkbox
+						defaultChecked={false}
+						colorScheme="green"
+						borderColor="green"
+						onChange={toggleAllow}
 					>
-						제출하기
-					</Text>
-					<Text
-						color={"whitesmoke"}
-						fontSize={{
-							base: "12px",
-							md: "14px",
-							lg: "16px",
-						}}
-						fontWeight={"bold"}
-						textAlign={"center"}
-					>
-						Submit
-					</Text>
+						개인정보 제공동의 Consent to provision of personal
+						information
+					</Checkbox>
 				</Box>
+
+				<Button
+					my="100px"
+					bgColor="green.300"
+					w="150px"
+					h="65px"
+					borderRadius="20px"
+					_hover={{
+						cursor: "pointer",
+						bgColor: "green.400",
+						transition: "all 0.2s linear",
+					}}
+					type="submit"
+					isLoading={sending}
+				>
+					<VStack spacing={0}>
+						<Text fontWeight="bold" fontSize="18px" color="white">
+							제출하기
+						</Text>
+						<Text fontWeight="bold" fontSize="18px" color="white">
+							Submit
+						</Text>
+					</VStack>
+				</Button>
 			</VStack>
 		</Center>
 	);
