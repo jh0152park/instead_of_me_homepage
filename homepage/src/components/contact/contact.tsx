@@ -14,6 +14,7 @@ import { useRecoilValue } from "recoil";
 import LANGUAGE from "../../global/language";
 import { MdContentCopy } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { go_to_top } from "../../util/utils";
 
 export default function Contact() {
 	const qrImage =
@@ -46,6 +47,7 @@ export default function Contact() {
 	}
 
 	function onClickContact() {
+		go_to_top(0);
 		navigate("/contact");
 	}
 
