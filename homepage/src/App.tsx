@@ -9,7 +9,10 @@ import { useEffect } from "react";
 
 const router = createBrowserRouter([
 	{
-		path: "/",
+		path:
+			"/" ||
+			"https://jh0152park.github.io" ||
+			"https://jh0152park.github.io/instead_of_me_homepage",
 		element: <Layout />,
 		errorElement: <NotFound />,
 		children: [

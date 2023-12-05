@@ -20,7 +20,13 @@ export default function ServiceMobile() {
 		"https://github.com/jh0152park/instead_of_me_homepage/blob/main/images/tech-stack_logos/selenium_icon.png?raw=true";
 
 	return (
-		<Center w="100vw" h="500px" color="black" bgColor="whitesmoke">
+		<Center
+			pt="100px"
+			w="100vw"
+			h="600px"
+			color="black"
+			bgColor="whitesmoke"
+		>
 			<VStack>
 				<Heading fontSize="25px" mb="50px" mt="100px">
 					Our Services
