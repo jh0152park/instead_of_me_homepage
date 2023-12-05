@@ -143,7 +143,7 @@ export default function ContactForm() {
 						lg: "10px",
 					}}
 					backgroundColor={"green.400"}
-					mt={15}
+					my={15}
 					borderRadius={{
 						base: "15px",
 						md: "18px",
