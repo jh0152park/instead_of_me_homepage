@@ -76,11 +76,7 @@ export default function Intro() {
                     }}
                     mt="30px"
                 >
-                    {
-                        LANGUAGE[currentLanguage][
-                            "CAPA를 초과하는 Workload로 인해"
-                        ]
-                    }
+                    {LANGUAGE[currentLanguage]["과도한 업무량으로 인하여"]}
                 </Heading>
                 <Heading
                     fontSize={{
