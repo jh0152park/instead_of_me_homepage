@@ -52,7 +52,7 @@ const boxAnimation = {
 			duration: 0.5,
 			bounce: 0.5,
 			delayChildren: 0.5,
-			staggerChildren: 0.3,
+			staggerChildren: 0.2,
 		},
 	},
 };
