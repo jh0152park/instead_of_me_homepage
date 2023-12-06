@@ -7,12 +7,12 @@ interface ILanguage {
     "다양한 분야에서 1위를 달리는 삼성전자 출신 S/W Engineer 그룹입니다.": string;
     "우리는 경험과 소통을 중심으로 단순 외주를 뛰어넘어": string;
     "새로운 도전을 함께 시작하는 비즈니스 파트너가 되는것이 목표입니다.": string;
-    "Global Co-Work경험을 토대로": string;
+    "다양한 국가와의 협업 경험을 토대로": string;
     Wherever: string;
     "의뢰인의 국가, 시간을 뛰어넘습니다.": string;
     "우리는 선택과 집중을 합니다.": string;
     "양보단 질을, 높은 완성도의 가치를 믿습니다.": string;
-    "CAPA를 초과하는 Workload로 인해": string;
+    "과도한 업무량으로 인하여": string;
     "작업의 완성도를 떨어뜨리지 않겠다고 약속 드립니다.": string;
     "효율적인 프레임워크를 사용해 iOS 및 Android에서 모두 동작하는 고품질의 어플리케이션을 개발하고 제공합니다.": string;
     "PC 및 Mobile에서 모두 사용가능한 고품질의 Web사이트를 개발하고 제공합니다.": string;
@@ -47,13 +47,14 @@ const LANGUAGE: ILanguage[] = [
         "새로운 도전을 함께 시작하는 비즈니스 파트너가 되는것이 목표입니다.":
             "새로운 도전을 함께 시작하는 비즈니스 파트너가 되는것이 목표입니다.",
         Wherever: "Wherever",
-        "Global Co-Work경험을 토대로": "Global Co-Work경험을 토대로",
+        "다양한 국가와의 협업 경험을 토대로":
+            "다양한 국가와의 협업 경험을 토대로",
         "의뢰인의 국가, 시간을 뛰어넘습니다.":
             "의뢰인의 국가, 시간을 뛰어넘습니다.",
         "우리는 선택과 집중을 합니다.": "우리는 선택과 집중을 합니다.",
         "양보단 질을, 높은 완성도의 가치를 믿습니다.":
             "양보단 질을, 높은 완성도의 가치를 믿습니다.",
-        "CAPA를 초과하는 Workload로 인해": "CAPA를 초과하는 Workload로 인해",
+        "과도한 업무량으로 인하여": "과도한 업무량으로 인하여",
         "작업의 완성도를 떨어뜨리지 않겠다고 약속 드립니다.":
             "작업의 완성도를 떨어뜨리지 않겠다고 약속 드립니다.",
         "효율적인 프레임워크를 사용해 iOS 및 Android에서 모두 동작하는 고품질의 어플리케이션을 개발하고 제공합니다.":
@@ -92,14 +93,14 @@ const LANGUAGE: ILanguage[] = [
         "새로운 도전을 함께 시작하는 비즈니스 파트너가 되는것이 목표입니다.":
             "and starts new challenges together, focusing on experience and communication.",
         Wherever: "Wherever",
-        "Global Co-Work경험을 토대로":
+        "다양한 국가와의 협업 경험을 토대로":
             "Based on our Global Co-Work experience,",
         "의뢰인의 국가, 시간을 뛰어넘습니다.":
             "we transcend the client's country and time.",
         "우리는 선택과 집중을 합니다.": "We make choices and focus.",
         "양보단 질을, 높은 완성도의 가치를 믿습니다.":
             "We believe in quality over quantity and the value of high perfection.",
-        "CAPA를 초과하는 Workload로 인해":
+        "과도한 업무량으로 인하여":
             "We promise that we will not degrade work completion",
         "작업의 완성도를 떨어뜨리지 않겠다고 약속 드립니다.":
             "due to workload exceeding CAPA.",
