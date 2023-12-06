@@ -1,5 +1,5 @@
 import { Center, Box, VStack, Heading, Image } from "@chakra-ui/react";
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { styled } from "styled-components";
 import { displayResolution, languageState } from "../../global/project_common";
 import { useRecoilValue } from "recoil";
@@ -30,7 +30,7 @@ const BOX = styled(motion.div)`
 export default function Global() {
 	const currentLanguage = useRecoilValue(languageState);
 	const currentMode = useRecoilValue(displayResolution);
-	const { scrollYProgress } = useViewportScroll();
+	const { scrollYProgress } = useScroll();
 	const scale = useTransform(scrollYProgress, [0, 1], [1, 3]);
 
 	const image =
@@ -91,7 +91,7 @@ export default function Global() {
 						>
 							{
 								LANGUAGE[currentLanguage][
-									"Global Co-Work경험을 토대로"
+									"다양한 국가와의 협업 경험을 토대로"
 								]
 							}
 							&nbsp;
