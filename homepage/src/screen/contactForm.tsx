@@ -28,6 +28,8 @@ import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
+import { useRecoilValue } from "recoil";
+import { displayResolution } from "../global/project_common";
 
 export default function ContactForm() {
 	const logo =
@@ -39,6 +41,7 @@ export default function ContactForm() {
 
 	const [sendAllow, setSendAllow] = useState(false);
 	const [sending, setSending] = useState(false);
+	const currentMode = useRecoilValue(displayResolution);
 
 	function toggleAllow() {
 		setSendAllow((prev) => !prev);
@@ -195,7 +198,7 @@ export default function ContactForm() {
 					</FormControl>
 				</Container>
 
-				<Box my="50px">
+				<Box my="50px" pl={currentMode ? "5px" : "none"}>
 					<VStack>
 						<Checkbox
 							defaultChecked={false}
