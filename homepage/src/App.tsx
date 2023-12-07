@@ -7,51 +7,58 @@ import { useSetRecoilState } from "recoil";
 import { displayResolution } from "./global/project_common";
 import { useEffect } from "react";
 
+// ,
+// 	"homepage": "https://jh0152park.github.io/instead_of_me_homepage"
+
 const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <Layout />,
-		errorElement: <NotFound />,
-		children: [
-			{
-				path: "",
-				element: <Home />,
-			},
-		],
-	},
-	{
-		path: "/instead_of_me_homepage",
-		element: <Layout />,
-		errorElement: <NotFound />,
-		children: [
-			{
-				path: "",
-				element: <Home />,
-			},
-		],
-	},
-	{
-		path: "/contact",
-		element: <ContactForm />,
-	},
+    {
+        path: "/",
+        element: <Layout />,
+        errorElement: <NotFound />,
+        children: [
+            {
+                path: "",
+                element: <Home />,
+            },
+            {
+                path: "contact",
+                element: <ContactForm />,
+            },
+        ],
+    },
+    // {
+    // 	path: "/instead_of_me_homepage",
+    // 	element: <Layout />,
+    // 	errorElement: <NotFound />,
+    // 	children: [
+    // 		{
+    // 			path: "",
+    // 			element: <Home />,
+    // 		},
+    // 	],
+    // },
+    // {
+    // 	path: "/contact",
+    // 	element: <ContactForm />,
+    // },
 ]);
 
 function App() {
-	const setDisplayResolution = useSetRecoilState(displayResolution);
+    const setDisplayResolution = useSetRecoilState(displayResolution);
 
-	useEffect(() => {
-		if (window.innerWidth < 500) {
-			setDisplayResolution("mobile");
-		} else {
-			setDisplayResolution("web");
-		}
-	}, []);
+    useEffect(() => {
+        if (window.innerWidth < 500) {
+            setDisplayResolution("mobile");
+        } else {
+            setDisplayResolution("web");
+        }
+    }, []);
 
-	return (
-		<>
-			<RouterProvider router={router} />
-		</>
-	);
+    return (
+        <>
+            <RouterProvider router={router} />
+        </>
+    );
 }
 
 export default App;
