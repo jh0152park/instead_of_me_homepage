@@ -115,7 +115,7 @@ export default function ContactForm() {
             <Helmet>
                 <title>Contact us</title>
             </Helmet>
-            <Center w="100vw">
+            <Center w="100vw" mt="100px">
                 <VStack w="100%" as={"form"} onSubmit={handleSubmit(onSubmit)}>
                     <VStack minWidth="100%" spacing={0}>
                         <Image

@@ -1,27 +1,19 @@
-import {
-    Box,
-    Heading,
-    VStack,
-    Image,
-    useDisclosure,
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalCloseButton,
-    ModalBody,
-    ModalFooter,
-    Button,
-} from "@chakra-ui/react";
+import { Box, Heading, VStack, Image } from "@chakra-ui/react";
 import { languageState } from "../../global/project_common";
 import { useRecoilValue } from "recoil";
 import LANGUAGE from "../../global/language";
+import { useState } from "react";
+import Phone from "./phone";
 
 export default function Instruction() {
     const chractor =
         "https://github.com/jh0152park/instead_of_me_homepage/blob/main/images/emoji/emoji.png?raw=true";
     const currentLanguage = useRecoilValue(languageState);
-    const { isOpen, onOpen, onClose } = useDisclosure();
+    const [clicked, setClicked] = useState<boolean>(false);
+
+    function toggleClicked() {
+        setClicked((prev) => !prev);
+    }
 
     return (
         <>
@@ -39,7 +31,7 @@ export default function Instruction() {
                 _hover={{
                     cursor: "pointer",
                 }}
-                onClick={onOpen}
+                onClick={toggleClicked}
             >
                 <Image
                     w="100%"
@@ -50,27 +42,7 @@ export default function Instruction() {
                 />
             </Box>
 
-            <Modal isOpen={isOpen} onClose={onClose} size="lg" isCentered>
-                <ModalOverlay />
-                <ModalContent>
-                    <ModalHeader>원하시는 옵션을 선택해 주세요</ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody>
-                        <VStack alignItems="flex-start">
-                            <Button variant="link">홈페이지 바로가기</Button>
-                            <Button variant="link">기술스택 바로가기</Button>
-                            <Button variant="link">제작과정 바로가기</Button>
-                            <Button variant="link">견적문의 바로가기</Button>
-                        </VStack>
-                    </ModalBody>
-
-                    <ModalFooter>
-                        <Button colorScheme="blue" mr={3} onClick={onClose}>
-                            Close
-                        </Button>
-                    </ModalFooter>
-                </ModalContent>
-            </Modal>
+            <Phone clicked={clicked} />
         </>
     );
 }
