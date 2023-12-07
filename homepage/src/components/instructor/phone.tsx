@@ -2,6 +2,7 @@ import { Box, Center, HStack, Text, VStack } from "@chakra-ui/react";
 import { SiMinutemailer } from "react-icons/si";
 import Avatar from "./avatar";
 import { useNavigate } from "react-router-dom";
+import Widget from "./widget";
 
 export default function Phone({ clicked }: { clicked: boolean }) {
     const navigate = useNavigate();
@@ -87,6 +88,34 @@ export default function Phone({ clicked }: { clicked: boolean }) {
                     </Box>
                 </VStack>
             </HStack>
+
+            <VStack mt="10px" alignItems="flex-start" ml="65px">
+                <Widget
+                    page={"home"}
+                    size={250}
+                    title={"홈페이지 둘러보기 👀"}
+                />
+                <Widget
+                    page={"business"}
+                    size={200}
+                    title={"기술 스택이 궁금해요 🔧"}
+                />
+                <Widget
+                    page={"contact_us"}
+                    size={180}
+                    title={"문의하고 싶어요 🙋‍♂️"}
+                />
+                <Widget
+                    page={"process"}
+                    size={230}
+                    title={"제작 과정이 궁금해요 🤔"}
+                />
+                <Widget
+                    page={"kakao"}
+                    size={240}
+                    title={"카카오톡 문의 바로가기 😎"}
+                />
+            </VStack>
         </Box>
     );
 }
