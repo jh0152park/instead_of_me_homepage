@@ -1,4 +1,12 @@
-import { Box, Center, Heading, Icon, Image, VStack } from "@chakra-ui/react";
+import {
+    Box,
+    Center,
+    Heading,
+    Icon,
+    Image,
+    Text,
+    VStack,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { useRecoilValue } from "recoil";
@@ -62,7 +70,8 @@ export default function Banner() {
                 mx="auto"
             >
                 <VStack color="black">
-                    <Heading
+                    <Text
+                        textAlign="center"
                         fontWeight="extrabold"
                         fontSize={{
                             base: "30px",
@@ -71,8 +80,9 @@ export default function Banner() {
                         }}
                     >
                         {LANGUAGE[currentLanguage]["외주, 그 이상의"]}
-                    </Heading>
-                    <Heading
+                    </Text>
+                    <Text
+                        textAlign="center"
                         fontWeight="extrabold"
                         fontSize={{
                             base: "30px",
@@ -81,7 +91,7 @@ export default function Banner() {
                         }}
                     >
                         {LANGUAGE[currentLanguage]["가치를 만들고 있습니다."]}
-                    </Heading>
+                    </Text>
 
                     {/* <BOX
                         variants={ArrowAnimation}
@@ -113,7 +123,8 @@ export default function Banner() {
                 alignItems="flex-start"
                 color="whitesmoke"
             >
-                <Heading
+                <Text
+                    textAlign="left"
                     fontWeight="extrabold"
                     fontSize={{
                         base: "20px",
@@ -126,8 +137,9 @@ export default function Banner() {
                             "도전을 열망하는 사람들이 모여,"
                         ]
                     }
-                </Heading>
-                <Heading
+                </Text>
+                <Text
+                    textAlign="left"
                     fontWeight="extrabold"
                     fontSize={{
                         base: "20px",
@@ -140,7 +152,7 @@ export default function Banner() {
                             "새로운 도전자분들의 시작을 함께합니다."
                         ]
                     }
-                </Heading>
+                </Text>
             </VStack>
         </Box>
     );
