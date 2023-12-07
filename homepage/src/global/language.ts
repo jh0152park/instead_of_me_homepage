@@ -31,6 +31,17 @@ interface ILanguage {
     문의하기: string;
     환영합니다: string;
     말씀해주세요: string;
+    "관심 주셔서 감사합니다": string;
+    "필요하신 모든걸 만들어 드립니다": string;
+    "더 큰 성장을 원합니다": string;
+    "메일로 물어보세요": string;
+    이메일보내기: string;
+    "24시간연중무휴": string;
+    홈페이지둘러보기: string;
+    기술스택궁금해요: string;
+    문의하고싶어요: string;
+    제작과정궁금해요: string;
+    카카오톡문의: string;
 }
 
 const LANGUAGE: ILanguage[] = [
@@ -80,6 +91,20 @@ const LANGUAGE: ILanguage[] = [
         문의하기: "문의하기",
         환영합니다: "방문해 주셔서 감사합니다 🥰",
         말씀해주세요: "도움이 필요하시면 저를 클릭해주세요! 😎",
+        "관심 주셔서 감사합니다": "관심 가져주셔서 감사합니다😆",
+        "필요하신 모든걸 만들어 드립니다":
+            "필요하신 모든걸 만들어 드리는 Instead of me입니다😎",
+        "더 큰 성장을 원합니다":
+            "저희는 여러분들과 함께 더욱 더 큰 성장을 원하고 있습니다!",
+        "메일로 물어보세요":
+            "협업 관련 문의는 쉽고 빠르게 메일을통해 진행해보세요 🥰",
+        이메일보내기: "문의하기",
+        "24시간연중무휴": "24시간 항상 운영해요",
+        홈페이지둘러보기: "홈페이지 둘러보기 👀",
+        기술스택궁금해요: "기술 스택이 궁금해요 🔧",
+        문의하고싶어요: "문의하고 싶어요 🙋‍♂️",
+        제작과정궁금해요: "제작 과정이 궁금해요 🤔",
+        카카오톡문의: "카카오톡 문의 바로가기 😎",
     },
     {
         "외주, 그 이상의": "We are creating value",
@@ -129,6 +154,19 @@ const LANGUAGE: ILanguage[] = [
         문의하기: "Contact",
         환영합니다: "Thank you for being here 🥰",
         말씀해주세요: "Just click me please if you need help! 😎",
+        "관심 주셔서 감사합니다": "Thank you for your attention and time 😆",
+        "필요하신 모든걸 만들어 드립니다":
+            "We are 🙌 Instead of me 🙌 create everything you want 😎",
+        "더 큰 성장을 원합니다": "We wanna grow even bigger with you!",
+        "메일로 물어보세요":
+            "For collaboration inquiries, please easily contact us via email 🥰",
+        이메일보내기: "Send email",
+        "24시간연중무휴": "Always open 24 hours",
+        홈페이지둘러보기: "Checkout homepage 👀",
+        기술스택궁금해요: "About tech stack 🔧",
+        문의하고싶어요: "I wanna inquire 🙋‍♂️",
+        제작과정궁금해요: "About production process 🤔",
+        카카오톡문의: "Go to KakaoTalk Channel 😎",
     },
 ];
 
