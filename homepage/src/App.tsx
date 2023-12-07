@@ -6,6 +6,7 @@ import ContactForm from "./screen/contactForm";
 import { useSetRecoilState } from "recoil";
 import { displayResolution } from "./global/project_common";
 import { useEffect } from "react";
+import Instructor from "./screen/instructor";
 
 // ,
 // 	"homepage": "https://jh0152park.github.io/instead_of_me_homepage"
@@ -18,7 +19,8 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "",
-                element: <Home />,
+                // element: <Home />,
+                element: <Instructor />,
             },
             {
                 path: "contact",
