@@ -67,7 +67,9 @@ function App() {
     const setDisplayResolution = useSetRecoilState(displayResolution);
 
     useEffect(() => {
-        if (window.innerWidth < 500) {
+        // console.log(window.innerWidth);
+        // console.log(document.documentElement.clientWidth);
+        if (document.documentElement.clientWidth < 500) {
             setDisplayResolution("mobile");
         } else {
             setDisplayResolution("web");

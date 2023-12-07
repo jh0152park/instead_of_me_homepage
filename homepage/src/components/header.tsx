@@ -12,7 +12,11 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
 import LanguageItem from "./language/languageItem";
 import { useSetRecoilState } from "recoil";
-import { languageCode, languageState } from "../global/project_common";
+import {
+    languageCode,
+    languageSelected,
+    languageState,
+} from "../global/project_common";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Header() {
@@ -26,19 +30,22 @@ export default function Header() {
     const [currentY, setCurrentY] = useState<number>(0);
 
     const setCurrentLanguage = useSetRecoilState(languageState);
+    const setLanguageSelected = useSetRecoilState(languageSelected);
 
     function changeLanguage(language: languageCode) {
         setCurrentLanguage(language);
     }
 
     function onLogoClick() {
-        if (pathname === "/home") {
-            go_to_id("top");
-            if (currentY === 0) refresh();
-        } else {
-            navigation("/home");
-            go_to_id("top");
-        }
+        setLanguageSelected(true);
+        navigation("/");
+        // if (pathname === "/home") {
+        //     go_to_id("top");
+        //     if (currentY === 0) refresh();
+        // } else {
+        //     navigation("/home");
+        //     go_to_id("top");
+        // }
     }
 
     function onCategoryClick(position: string, route: string) {
