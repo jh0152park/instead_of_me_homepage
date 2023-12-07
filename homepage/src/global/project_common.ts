@@ -19,3 +19,8 @@ export const languageSelected = atom<boolean>({
     default: false,
     key: "LanguageSelected",
 });
+
+export const phoneState = atom<boolean>({
+    default: false,
+    key: "PhoneState",
+});

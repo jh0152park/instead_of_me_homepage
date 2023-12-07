@@ -1,11 +1,20 @@
-import { Box, Center, HStack, Text, VStack, keyframes } from "@chakra-ui/react";
+import {
+    Box,
+    Center,
+    HStack,
+    Icon,
+    Text,
+    VStack,
+    keyframes,
+} from "@chakra-ui/react";
 import { SiMinutemailer } from "react-icons/si";
 import Avatar from "./avatar";
 import { useNavigate } from "react-router-dom";
 import Widget from "./widget";
-import { useRecoilValue } from "recoil";
-import { languageState } from "../../global/project_common";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { languageState, phoneState } from "../../global/project_common";
 import LANGUAGE from "../../global/language";
+import { IoIosClose } from "react-icons/io";
 
 const appear = keyframes`
     from {
@@ -20,10 +29,15 @@ const appear = keyframes`
 export default function Phone({ clicked }: { clicked: boolean }) {
     const navigate = useNavigate();
     const currentLanguage = useRecoilValue(languageState);
+    const setPhoneState = useSetRecoilState(phoneState);
     const appearAnimation = `${appear} 0.2s linear`;
 
     function onAskButtonClicked() {
         navigate("/contact");
+    }
+
+    function onCloseButtonClicked() {
+        setPhoneState((prev) => !prev);
     }
 
     return (
@@ -42,9 +56,22 @@ export default function Phone({ clicked }: { clicked: boolean }) {
             // transform={clicked ? `translateY(10px)` : ""}
             // transition={"all 0.2s linear"}
         >
-            <Text fontWeight="bold" mb="70px">
-                Instead of me, 야 해줘
-            </Text>
+            <HStack w="100%" mb="70px" justifyContent="space-between">
+                <Text fontWeight="bold">Instead of me, 야 해줘</Text>
+                <Center
+                    w="25px"
+                    h="25px"
+                    borderRadius="50%"
+                    _hover={{
+                        cursor: "pointer",
+                        bgColor: "#CBD5E0",
+                    }}
+                    transition="all 0.2s linear"
+                    onClick={onCloseButtonClicked}
+                >
+                    <Icon as={IoIosClose} w="100%" h="100%" />
+                </Center>
+            </HStack>
 
             <HStack spacing={0} alignItems="flex-end">
                 <Avatar size={50} border={false} hover={false} />

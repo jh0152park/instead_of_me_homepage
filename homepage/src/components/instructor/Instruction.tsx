@@ -1,8 +1,8 @@
 import { Box, Heading, VStack, Image } from "@chakra-ui/react";
-import { languageState } from "../../global/project_common";
-import { useRecoilValue } from "recoil";
+import { languageState, phoneState } from "../../global/project_common";
+import { useRecoilState, useRecoilValue } from "recoil";
 import LANGUAGE from "../../global/language";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Phone from "./phone";
 
 export default function Instruction() {
@@ -10,10 +10,18 @@ export default function Instruction() {
         "https://github.com/jh0152park/instead_of_me_homepage/blob/main/images/emoji/emoji.png?raw=true";
     const currentLanguage = useRecoilValue(languageState);
     const [clicked, setClicked] = useState<boolean>(false);
+    const [PhoneState, setPhoneState] = useRecoilState(phoneState);
+
+    console.log(PhoneState);
 
     function toggleClicked() {
+        setPhoneState((prev) => !prev);
         setClicked((prev) => !prev);
     }
+
+    useEffect(() => {
+        setClicked(PhoneState);
+    }, [PhoneState]);
 
     return (
         <>

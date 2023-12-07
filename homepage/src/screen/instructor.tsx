@@ -1,13 +1,4 @@
-import {
-    Box,
-    Center,
-    Heading,
-    Image,
-    Text,
-    VStack,
-    keyframes,
-} from "@chakra-ui/react";
-import { useState } from "react";
+import { Center } from "@chakra-ui/react";
 import { Helmet } from "react-helmet";
 import SelectLanguage from "../components/instructor/selectLanguage";
 import { useRecoilValue } from "recoil";
