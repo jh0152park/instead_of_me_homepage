@@ -64,7 +64,7 @@ export default function Header() {
 
     return (
         <HStack
-            w="100dvw"
+            w="100vw"
             h="70px"
             zIndex="99"
             bgColor={opacity ? "rgba(56, 161, 105, 0.9)" : "rgb(56, 161, 105)"}

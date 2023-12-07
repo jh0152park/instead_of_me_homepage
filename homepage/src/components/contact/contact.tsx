@@ -76,7 +76,7 @@ export default function Contact() {
                               md: "-100px",
                               lg: "-200px",
                           }
-                        : "-100px"
+                        : "0px"
                 }
             >
                 <Heading

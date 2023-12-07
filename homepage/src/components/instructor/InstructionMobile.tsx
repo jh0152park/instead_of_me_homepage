@@ -52,10 +52,10 @@ export default function InstructionMobile() {
                 </Box>
 
                 <VStack>
-                    <Heading fontSize="20px">
+                    <Heading fontSize="18px">
                         {LANGUAGE[currentLanguage]["환영합니다"]}
                     </Heading>
-                    <Heading fontSize="20px">
+                    <Heading fontSize="18px">
                         {LANGUAGE[currentLanguage]["말씀해주세요"]}
                     </Heading>
                 </VStack>
