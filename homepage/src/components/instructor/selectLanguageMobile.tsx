@@ -30,7 +30,7 @@ export default function SelectLanguageMobile() {
 
     return (
         <Center w="100%" h="100vh">
-            <VStack>
+            <VStack w="100%">
                 <Avatar
                     size={250}
                     border={true}
@@ -38,15 +38,19 @@ export default function SelectLanguageMobile() {
                     hover={true}
                 />
 
-                <VStack alignItems="center" ml="50px">
-                    <VStack w="100%">
-                        <Heading>사용하실 언어를 선택해 주세요 😊</Heading>
-                        <Heading>Please select one what you want 😊</Heading>
+                <VStack>
+                    <VStack>
+                        <Heading fontSize="20px">
+                            사용하실 언어를 선택해 주세요
+                        </Heading>
+                        <Heading fontSize="20px">
+                            Please select one what you want
+                        </Heading>
                     </VStack>
 
                     <HStack mt="50px">
                         <Center
-                            w="200px"
+                            w="150px"
                             h="60px"
                             bgColor="green.400"
                             borderRadius="20px"
@@ -60,7 +64,7 @@ export default function SelectLanguageMobile() {
                         </Center>
 
                         <Center
-                            w="200px"
+                            w="150px"
                             h="60px"
                             bgColor="green.400"
                             borderRadius="20px"
