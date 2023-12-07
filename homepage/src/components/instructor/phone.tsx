@@ -1,4 +1,4 @@
-import { Box, Center, HStack, Text, VStack } from "@chakra-ui/react";
+import { Box, Center, HStack, Text, VStack, keyframes } from "@chakra-ui/react";
 import { SiMinutemailer } from "react-icons/si";
 import Avatar from "./avatar";
 import { useNavigate } from "react-router-dom";
@@ -7,9 +7,20 @@ import { useRecoilValue } from "recoil";
 import { languageState } from "../../global/project_common";
 import LANGUAGE from "../../global/language";
 
+const appear = keyframes`
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    } to {
+        opacity: 1;;
+        transform: translateY(0px);
+    }
+`;
+
 export default function Phone({ clicked }: { clicked: boolean }) {
     const navigate = useNavigate();
     const currentLanguage = useRecoilValue(languageState);
+    const appearAnimation = `${appear} 0.2s linear`;
 
     function onAskButtonClicked() {
         navigate("/contact");
@@ -17,6 +28,7 @@ export default function Phone({ clicked }: { clicked: boolean }) {
 
     return (
         <Box
+            p="20px"
             w="400px"
             h="700px"
             bgColor="whitesmoke"
@@ -25,9 +37,10 @@ export default function Phone({ clicked }: { clicked: boolean }) {
             right="50px"
             margin="auto"
             opacity={clicked ? "1" : "0"}
-            transform={clicked ? `translateY(10px)` : ""}
-            transition={"all 0.2s linear"}
-            p="20px"
+            display={clicked ? "block" : "none"}
+            animation={appearAnimation}
+            // transform={clicked ? `translateY(10px)` : ""}
+            // transition={"all 0.2s linear"}
         >
             <Text fontWeight="bold" mb="70px">
                 Instead of me, 야 해줘
@@ -117,7 +130,7 @@ export default function Phone({ clicked }: { clicked: boolean }) {
                 />
                 <Widget
                     page={"process"}
-                    size={230}
+                    size={240}
                     title={LANGUAGE[currentLanguage]["제작과정궁금해요"]}
                 />
                 <Widget
