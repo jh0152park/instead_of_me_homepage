@@ -8,7 +8,10 @@ export default function Layout() {
 
     return (
         <>
-            {pathname === "/" || "/instead_of_me_homepage" ? null : <Header />}
+            {pathname === "/" ? null : pathname ===
+              "/instead_of_me_homepage/" ? null : (
+                <Header />
+            )}
             <Outlet></Outlet>
         </>
     );
