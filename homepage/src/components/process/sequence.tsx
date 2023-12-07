@@ -36,7 +36,7 @@ export default function Sequence() {
                         md: "100px",
                         lg: "120px",
                     }}
-                    fontSize={"60px"}
+                    // fontSize={"60px"}
                 >
                     Process of production
                 </Heading>
