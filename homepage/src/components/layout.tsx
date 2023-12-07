@@ -6,7 +6,7 @@ export default function Layout() {
 
     return (
         <>
-            {pathname === "/" ? null : <Header />}
+            {pathname === "/" || "/instead_of_me_homepage" ? null : <Header />}
             <Outlet></Outlet>
         </>
     );
