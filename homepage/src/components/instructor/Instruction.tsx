@@ -50,18 +50,24 @@ export default function Instruction() {
                 />
             </Box>
 
-            <Modal isOpen={isOpen} onClose={onClose}>
+            <Modal isOpen={isOpen} onClose={onClose} size="lg" isCentered>
                 <ModalOverlay />
                 <ModalContent>
-                    <ModalHeader>Modal Title</ModalHeader>
+                    <ModalHeader>원하시는 옵션을 선택해 주세요</ModalHeader>
                     <ModalCloseButton />
-                    <ModalBody></ModalBody>
+                    <ModalBody>
+                        <VStack alignItems="flex-start">
+                            <Button variant="link">홈페이지 바로가기</Button>
+                            <Button variant="link">기술스택 바로가기</Button>
+                            <Button variant="link">제작과정 바로가기</Button>
+                            <Button variant="link">견적문의 바로가기</Button>
+                        </VStack>
+                    </ModalBody>
 
                     <ModalFooter>
                         <Button colorScheme="blue" mr={3} onClick={onClose}>
                             Close
                         </Button>
-                        <Button variant="ghost">Secondary Action</Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>
