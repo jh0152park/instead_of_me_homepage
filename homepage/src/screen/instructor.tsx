@@ -12,9 +12,12 @@ import { Helmet } from "react-helmet";
 import SelectLanguage from "../components/instructor/selectLanguage";
 import { useRecoilValue } from "recoil";
 import { languageSelected } from "../global/project_common";
+import Instruction from "../components/instructor/Instruction";
 
 export default function Instructor() {
     const isLanguageSelected = useRecoilValue(languageSelected);
+
+    console.log(isLanguageSelected);
 
     return (
         <>
@@ -27,7 +30,7 @@ export default function Instructor() {
                 h="100vh"
                 background="linear-gradient(180deg, rgb(56, 161, 105), #c7c9c8)"
             >
-                <SelectLanguage />
+                {!isLanguageSelected ? <SelectLanguage /> : <Instruction />}
             </Center>
         </>
     );
