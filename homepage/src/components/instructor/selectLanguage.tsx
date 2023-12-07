@@ -5,6 +5,7 @@ import {
     languageSelected,
     languageState,
 } from "../../global/project_common";
+import Avatar from "./avatar";
 
 export default function SelectLanguage() {
     const chractor =
@@ -30,27 +31,14 @@ export default function SelectLanguage() {
     return (
         <Center w="100%" h="100vh">
             <HStack>
-                <Box
-                    w="250px"
-                    h="250px"
-                    borderRadius="50%"
-                    border="3px solid"
+                <Avatar
+                    size={250}
+                    border={true}
                     borderColor="teal.500"
-                    mr="50px"
-                    _hover={{
-                        cursor: "pointer",
-                    }}
-                >
-                    <Image
-                        w="100%"
-                        h="100%"
-                        src={chractor}
-                        objectFit={"cover"}
-                        borderRadius="full"
-                    />
-                </Box>
+                    hover={true}
+                />
 
-                <VStack alignItems="center">
+                <VStack alignItems="center" ml="50px">
                     <VStack w="100%">
                         <Heading>사용하실 언어를 선택해 주세요 😊</Heading>
                         <Heading>Please select one what you want 😊</Heading>

@@ -17,8 +17,6 @@ import Instruction from "../components/instructor/Instruction";
 export default function Instructor() {
     const isLanguageSelected = useRecoilValue(languageSelected);
 
-    console.log(isLanguageSelected);
-
     return (
         <>
             <Helmet>
