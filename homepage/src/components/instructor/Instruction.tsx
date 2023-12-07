@@ -30,7 +30,9 @@ export default function Instruction() {
                 borderColor="teal.500"
                 _hover={{
                     cursor: "pointer",
+                    transform: "translateY(-10px)",
                 }}
+                transition="all 0.2s linear"
                 onClick={toggleClicked}
             >
                 <Image
