@@ -1,4 +1,4 @@
-import { Center, Box, VStack, Heading, Image } from "@chakra-ui/react";
+import { Center, Box, VStack, Heading, Image, Text } from "@chakra-ui/react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { styled } from "styled-components";
 import { displayResolution, languageState } from "../../global/project_common";
@@ -82,25 +82,29 @@ export default function Global() {
                         >
                             {LANGUAGE[currentLanguage].Wherever}
                         </Heading>
-                        <Heading
-                            fontSize={{
-                                base: "7px",
-                                md: "12px",
-                                lg: "16px",
-                            }}
-                        >
-                            {
-                                LANGUAGE[currentLanguage][
-                                    "다양한 국가와의 협업 경험을 토대로"
-                                ]
-                            }
-                            &nbsp;
-                            {
-                                LANGUAGE[currentLanguage][
-                                    "의뢰인의 국가, 시간을 뛰어넘습니다."
-                                ]
-                            }
-                        </Heading>
+                        <Center>
+                            <Text
+                                textAlign="center"
+                                fontWeight="bold"
+                                fontSize={{
+                                    base: "7px",
+                                    md: "12px",
+                                    lg: "16px",
+                                }}
+                            >
+                                {
+                                    LANGUAGE[currentLanguage][
+                                        "다양한 국가와의 협업 경험을 토대로"
+                                    ]
+                                }
+                                &nbsp;
+                                {
+                                    LANGUAGE[currentLanguage][
+                                        "의뢰인의 국가, 시간을 뛰어넘습니다."
+                                    ]
+                                }
+                            </Text>
+                        </Center>
                     </VStack>
                 </Box>
             </BOX>

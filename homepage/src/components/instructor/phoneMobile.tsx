@@ -30,7 +30,7 @@ const appear = keyframes`
     }
 `;
 
-export default function Phone({ clicked }: { clicked: boolean }) {
+export default function PhoneMobile({ clicked }: { clicked: boolean }) {
     const navigate = useNavigate();
     const currentLanguage = useRecoilValue(languageState);
     const setPhoneState = useSetRecoilState(phoneState);
@@ -48,12 +48,12 @@ export default function Phone({ clicked }: { clicked: boolean }) {
     return (
         <Box
             p="20px"
-            w="400px"
+            w="350px"
             h="700px"
             bgColor="whitesmoke"
             borderRadius="20px"
             position="absolute"
-            right="50px"
+            top="50px"
             margin="auto"
             opacity={clicked ? "1" : "0"}
             display={clicked ? "block" : "none"}
@@ -83,7 +83,7 @@ export default function Phone({ clicked }: { clicked: boolean }) {
                 <VStack alignItems={"flex-start"} ml="20px">
                     <Text fontSize="12px">Instead of me, 야 해줘</Text>
                     <Box
-                        w="280px"
+                        w="240px"
                         h="300px"
                         borderRadius="20px"
                         bgColor="gray.200"
@@ -106,13 +106,13 @@ export default function Phone({ clicked }: { clicked: boolean }) {
                         <Text fontSize="15px" mb="20px">
                             {LANGUAGE[currentLanguage]["더 큰 성장을 원합니다"]}
                         </Text>
-                        <Text fontSize="15px" mb="50px">
+                        <Text fontSize="15px" mb="20px">
                             {LANGUAGE[currentLanguage]["메일로 물어보세요"]}
                         </Text>
 
                         <VStack>
                             <Center
-                                w="250px"
+                                w="200px"
                                 h="40px"
                                 bgColor="green.300"
                                 borderRadius="20px"
@@ -147,7 +147,7 @@ export default function Phone({ clicked }: { clicked: boolean }) {
             <VStack mt="10px" alignItems="flex-start" ml="65px">
                 <Widget
                     page={"home"}
-                    size={250}
+                    size={210}
                     title={LANGUAGE[currentLanguage]["홈페이지둘러보기"]}
                 />
                 <Widget

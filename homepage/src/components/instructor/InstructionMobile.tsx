@@ -4,6 +4,7 @@ import { useRecoilValue } from "recoil";
 import LANGUAGE from "../../global/language";
 import { useState } from "react";
 import Phone from "./phone";
+import PhoneMobile from "./phoneMobile";
 
 export default function InstructionMobile() {
     const chractor =
@@ -49,7 +50,7 @@ export default function InstructionMobile() {
                     />
                 </Box>
 
-                <Phone clicked={clicked} />
+                <PhoneMobile clicked={clicked} />
             </VStack>
         </Center>
     );
