@@ -1,4 +1,4 @@
-import { Box, Heading, Image, VStack } from "@chakra-ui/react";
+import { Box, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import { languageState } from "../../global/project_common";
 import { useRecoilValue } from "recoil";
 import LANGUAGE from "../../global/language";
@@ -46,7 +46,9 @@ export default function Intro() {
                 >
                     Instead of me{" "}
                 </Heading>
-                <Heading
+                <Text
+                    textAlign="right"
+                    fontWeight="bold"
                     fontSize={{
                         base: "16px",
                         md: "24px",
@@ -54,8 +56,10 @@ export default function Intro() {
                     }}
                 >
                     {LANGUAGE[currentLanguage]["우리는 선택과 집중을 합니다."]}
-                </Heading>
-                <Heading
+                </Text>
+                <Text
+                    textAlign="right"
+                    fontWeight="bold"
                     fontSize={{
                         base: "16px",
                         md: "24px",
@@ -67,8 +71,10 @@ export default function Intro() {
                             "양보단 질을, 높은 완성도의 가치를 믿습니다."
                         ]
                     }
-                </Heading>
-                <Heading
+                </Text>
+                <Text
+                    textAlign="right"
+                    fontWeight="bold"
                     fontSize={{
                         base: "16px",
                         md: "24px",
@@ -77,8 +83,10 @@ export default function Intro() {
                     mt="30px"
                 >
                     {LANGUAGE[currentLanguage]["과도한 업무량으로 인하여"]}
-                </Heading>
-                <Heading
+                </Text>
+                <Text
+                    textAlign="right"
+                    fontWeight="bold"
                     fontSize={{
                         base: "16px",
                         md: "24px",
@@ -90,7 +98,7 @@ export default function Intro() {
                             "작업의 완성도를 떨어뜨리지 않겠다고 약속 드립니다."
                         ]
                     }
-                </Heading>
+                </Text>
             </VStack>
         </Box>
     );

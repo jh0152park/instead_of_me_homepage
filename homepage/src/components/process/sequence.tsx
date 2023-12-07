@@ -4,6 +4,7 @@ import {
     GridItem,
     Heading,
     Icon,
+    Text,
     VStack,
 } from "@chakra-ui/react";
 import { LuNewspaper, LuEraser } from "react-icons/lu";
@@ -84,7 +85,9 @@ export default function Sequence() {
                                     w={{ base: "30px", md: "50px", lg: "70px" }}
                                     h={{ base: "30px", md: "50px", lg: "70px" }}
                                 />
-                                <Heading
+                                <Text
+                                    textAlign="center"
+                                    fontWeight="bold"
                                     fontSize={{
                                         base: "10px",
                                         md: "14px",
@@ -97,7 +100,7 @@ export default function Sequence() {
                                             "제작문의 및 견적상담"
                                         ]
                                     }
-                                </Heading>
+                                </Text>
                             </VStack>
                         </Center>
                     </GridItem>

@@ -21,7 +21,7 @@ export default function Introduce() {
             bgColor="whitesmoke"
         >
             <Box
-                pl={{
+                px={{
                     base: "20px",
                     md: "50px",
                     lg: "200px",
@@ -57,7 +57,7 @@ export default function Introduce() {
                 </Heading>
                 <Heading
                     fontSize={{
-                        base: "12px",
+                        base: "11.5px",
                         md: "24px",
                         lg: "36px",
                     }}

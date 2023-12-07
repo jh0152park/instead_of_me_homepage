@@ -1,4 +1,4 @@
-import { Center, Box, VStack, Heading, Image } from "@chakra-ui/react";
+import { Center, Box, VStack, Heading, Image, Text } from "@chakra-ui/react";
 import { useRecoilValue } from "recoil";
 import { languageState } from "../../global/project_common";
 import LANGUAGE from "../../global/language";
@@ -20,7 +20,7 @@ export default function Partner() {
             color="black"
             bgColor="whitesmoke"
         >
-            <VStack>
+            <VStack px="10px">
                 <Heading
                     fontSize={{
                         base: "12px",
@@ -30,7 +30,9 @@ export default function Partner() {
                 >
                     Instead of me,
                 </Heading>
-                <Heading
+                <Text
+                    textAlign="center"
+                    fontWeight="bold"
                     fontSize={{
                         base: "12px",
                         md: "24px",
@@ -42,8 +44,10 @@ export default function Partner() {
                             "우리는 경험과 소통을 중심으로 단순 외주를 뛰어넘어"
                         ]
                     }
-                </Heading>
-                <Heading
+                </Text>
+                <Text
+                    textAlign="center"
+                    fontWeight="bold"
                     fontSize={{
                         base: "12px",
                         md: "24px",
@@ -55,7 +59,7 @@ export default function Partner() {
                             "새로운 도전을 함께 시작하는 비즈니스 파트너가 되는것이 목표입니다."
                         ]
                     }
-                </Heading>
+                </Text>
                 <Box
                     w={{
                         base: "300px",

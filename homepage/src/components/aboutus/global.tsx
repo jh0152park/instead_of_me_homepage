@@ -82,7 +82,7 @@ export default function Global() {
                         >
                             {LANGUAGE[currentLanguage].Wherever}
                         </Heading>
-                        <Center>
+                        <Center mt="5px">
                             <Text
                                 textAlign="center"
                                 fontWeight="bold"
