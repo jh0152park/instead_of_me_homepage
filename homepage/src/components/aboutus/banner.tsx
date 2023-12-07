@@ -83,7 +83,7 @@ export default function Banner() {
                         {LANGUAGE[currentLanguage]["가치를 만들고 있습니다."]}
                     </Heading>
 
-                    <BOX
+                    {/* <BOX
                         variants={ArrowAnimation}
                         initial="start"
                         animate="end"
@@ -99,7 +99,7 @@ export default function Banner() {
                             }}
                             as={MdKeyboardDoubleArrowDown}
                         />
-                    </BOX>
+                    </BOX> */}
                 </VStack>
             </Center>
             <VStack
