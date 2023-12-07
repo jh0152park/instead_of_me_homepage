@@ -63,11 +63,11 @@ export default function Contact() {
             bgColor="whitesmoke"
         >
             <VStack
-                mt={{
-                    base: "100px",
-                    md: "-100px",
-                    lg: "-200px",
-                }}
+            // mt={{
+            //     base: "100px",
+            //     md: "-100px",
+            //     lg: "-200px",
+            // }}
             >
                 <Heading
                     fontSize={{

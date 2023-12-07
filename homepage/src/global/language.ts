@@ -139,7 +139,7 @@ const LANGUAGE: ILanguage[] = [
             "We develop and provide high-quality websites that can be used on both PC and mobile.",
         "휴먼에러를 야기하는 단순하고 반복적인 업무를 자동화 합니다. 웹크롤링, 웹자동화을 비롯해 핵심적인 업무툴인 엑셀 자동화를 통해 업무의 효율을 대폭 높힐수 있습니다.":
             "Automates simple and repetitive tasks that cause human errors. Work efficiency can be greatly increased through web crawling, web automation, and Excel automation, a core work tool.",
-        "제작문의 및 견적상담": "Production inquiries and quote consultation",
+        "제작문의 및 견적상담": "Inquiry and consultation",
         "견적검토 및 계약진행": "Quotation review and contract progress",
         "의뢰인 자료 전달": "Delivery of client data",
         제작: "Produce",
