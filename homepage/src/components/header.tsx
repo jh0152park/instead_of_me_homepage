@@ -13,11 +13,14 @@ import { useState } from "react";
 import LanguageItem from "./language/languageItem";
 import { useSetRecoilState } from "recoil";
 import { languageCode, languageState } from "../global/project_common";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Header() {
     const logo =
         "https://github.com/jh0152park/instead_of_me_homepage/blob/main/images/logo/whiteLogo/textLogo3.png?raw=true";
 
+    const { pathname } = useLocation();
+    const navigation = useNavigate();
     const { scrollY } = useScroll();
     const [opacity, setOpacity] = useState<boolean>(false);
     const [currentY, setCurrentY] = useState<number>(0);
@@ -26,6 +29,24 @@ export default function Header() {
 
     function changeLanguage(language: languageCode) {
         setCurrentLanguage(language);
+    }
+
+    function onLogoClick() {
+        if (pathname === "/home") {
+            go_to_id("top");
+            if (currentY === 0) refresh();
+        } else {
+            navigation("/home");
+            go_to_id("top");
+        }
+    }
+
+    function onCategoryClick(position: string, route: string) {
+        if (pathname === "/home") {
+            go_to_id(position);
+        } else {
+            navigation(`/${route}`);
+        }
     }
 
     useMotionValueEvent(scrollY, "change", (latest) => {
@@ -63,10 +84,7 @@ export default function Header() {
                 }}
                 mt="15px"
                 _hover={{ cursor: "pointer" }}
-                onClick={() => {
-                    go_to_id("top");
-                    if (currentY === 0) refresh();
-                }}
+                onClick={onLogoClick}
             >
                 <Image src={logo} objectFit="cover" />
             </Box>
@@ -93,7 +111,7 @@ export default function Header() {
                             transition: "all 0.2s linear",
                         }}
                         onClick={() => {
-                            go_to_id("top");
+                            onCategoryClick("top", "home");
                         }}
                     >
                         About us
@@ -105,7 +123,7 @@ export default function Header() {
                             transition: "all 0.2s linear",
                         }}
                         onClick={() => {
-                            go_to_id("business");
+                            onCategoryClick("business", "business");
                         }}
                     >
                         Business
@@ -117,7 +135,7 @@ export default function Header() {
                             transition: "all 0.2s linear",
                         }}
                         onClick={() => {
-                            go_to_id("process");
+                            onCategoryClick("process", "process");
                         }}
                     >
                         Process of production
@@ -129,7 +147,7 @@ export default function Header() {
                             transition: "all 0.2s linear",
                         }}
                         onClick={() => {
-                            go_to_id("contact");
+                            onCategoryClick("contact", "contact_us");
                         }}
                     >
                         Contact us
