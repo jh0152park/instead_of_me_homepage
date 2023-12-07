@@ -14,6 +14,7 @@ import { useRecoilValue } from "recoil";
 import { displayResolution, languageSelected } from "../global/project_common";
 import Instruction from "../components/instructor/Instruction";
 import SelectLanguageMobile from "../components/instructor/selectLanguageMobile";
+import InstructionMobile from "../components/instructor/InstructionMobile";
 
 export default function Instructor() {
     const currentMode = useRecoilValue(displayResolution);
@@ -41,7 +42,7 @@ export default function Instructor() {
                 ) : !isLanguageSelected ? (
                     <SelectLanguageMobile />
                 ) : (
-                    <Instruction />
+                    <InstructionMobile />
                 )}
             </Center>
         </>
