@@ -61,5 +61,6 @@
         "@types/react-helmet": "^6.1.7",
         "@types/react-router-dom": "^5.3.3",
         "@types/styled-components": "^5.1.28"
-    }
+    },
+    "homepage": "https://jh0152park.github.io/instead_of_me_homepage"
 }

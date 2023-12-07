@@ -1,4 +1,4 @@
-import { Box, Heading, VStack, Image } from "@chakra-ui/react";
+import { Box, Heading, VStack, Image, keyframes } from "@chakra-ui/react";
 import { languageState, phoneState } from "../../global/project_common";
 import { useRecoilState, useRecoilValue } from "recoil";
 import LANGUAGE from "../../global/language";
@@ -25,6 +25,10 @@ export default function Instruction() {
 
     return (
         <>
+            <Heading position="absolute" top="50px">
+                Instead of me
+            </Heading>
+
             <VStack mr="50px">
                 <Heading>{LANGUAGE[currentLanguage]["환영합니다"]}</Heading>
                 <Heading>{LANGUAGE[currentLanguage]["말씀해주세요"]}</Heading>

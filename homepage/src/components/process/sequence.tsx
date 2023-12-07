@@ -12,25 +12,30 @@ import { TbListSearch } from "react-icons/tb";
 import { BsFolderSymlink } from "react-icons/bs";
 import { FaTools } from "react-icons/fa";
 import { ImHappy } from "react-icons/im";
-import { languageState } from "../../global/project_common";
+import { displayResolution, languageState } from "../../global/project_common";
 import { useRecoilValue } from "recoil";
 import LANGUAGE from "../../global/language";
 
 export default function Sequence() {
     const currentLanguage = useRecoilValue(languageState);
+    const currentMode = useRecoilValue(displayResolution);
 
     return (
         <Center
             w="100dvw"
-            h={{
-                base: "500px",
-                md: "800px",
-                lg: "1000px",
-            }}
+            h={
+                currentMode === "web"
+                    ? {
+                          base: "500px",
+                          md: "800px",
+                          lg: "1000px",
+                      }
+                    : "100vh"
+            }
             color="black"
             bgColor="whitesmoke"
         >
-            <VStack>
+            <VStack mt={currentMode === "mobile" ? "-150px" : "none"}>
                 <Heading
                     mb={{
                         base: "50px",

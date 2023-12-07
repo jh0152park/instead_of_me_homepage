@@ -31,6 +31,10 @@ export default function SelectLanguageMobile() {
     return (
         <Center w="100%" h="100vh">
             <VStack w="100%">
+                <Heading position="absolute" top="50px">
+                    Instead of me
+                </Heading>
+
                 <Avatar
                     size={250}
                     border={true}

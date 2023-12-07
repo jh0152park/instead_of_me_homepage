@@ -30,6 +30,10 @@ export default function SelectLanguage() {
 
     return (
         <Center w="100%" h="100vh">
+            <Heading position="absolute" top="50px">
+                Instead of me
+            </Heading>
+
             <HStack>
                 <Avatar
                     size={250}

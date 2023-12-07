@@ -34,7 +34,6 @@ export default function Phone({ clicked }: { clicked: boolean }) {
     const navigate = useNavigate();
     const currentLanguage = useRecoilValue(languageState);
     const setPhoneState = useSetRecoilState(phoneState);
-
     const appearAnimation = `${appear} 0.2s linear`;
 
     function onAskButtonClicked() {

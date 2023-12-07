@@ -9,7 +9,7 @@ import {
     useToast,
     Image,
 } from "@chakra-ui/react";
-import { languageState } from "../../global/project_common";
+import { displayResolution, languageState } from "../../global/project_common";
 import { useRecoilValue } from "recoil";
 import LANGUAGE from "../../global/language";
 import { MdContentCopy } from "react-icons/md";
@@ -20,6 +20,7 @@ export default function Contact() {
     const qrImage =
         "https://github.com/jh0152park/instead_of_me_homepage/blob/yuhyeon/images/QR/qrcode.png?raw=true";
     const currentLanguage = useRecoilValue(languageState);
+    const currentMode = useRecoilValue(displayResolution);
     const toast = useToast();
     const navigate = useNavigate();
 
@@ -54,20 +55,29 @@ export default function Contact() {
     return (
         <Center
             w="100dvw"
-            h={{
-                base: "500px",
-                md: "800px",
-                lg: "1000px",
-            }}
+            h={
+                currentMode === "web"
+                    ? {
+                          base: "500px",
+                          md: "800px",
+                          lg: "1000px",
+                      }
+                    : "100vh"
+            }
             color="black"
             bgColor="whitesmoke"
+            // pt={currentMode === "web" ? "none" : "10px"}
         >
             <VStack
-                mt={{
-                    base: "100px",
-                    md: "-100px",
-                    lg: "-200px",
-                }}
+                mt={
+                    currentMode === "web"
+                        ? {
+                              base: "100px",
+                              md: "-100px",
+                              lg: "-200px",
+                          }
+                        : "-100px"
+                }
             >
                 <Heading
                     fontSize={{

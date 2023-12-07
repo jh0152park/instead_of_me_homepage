@@ -46,6 +46,37 @@ const router = createBrowserRouter([
             },
         ],
     },
+    {
+        path: "/instead_of_me_homepage",
+        element: <Layout />,
+        errorElement: <NotFound />,
+        children: [
+            {
+                path: "",
+                element: <Instructor />,
+            },
+            {
+                path: "home",
+                element: <Home />,
+            },
+            {
+                path: "business",
+                element: <Business />,
+            },
+            {
+                path: "process",
+                element: <Process />,
+            },
+            {
+                path: "contact_us",
+                element: <ContactUS />,
+            },
+            {
+                path: "contact",
+                element: <ContactForm />,
+            },
+        ],
+    },
     // {
     // 	path: "/instead_of_me_homepage",
     // 	element: <Layout />,

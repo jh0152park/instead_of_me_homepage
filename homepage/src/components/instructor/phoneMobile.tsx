@@ -106,7 +106,7 @@ export default function PhoneMobile({ clicked }: { clicked: boolean }) {
                         <Text fontSize="15px" mb="20px">
                             {LANGUAGE[currentLanguage]["더 큰 성장을 원합니다"]}
                         </Text>
-                        <Text fontSize="15px" mb="20px">
+                        <Text fontSize="15px" mb="25px">
                             {LANGUAGE[currentLanguage]["메일로 물어보세요"]}
                         </Text>
 
