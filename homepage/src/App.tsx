@@ -14,85 +14,74 @@ import ContactUS from "./screen/contactus";
 // ,
 // 	"homepage": "https://jh0152park.github.io/instead_of_me_homepage"
 
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Layout />,
-        errorElement: <NotFound />,
-        children: [
-            {
-                path: "",
-                element: <Instructor />,
-            },
-            {
-                path: "home",
-                element: <Home />,
-            },
-            {
-                path: "business",
-                element: <Business />,
-            },
-            {
-                path: "process",
-                element: <Process />,
-            },
-            {
-                path: "contact_us",
-                element: <ContactUS />,
-            },
-            {
-                path: "contact",
-                element: <ContactForm />,
-            },
-        ],
-    },
-    {
-        path: "/instead_of_me_homepage",
-        element: <Layout />,
-        errorElement: <NotFound />,
-        children: [
-            {
-                path: "",
-                element: <Instructor />,
-            },
-            {
-                path: "home",
-                element: <Home />,
-            },
-            {
-                path: "business",
-                element: <Business />,
-            },
-            {
-                path: "process",
-                element: <Process />,
-            },
-            {
-                path: "contact_us",
-                element: <ContactUS />,
-            },
-            {
-                path: "contact",
-                element: <ContactForm />,
-            },
-        ],
-    },
-    // {
-    // 	path: "/instead_of_me_homepage",
-    // 	element: <Layout />,
-    // 	errorElement: <NotFound />,
-    // 	children: [
-    // 		{
-    // 			path: "",
-    // 			element: <Home />,
-    // 		},
-    // 	],
-    // },
-    // {
-    // 	path: "/contact",
-    // 	element: <ContactForm />,
-    // },
-]);
+const basename = "https://jh0152park.github.io/instead_of_me_homepage";
+const router = createBrowserRouter(
+    [
+        {
+            path: "/",
+            element: <Layout />,
+            errorElement: <NotFound />,
+            children: [
+                {
+                    path: "",
+                    element: <Instructor />,
+                },
+                {
+                    path: "home",
+                    element: <Home />,
+                },
+                {
+                    path: "business",
+                    element: <Business />,
+                },
+                {
+                    path: "process",
+                    element: <Process />,
+                },
+                {
+                    path: "contact_us",
+                    element: <ContactUS />,
+                },
+                {
+                    path: "contact",
+                    element: <ContactForm />,
+                },
+            ],
+        },
+        {
+            path: "/instead_of_me_homepage",
+            element: <Layout />,
+            errorElement: <NotFound />,
+            children: [
+                {
+                    path: "",
+                    element: <Instructor />,
+                },
+                {
+                    path: "home",
+                    element: <Home />,
+                },
+                {
+                    path: "business",
+                    element: <Business />,
+                },
+                {
+                    path: "process",
+                    element: <Process />,
+                },
+                {
+                    path: "contact_us",
+                    element: <ContactUS />,
+                },
+                {
+                    path: "contact",
+                    element: <ContactForm />,
+                },
+            ],
+        },
+    ],
+    { basename: basename }
+);
 
 function App() {
     const setDisplayResolution = useSetRecoilState(displayResolution);
