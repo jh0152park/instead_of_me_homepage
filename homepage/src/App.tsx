@@ -79,8 +79,8 @@ const router = createBrowserRouter(
                 },
             ],
         },
-    ],
-    { basename: basename }
+    ]
+    // { basename: basename }
 );
 
 function App() {
