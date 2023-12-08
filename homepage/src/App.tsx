@@ -1,4 +1,8 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+    RouterProvider,
+    createBrowserRouter,
+    createHashRouter,
+} from "react-router-dom";
 import Layout from "./components/layout";
 import NotFound from "./components/notfound";
 import Home from "./screen/home";
@@ -15,7 +19,7 @@ import ContactUS from "./screen/contactus";
 // 	"homepage": "https://jh0152park.github.io/instead_of_me_homepage"
 
 const basename = "https://jh0152park.github.io/instead_of_me_homepage";
-const router = createBrowserRouter(
+const router = createHashRouter(
     [
         {
             path: "/",
@@ -96,11 +100,7 @@ function App() {
         }
     }, []);
 
-    return (
-        <>
-            <RouterProvider router={router} />
-        </>
-    );
+    return <RouterProvider router={router} />;
 }
 
 export default App;
