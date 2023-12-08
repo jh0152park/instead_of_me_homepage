@@ -3,15 +3,17 @@ import Header from "./header";
 
 export default function Layout() {
     const { pathname } = useLocation();
+    const homepage = [
+        "/",
+        "/instead_of_me_homepage",
+        "/instead_of_me_homepage/",
+    ];
 
     console.log(pathname);
 
     return (
         <>
-            {pathname === "/" ? null : pathname ===
-              "/instead_of_me_homepage/" ? null : (
-                <Header />
-            )}
+            {homepage.includes(pathname) ? null : <Header />}
             <Outlet></Outlet>
         </>
     );

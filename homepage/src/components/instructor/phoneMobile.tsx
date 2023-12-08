@@ -49,7 +49,7 @@ export default function PhoneMobile({ clicked }: { clicked: boolean }) {
         <Box
             p="20px"
             w="350px"
-            h="700px"
+            h="650px"
             bgColor="whitesmoke"
             borderRadius="20px"
             position="absolute"
@@ -58,10 +58,11 @@ export default function PhoneMobile({ clicked }: { clicked: boolean }) {
             opacity={clicked ? "1" : "0"}
             display={clicked ? "block" : "none"}
             animation={appearAnimation}
+            overflowY="scroll"
             // transform={clicked ? `translateY(10px)` : ""}
             // transition={"all 0.2s linear"}
         >
-            <HStack w="100%" mb="70px" justifyContent="space-between">
+            <HStack w="100%" mb="30px" justifyContent="space-between">
                 <Text fontWeight="bold">Instead of me, 야 해줘</Text>
                 <Center
                     w="25px"

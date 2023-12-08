@@ -57,6 +57,7 @@ export default function Phone({ clicked }: { clicked: boolean }) {
             opacity={clicked ? "1" : "0"}
             display={clicked ? "block" : "none"}
             animation={appearAnimation}
+            overflowY="scroll"
             // transform={clicked ? `translateY(10px)` : ""}
             // transition={"all 0.2s linear"}
         >
