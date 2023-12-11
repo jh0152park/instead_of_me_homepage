@@ -6,7 +6,6 @@ import {
     Container,
     FormControl,
     FormLabel,
-    HStack,
     Heading,
     Image,
     Popover,
@@ -16,7 +15,6 @@ import {
     PopoverContent,
     PopoverHeader,
     PopoverTrigger,
-    Radio,
     Select,
     Text,
     Textarea,
@@ -24,13 +22,17 @@ import {
     useToast,
 } from "@chakra-ui/react";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 import { useRecoilValue } from "recoil";
-import { displayResolution } from "../global/project_common";
+import { displayResolution, languageState } from "../global/project_common";
 import { Helmet } from "react-helmet";
+import {
+    contactFormLanguage,
+    contactFormExtraLanguage,
+} from "../components/contactForm/language";
 
 export default function ContactForm() {
     const logo =
@@ -43,6 +45,7 @@ export default function ContactForm() {
     const [sendAllow, setSendAllow] = useState(false);
     const [sending, setSending] = useState(false);
     const currentMode = useRecoilValue(displayResolution);
+    const currentLanguage = useRecoilValue(languageState);
 
     function toggleAllow() {
         setSendAllow((prev) => !prev);
@@ -58,7 +61,8 @@ export default function ContactForm() {
                 status: "warning",
                 title: "Can't send email",
                 description:
-                    "개인정보 제공동의를 해야합니다. Please agree to provide personal information.",
+                    contactFormExtraLanguage[currentLanguage]
+                        .개인정보제공동의해야합니다,
             });
             return;
         }
@@ -91,7 +95,8 @@ export default function ContactForm() {
                 title: "Done",
                 isClosable: true,
                 description:
-                    "검토 후 최대한 빠르게 답변 드리겠습니다. We'll reply as soon as possible with reviews.",
+                    contactFormExtraLanguage[currentLanguage]
+                        .검토후최대한빠르게,
             });
         } catch (error) {
             console.log(error);
@@ -99,7 +104,8 @@ export default function ContactForm() {
                 status: "error",
                 title: "Failed",
                 description:
-                    "잠시 후 다시 부탁드립니다. Something went wrong, please try again.",
+                    contactFormExtraLanguage[currentLanguage]
+                        .잠시후다시부탁드립니다,
             });
         } finally {
             setSending(false);
@@ -107,8 +113,6 @@ export default function ContactForm() {
             navigate("/");
         }
     }
-
-    // console.log(watch());
 
     return (
         <>
@@ -126,99 +130,121 @@ export default function ContactForm() {
                             cursor={"pointer"}
                             onClick={onClickLogo}
                         />
-
-                        <Heading>문의하기</Heading>
-                        <Heading>Contact</Heading>
+                        <Heading>
+                            {contactFormLanguage[currentLanguage].문의하기}
+                        </Heading>
                     </VStack>
 
                     <Container>
                         <FormControl mt="100px">
-                            <FormLabel fontWeight="bold" fontSize="20px">
-                                개인 이십니까?
-                            </FormLabel>
                             <FormLabel
                                 fontWeight="bold"
                                 fontSize="20px"
                                 mb="20px"
                             >
-                                Are you personal?
+                                {
+                                    contactFormLanguage[currentLanguage]
+                                        .개인이십니까
+                                }
                             </FormLabel>
                             <Select
-                                placeholder="선택해주세요. Select one"
+                                placeholder={
+                                    contactFormExtraLanguage[currentLanguage]
+                                        .선택해주세요
+                                }
                                 {...register("is_personal", { required: true })}
                             >
-                                <option value="yes">네, Yes</option>
-                                <option value="no">아니오, No</option>
+                                <option value="yes">
+                                    {
+                                        contactFormLanguage[currentLanguage]
+                                            .개인입니다
+                                    }
+                                </option>
+                                <option value="no">
+                                    {
+                                        contactFormLanguage[currentLanguage]
+                                            .개인이아닙니다
+                                    }
+                                </option>
                             </Select>
                         </FormControl>
 
                         <FormControl mt="100px">
-                            <FormLabel fontWeight="bold" fontSize="20px">
-                                귀하 또는 회사의 이름을 입력해 주세요.
-                            </FormLabel>
                             <FormLabel
                                 fontWeight="bold"
                                 fontSize="20px"
                                 mb="20px"
                             >
-                                Please enter the name of your or company.
+                                {
+                                    contactFormLanguage[currentLanguage]
+                                        .귀하또는회사의이름을입력해주세요
+                                }
                             </FormLabel>
                             <Textarea
-                                placeholder="Pleaes enter here"
+                                placeholder={
+                                    contactFormExtraLanguage[currentLanguage]
+                                        .이곳에작성해주세요
+                                }
                                 {...register("name", { required: true })}
                             />
                         </FormControl>
 
                         <FormControl mt="100px">
-                            <FormLabel fontWeight="bold" fontSize="20px">
-                                연락 가능한 연락처를 입력해 주세요.
-                            </FormLabel>
                             <FormLabel
                                 fontWeight="bold"
                                 fontSize="20px"
                                 mb="20px"
                             >
-                                Please enter contact imformation where you can
-                                be contacted.
+                                {
+                                    contactFormLanguage[currentLanguage]
+                                        .연락가능한연락처를입력해주세요
+                                }
                             </FormLabel>
                             <Textarea
-                                placeholder="Pleaes enter here"
+                                placeholder={
+                                    contactFormExtraLanguage[currentLanguage]
+                                        .이곳에작성해주세요
+                                }
                                 {...register("contact", { required: true })}
                             />
                         </FormControl>
 
                         <FormControl mt="100px">
-                            <FormLabel fontWeight="bold" fontSize="20px">
-                                답장 받을 이메일을 입력해 주세요.
-                            </FormLabel>
                             <FormLabel
                                 fontWeight="bold"
                                 fontSize="20px"
                                 mb="20px"
                             >
-                                Please enter your email address to receive a
-                                reply.
+                                {
+                                    contactFormLanguage[currentLanguage]
+                                        .답장받을이메일을입력해주세요
+                                }
                             </FormLabel>
                             <Textarea
-                                placeholder="Pleaes enter here"
+                                placeholder={
+                                    contactFormExtraLanguage[currentLanguage]
+                                        .이곳에작성해주세요
+                                }
                                 {...register("email", { required: true })}
                             />
                         </FormControl>
 
                         <FormControl mt="100px">
-                            <FormLabel fontWeight="bold" fontSize="20px">
-                                문의하고싶은 내용을 가능한 자세히 입력해주세요.
-                            </FormLabel>
                             <FormLabel
                                 fontWeight="bold"
                                 fontSize="20px"
                                 mb="20px"
                             >
-                                Please enter the information you wish to inquire
-                                about as detail as possible.
+                                {
+                                    contactFormLanguage[currentLanguage]
+                                        .문의하고싶은내용을가능한자세히입력해주세요
+                                }
                             </FormLabel>
                             <Textarea
-                                placeholder="Pleaes enter here"
+                                placeholder={
+                                    contactFormExtraLanguage[currentLanguage]
+                                        .이곳에작성해주세요
+                                }
                                 {...register("detail", { required: true })}
                             />
                         </FormControl>
@@ -232,10 +258,11 @@ export default function ContactForm() {
                                 borderColor="green"
                                 onChange={toggleAllow}
                             >
-                                개인정보 제공동의 Consent to provision of
-                                personal information
+                                {
+                                    contactFormExtraLanguage[currentLanguage]
+                                        .개인정보제공동의
+                                }
                             </Checkbox>
-
                             <Popover>
                                 <PopoverTrigger>
                                     <Button
@@ -243,7 +270,11 @@ export default function ContactForm() {
                                         variant="link"
                                         fontSize="15px"
                                     >
-                                        자세히보기, See detail
+                                        {
+                                            contactFormExtraLanguage[
+                                                currentLanguage
+                                            ].자세히보기
+                                        }
                                     </Button>
                                 </PopoverTrigger>
                                 <PopoverContent>
@@ -251,44 +282,36 @@ export default function ContactForm() {
                                     <PopoverCloseButton />
                                     <PopoverHeader>
                                         <Text>
-                                            Instead of me는 고객 문의사항 접수
-                                            및 답변을 위해 아래와 같이
-                                            개인정보를 수집, 이용합니다.
-                                        </Text>
-                                        <Text>
-                                            Instead of me collects personal
-                                            information as follows to receive
-                                            and respond to customer inquiries.
+                                            {
+                                                contactFormExtraLanguage[
+                                                    currentLanguage
+                                                ].개인정보를수집합니다
+                                            }
                                         </Text>
                                     </PopoverHeader>
                                     <PopoverBody>
                                         <Text>
-                                            목적: 고객 문의사항 접수 및 답변
-                                        </Text>
-                                        <Text>
-                                            Purpose: Receiving and responding to
-                                            customer inquiries
-                                        </Text>
-                                        <Box my="15px"></Box>
-                                        <Text>
-                                            항목: 회사명, 성함, 연락처, 이메일
-                                        </Text>
-                                        <Text>
-                                            Items: Company name, name, contact
-                                            information, email
+                                            {
+                                                contactFormExtraLanguage[
+                                                    currentLanguage
+                                                ].목적
+                                            }
                                         </Text>
                                         <Box my="15px"></Box>
                                         <Text>
-                                            서비스 이용에 필요한 최소한의 수집
-                                            및 이용에 동의하지 않을 수 있으나,
-                                            동의를 거부할 경우 서비스 이용에
-                                            제한이 있을 수 있습니다.
+                                            {
+                                                contactFormExtraLanguage[
+                                                    currentLanguage
+                                                ].항목
+                                            }
                                         </Text>
+                                        <Box my="15px"></Box>
                                         <Text>
-                                            Minimum collection and You may not
-                                            agree to the use, but If you refuse,
-                                            your use of the service may be
-                                            restricted. there is.
+                                            {
+                                                contactFormExtraLanguage[
+                                                    currentLanguage
+                                                ].제한이있을수있습니다
+                                            }
                                         </Text>
                                     </PopoverBody>
                                 </PopoverContent>
@@ -299,9 +322,9 @@ export default function ContactForm() {
                     <Button
                         my="100px"
                         bgColor="green.300"
-                        w="150px"
-                        h="65px"
-                        borderRadius="20px"
+                        w="120px"
+                        h="45px"
+                        borderRadius="10px"
                         _hover={{
                             cursor: "pointer",
                             bgColor: "green.400",
@@ -316,14 +339,10 @@ export default function ContactForm() {
                                 fontSize="18px"
                                 color="white"
                             >
-                                제출하기
-                            </Text>
-                            <Text
-                                fontWeight="bold"
-                                fontSize="18px"
-                                color="white"
-                            >
-                                Submit
+                                {
+                                    contactFormExtraLanguage[currentLanguage]
+                                        .제출하기
+                                }
                             </Text>
                         </VStack>
                     </Button>
