@@ -19,6 +19,7 @@ import {
 } from "../../global/project_common";
 import LANGUAGE from "../../global/language";
 import { IoIosClose } from "react-icons/io";
+import { COLOR_PALETTES } from "../../Colors";
 
 const appear = keyframes`
     from {
@@ -114,11 +115,12 @@ export default function Phone({ clicked }: { clicked: boolean }) {
                             <Center
                                 w="250px"
                                 h="40px"
-                                bgColor="green.300"
+                                // bgColor="green.300"
+                                bgColor={COLOR_PALETTES.blue}
                                 borderRadius="20px"
                                 _hover={{
                                     cursor: "pointer",
-                                    bgColor: "green.400",
+                                    bgColor: COLOR_PALETTES.skyblue,
                                 }}
                                 transition="all 0.2s linear"
                                 onClick={onAskButtonClicked}
