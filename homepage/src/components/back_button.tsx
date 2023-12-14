@@ -15,8 +15,8 @@ export default function BackButton() {
             borderRadius="50%"
             bgColor="rgba(255, 255, 255, 0.5)"
             position="fixed"
-            bottom={isMobile ? 2 : 10}
-            right={isMobile ? 2 : 10}
+            bottom={isMobile ? 5 : 10}
+            right={isMobile ? 5 : 10}
             zIndex="99"
             border="1px solid rgba(0, 0, 0, 0.3)"
             _hover={{

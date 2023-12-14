@@ -67,7 +67,7 @@ export default function Header() {
             w="100vw"
             h="70px"
             zIndex="99"
-            bgColor={opacity ? "rgba(56, 161, 105, 0.9)" : "rgb(56, 161, 105)"}
+            bgColor={opacity ? "rgba(95, 189, 255, 0.9)" : "rgb(95, 189, 255)"}
             position="fixed"
             top="0"
             px={{
