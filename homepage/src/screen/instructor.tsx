@@ -22,7 +22,7 @@ export default function Instructor() {
             <Center
                 w="100%"
                 h="100vh"
-                background="linear-gradient(180deg, rgb(56, 161, 105), #c7c9c8)"
+                background="linear-gradient(180deg, rgb(95, 189, 255), #e4ece8)"
             >
                 {currentMode === "web" ? (
                     !isLanguageSelected ? (

@@ -15,6 +15,7 @@ import { ImHappy } from "react-icons/im";
 import { displayResolution, languageState } from "../../global/project_common";
 import { useRecoilValue } from "recoil";
 import LANGUAGE from "../../global/language";
+import { COLOR_PALETTES } from "../../Colors";
 
 export default function Sequence() {
     const currentLanguage = useRecoilValue(languageState);
@@ -69,7 +70,8 @@ export default function Sequence() {
                                     mt="10px"
                                     borderRadius="50%"
                                     border="none"
-                                    bgColor="green.300"
+                                    // bgColor="green.300"
+                                    bgColor={COLOR_PALETTES.blue}
                                     color="whitesmoke"
                                     fontWeight="bold"
                                     fontSize={{
@@ -119,7 +121,8 @@ export default function Sequence() {
                                     mt="10px"
                                     borderRadius="50%"
                                     border="none"
-                                    bgColor="green.300"
+                                    // bgColor="green.300"
+                                    bgColor={COLOR_PALETTES.blue}
                                     color="whitesmoke"
                                     fontWeight="bold"
                                     fontSize={{
@@ -167,7 +170,8 @@ export default function Sequence() {
                                     mt="10px"
                                     borderRadius="50%"
                                     border="none"
-                                    bgColor="green.300"
+                                    // bgColor="green.300"
+                                    bgColor={COLOR_PALETTES.blue}
                                     color="whitesmoke"
                                     fontWeight="bold"
                                     fontSize={{
@@ -215,7 +219,8 @@ export default function Sequence() {
                                     mt="10px"
                                     borderRadius="50%"
                                     border="none"
-                                    bgColor="green.300"
+                                    // bgColor="green.300"
+                                    bgColor={COLOR_PALETTES.blue}
                                     color="whitesmoke"
                                     fontWeight="bold"
                                     fontSize={{
@@ -260,7 +265,8 @@ export default function Sequence() {
                                     mt="10px"
                                     borderRadius="50%"
                                     border="none"
-                                    bgColor="green.300"
+                                    // bgColor="green.300"
+                                    bgColor={COLOR_PALETTES.blue}
                                     color="whitesmoke"
                                     fontWeight="bold"
                                     fontSize={{
@@ -304,7 +310,8 @@ export default function Sequence() {
                                     mt="10px"
                                     borderRadius="50%"
                                     border="none"
-                                    bgColor="green.300"
+                                    // bgColor="green.300"
+                                    bgColor={COLOR_PALETTES.blue}
                                     color="whitesmoke"
                                     fontWeight="bold"
                                     fontSize={{

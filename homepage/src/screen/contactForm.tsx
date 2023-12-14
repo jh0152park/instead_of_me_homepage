@@ -33,6 +33,7 @@ import {
     contactFormLanguage,
     contactFormExtraLanguage,
 } from "../components/contactForm/language";
+import { COLOR_PALETTES } from "../Colors";
 
 export default function ContactForm() {
     const logo =
@@ -254,8 +255,8 @@ export default function ContactForm() {
                         <VStack>
                             <Checkbox
                                 defaultChecked={false}
-                                colorScheme="green"
-                                borderColor="green"
+                                colorScheme="blue"
+                                borderColor="blue.300"
                                 onChange={toggleAllow}
                             >
                                 {
@@ -266,7 +267,7 @@ export default function ContactForm() {
                             <Popover>
                                 <PopoverTrigger>
                                     <Button
-                                        colorScheme="green"
+                                        colorScheme="blue"
                                         variant="link"
                                         fontSize="15px"
                                     >
@@ -321,13 +322,14 @@ export default function ContactForm() {
 
                     <Button
                         my="100px"
-                        bgColor="green.300"
+                        // bgColor="green.300"
+                        bgColor={COLOR_PALETTES.skyblue}
                         w="120px"
                         h="45px"
                         borderRadius="10px"
                         _hover={{
                             cursor: "pointer",
-                            bgColor: "green.400",
+                            bgColor: COLOR_PALETTES.blue,
                             transition: "all 0.2s linear",
                         }}
                         type="submit"

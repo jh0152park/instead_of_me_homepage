@@ -15,6 +15,7 @@ import LANGUAGE from "../../global/language";
 import { MdContentCopy } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { go_to_top } from "../../util/utils";
+import { COLOR_PALETTES } from "../../Colors";
 
 export default function Contact() {
     const qrImage =
@@ -86,7 +87,8 @@ export default function Contact() {
                         lg: "80px",
                     }}
                     fontWeight="extrabold"
-                    color="green.400"
+                    // color="green.400"
+                    color={COLOR_PALETTES.blue}
                 >
                     Contact US
                 </Heading>
@@ -126,7 +128,8 @@ export default function Contact() {
                                 md: "18px",
                             }}
                             fontWeight="bold"
-                            color="green.400"
+                            // color="green.400"
+                            color={COLOR_PALETTES.blue}
                         >
                             Business Email:
                         </Text>
@@ -145,7 +148,8 @@ export default function Contact() {
                             }}
                             onClick={onClickCopy}
                             as={MdContentCopy}
-                            color={"green.400"}
+                            // color="green.400"
+                            color={COLOR_PALETTES.blue}
                             _hover={{
                                 cursor: "pointer",
                             }}
@@ -158,7 +162,8 @@ export default function Contact() {
                                 md: "18px",
                             }}
                             fontWeight="bold"
-                            color="green.400"
+                            // color="green.400"
+                            color={COLOR_PALETTES.blue}
                         >
                             {
                                 LANGUAGE[currentLanguage][
@@ -200,12 +205,17 @@ export default function Contact() {
                             md: "7px",
                             lg: "10px",
                         }}
-                        backgroundColor={"green.400"}
+                        // backgroundColor={"green.400"}
+                        bgColor={COLOR_PALETTES.blue}
                         mt={15}
                         mb={20}
                         borderRadius={"20px"}
                         cursor={"pointer"}
                         onClick={onClickContact}
+                        _hover={{
+                            bgColor: COLOR_PALETTES.skyblue,
+                        }}
+                        transition="all 0.2s linear"
                     >
                         <Text
                             color={"whitesmoke"}

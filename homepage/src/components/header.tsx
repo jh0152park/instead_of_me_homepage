@@ -18,10 +18,11 @@ import {
     languageState,
 } from "../global/project_common";
 import { useLocation, useNavigate } from "react-router-dom";
+import { COLOR_PALETTES } from "../Colors";
 
 export default function Header() {
     const logo =
-        "https://github.com/jh0152park/instead_of_me_homepage/blob/main/images/logo/whiteLogo/textLogo3.png?raw=true";
+        "https://github.com/jh0152park/instead_of_me_homepage/blob/main/images/logo/blackLogo/textLogo2.png?raw=true";
 
     const { pathname } = useLocation();
     const navigation = useNavigate();
@@ -67,7 +68,12 @@ export default function Header() {
             w="100vw"
             h="70px"
             zIndex="99"
-            bgColor={opacity ? "rgba(95, 189, 255, 0.9)" : "rgb(95, 189, 255)"}
+            // bgColor={opacity ? "rgba(95, 189, 255, 0.9)" : "rgb(95, 189, 255)"}
+            bgColor={"whitesmoke"}
+            border="1px solid rgba(0, 0, 0, 0.2)"
+            borderLeftColor="none"
+            borderRightColor="none"
+            borderTopColor="none"
             position="fixed"
             top="0"
             px={{
@@ -101,7 +107,8 @@ export default function Header() {
                     lg: "20px",
                 }}
                 fontWeight="bold"
-                color="rgba(255, 255, 255, 0.9)"
+                // color="rgba(255, 255, 255, 0.9)"
+                color="black"
                 spacing="5"
             >
                 <HStack

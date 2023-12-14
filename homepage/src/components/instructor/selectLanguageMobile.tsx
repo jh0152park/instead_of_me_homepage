@@ -6,6 +6,7 @@ import {
     languageState,
 } from "../../global/project_common";
 import Avatar from "./avatar";
+import { COLOR_PALETTES } from "../../Colors";
 
 export default function SelectLanguageMobile() {
     const chractor =
@@ -56,9 +57,13 @@ export default function SelectLanguageMobile() {
                         <Center
                             w="150px"
                             h="60px"
-                            bgColor="green.400"
+                            // bgColor="green.400"
+                            bgColor={COLOR_PALETTES.skyblue}
                             borderRadius="20px"
-                            _hover={{ cursor: "pointer", bgColor: "green.500" }}
+                            _hover={{
+                                cursor: "pointer",
+                                bgColor: COLOR_PALETTES.blue,
+                            }}
                             transition="all 0.2s linear"
                             onClick={() => onLanguageSelected("kor")}
                         >
@@ -70,9 +75,13 @@ export default function SelectLanguageMobile() {
                         <Center
                             w="150px"
                             h="60px"
-                            bgColor="green.400"
+                            // bgColor="green.400"
+                            bgColor={COLOR_PALETTES.skyblue}
                             borderRadius="20px"
-                            _hover={{ cursor: "pointer", bgColor: "green.500" }}
+                            _hover={{
+                                cursor: "pointer",
+                                bgColor: COLOR_PALETTES.blue,
+                            }}
                             transition="all 0.2s linear"
                             onClick={() => onLanguageSelected("eng")}
                         >
