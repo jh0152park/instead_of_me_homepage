@@ -1,5 +1,6 @@
 import { Outlet, useLocation, useParams } from "react-router-dom";
 import Header from "./header";
+import BackButton from "./back_button";
 
 export default function Layout() {
     const { pathname } = useLocation();
@@ -15,6 +16,7 @@ export default function Layout() {
         <>
             {homepage.includes(pathname) ? null : <Header />}
             <Outlet></Outlet>
+            {homepage.includes(pathname) ? null : <BackButton />}
         </>
     );
 }
