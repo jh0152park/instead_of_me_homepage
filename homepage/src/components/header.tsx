@@ -95,7 +95,6 @@ export default function Header() {
                     md: "120px",
                     lg: "150px",
                 }}
-                mt="15px"
                 _hover={{ cursor: "pointer" }}
                 onClick={onLogoClick}
             >
