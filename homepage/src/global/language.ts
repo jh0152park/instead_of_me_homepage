@@ -42,6 +42,7 @@ interface ILanguage {
     문의하고싶어요: string;
     제작과정궁금해요: string;
     카카오톡문의: string;
+    샘플은없나요: string;
 }
 
 const LANGUAGE: ILanguage[] = [
@@ -105,6 +106,7 @@ const LANGUAGE: ILanguage[] = [
         문의하고싶어요: "문의하고 싶어요 🙋‍♂️",
         제작과정궁금해요: "제작 과정이 궁금해요 🤔",
         카카오톡문의: "카카오톡 문의 바로가기 😎",
+        샘플은없나요: "샘플은 없나요? 😞",
     },
     {
         "외주, 그 이상의": "We are creating value",
@@ -167,6 +169,7 @@ const LANGUAGE: ILanguage[] = [
         문의하고싶어요: "I wanna inquire 🙋‍♂️",
         제작과정궁금해요: "About production process 🤔",
         카카오톡문의: "Go to KakaoTalk Channel 😎",
+        샘플은없나요: "Are there any samples? 😞",
     },
 ];
 

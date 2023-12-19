@@ -61,7 +61,7 @@ export default function ShowSample() {
     useEffect(() => {
         setTimeout(() => {
             setSpinner((prev) => !prev);
-        }, 2000);
+        }, 1000);
     }, []);
 
     return (
