@@ -83,12 +83,12 @@ export default function Phone({ clicked }: { clicked: boolean }) {
         <VStack
             p="20px"
             w={isMobile ? `${SCREEN_WIDTH * 0.9}px` : "400px"}
-            h={isMobile ? `${SCREEN_HEIGHT * 0.8}px` : "700px"}
+            h={isMobile ? `${SCREEN_HEIGHT * 0.9}px` : "700px"}
             bgColor="whitesmoke"
             borderRadius="20px"
             position="absolute"
             right={isMobile ? "none" : "50px"}
-            top={isMobile ? `${SCREEN_HEIGHT * 0.1}px` : "none"}
+            top={isMobile ? `${SCREEN_HEIGHT * 0.05}px` : "none"}
             margin="auto"
             opacity={clicked ? "1" : "0"}
             display={clicked ? "flex" : "none"}
