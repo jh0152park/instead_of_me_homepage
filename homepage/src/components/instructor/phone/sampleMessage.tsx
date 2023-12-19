@@ -2,7 +2,10 @@ import { Box, Center, HStack, Text, VStack } from "@chakra-ui/react";
 import Avatar from "../avatar";
 import { SiMinutemailer } from "react-icons/si";
 import { useRecoilValue } from "recoil";
-import { languageState } from "../../../global/project_common";
+import {
+    displayResolution,
+    languageState,
+} from "../../../global/project_common";
 import LANGUAGE from "../../../global/language";
 import { COLOR_PALETTES } from "../../../Colors";
 import { useNavigate } from "react-router-dom";
@@ -11,6 +14,7 @@ import { messages } from "./samepleMessageData";
 export default function SampleMessage() {
     const navigate = useNavigate();
     const currentLanguage = useRecoilValue(languageState);
+    const isMobile = useRecoilValue(displayResolution) === "mobile";
 
     function onAskButtonClicked() {
         navigate("/contact");
@@ -22,7 +26,7 @@ export default function SampleMessage() {
             <VStack alignItems={"flex-start"} ml="20px">
                 <Text fontSize="12px">Instead of me, 야 해줘</Text>
                 <Box
-                    w="280px"
+                    w={isMobile ? "240px" : "280px"}
                     h="300px"
                     borderRadius="20px"
                     bgColor="gray.200"
@@ -50,7 +54,7 @@ export default function SampleMessage() {
 
                     <VStack>
                         <Center
-                            w="250px"
+                            w={isMobile ? "200px" : "250px"}
                             h="40px"
                             // bgColor="green.300"
                             bgColor={COLOR_PALETTES.blue}

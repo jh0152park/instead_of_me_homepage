@@ -60,7 +60,7 @@ export default function InstructionMobile() {
                     </Heading>
                 </VStack>
 
-                <PhoneMobile clicked={clicked} />
+                <Phone clicked={clicked} />
             </VStack>
         </Center>
     );

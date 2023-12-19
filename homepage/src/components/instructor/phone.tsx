@@ -9,7 +9,11 @@ import {
     VStack,
     keyframes,
 } from "@chakra-ui/react";
-import { languageState, showSample } from "../../global/project_common";
+import {
+    displayResolution,
+    languageState,
+    showSample,
+} from "../../global/project_common";
 
 import PhoneHeader from "./phone/phoneHeader";
 import GreetMessage from "./phone/greetMessage";
@@ -36,35 +40,41 @@ export default function Phone({ clicked }: { clicked: boolean }) {
     const isShowSample = useRecoilValue(showSample);
     const currentLanguage = useRecoilValue(languageState);
 
+    const isMobile = useRecoilValue(displayResolution) === "mobile";
+    const SCREEN_WIDTH = window.document.documentElement.clientWidth;
+    const SCREEN_HEIGHT = window.document.documentElement.clientHeight;
+
+    const widgetSize = isMobile ? 230 : 250;
+
     const widgets: IWidget[] = [
         {
             page: "home",
-            size: 250,
+            size: widgetSize,
             title: LANGUAGE[currentLanguage]["홈페이지둘러보기"],
         },
         {
             page: "business",
-            size: 250,
+            size: widgetSize,
             title: LANGUAGE[currentLanguage]["기술스택궁금해요"],
         },
         {
             page: "contact_us",
-            size: 250,
+            size: widgetSize,
             title: LANGUAGE[currentLanguage]["문의하고싶어요"],
         },
         {
             page: "homprocesse",
-            size: 250,
+            size: widgetSize,
             title: LANGUAGE[currentLanguage]["제작과정궁금해요"],
         },
         {
             page: "kakao",
-            size: 250,
+            size: widgetSize,
             title: LANGUAGE[currentLanguage]["카카오톡문의"],
         },
         {
             page: "sample",
-            size: 250,
+            size: widgetSize,
             title: LANGUAGE[currentLanguage]["샘플은없나요"],
         },
     ];
@@ -72,12 +82,13 @@ export default function Phone({ clicked }: { clicked: boolean }) {
     return (
         <VStack
             p="20px"
-            w="400px"
-            h="700px"
+            w={isMobile ? `${SCREEN_WIDTH * 0.9}px` : "400px"}
+            h={isMobile ? `${SCREEN_HEIGHT * 0.8}` : "700px"}
             bgColor="whitesmoke"
             borderRadius="20px"
             position="absolute"
-            right="50px"
+            right={isMobile ? "none" : "50px"}
+            top={isMobile ? `${SCREEN_HEIGHT * 0.1}` : "none"}
             margin="auto"
             opacity={clicked ? "1" : "0"}
             display={clicked ? "flex" : "none"}
