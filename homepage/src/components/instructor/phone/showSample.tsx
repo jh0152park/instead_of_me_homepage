@@ -66,29 +66,28 @@ export default function ShowSample() {
 
     return (
         <>
-            {/* {spinner ? (
+            {spinner ? (
                 <Center w="100%" h="100%">
                     <Spinner />
                 </Center>
             ) : (
                 <>
-                    <PhoneHeader />
+                    <VStack pt="120px">
+                        <SampleMessage />
+                        <VStack my="10px" alignItems="flex-start" ml="65px">
+                            {samples.map((sample, index) => (
+                                <Widget
+                                    key={index}
+                                    index={index}
+                                    page={sample.page}
+                                    size={sample.size}
+                                    title={sample.title}
+                                />
+                            ))}
+                        </VStack>
+                    </VStack>
                 </>
-            )} */}
-            <VStack>
-                <SampleMessage />
-                <VStack my="10px" alignItems="flex-start" ml="65px">
-                    {samples.map((sample, index) => (
-                        <Widget
-                            key={index}
-                            index={index}
-                            page={sample.page}
-                            size={sample.size}
-                            title={sample.title}
-                        />
-                    ))}
-                </VStack>
-            </VStack>
+            )}
         </>
     );
 }

@@ -84,7 +84,7 @@ export default function Phone({ clicked }: { clicked: boolean }) {
             animation={appearAnimation}
         >
             <PhoneHeader />
-            <VStack w="100%" h="100%" overflowY="scroll" pt="150px">
+            <VStack w="100%" h="100%" overflowY="scroll" pt="40px">
                 {!isShowSample ? (
                     <>
                         <GreetMessage />
