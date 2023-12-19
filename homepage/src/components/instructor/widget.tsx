@@ -1,7 +1,12 @@
 import { Center, Text, keyframes } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import { useSetRecoilState } from "recoil";
-import { SampleKeys, sampleURL, showSample } from "../../global/project_common";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import {
+    SampleKeys,
+    displayResolution,
+    sampleURL,
+    showSample,
+} from "../../global/project_common";
 import { useEffect, useState } from "react";
 import { sleep } from "../../util/utils";
 
@@ -30,6 +35,8 @@ export default function Widget({
 
     const navigation = useNavigate();
     const setShowSample = useSetRecoilState(showSample);
+
+    const isMobile = useRecoilValue(displayResolution) === "mobile";
 
     function redirction() {
         if (page === "kakao") {
@@ -67,7 +74,7 @@ export default function Widget({
             transition="all 0.1s linear"
             color="black"
             onClick={redirction}
-            animation={appearAnimation}
+            animation={!isMobile ? appearAnimation : "none"}
         >
             <Text fontSize="15px" fontWeight="bold">
                 {title}
