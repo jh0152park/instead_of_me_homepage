@@ -6,6 +6,7 @@ import { languageState } from "../../../global/project_common";
 import LANGUAGE from "../../../global/language";
 import { COLOR_PALETTES } from "../../../Colors";
 import { useNavigate } from "react-router-dom";
+import { messages } from "./samepleMessageData";
 
 export default function SampleMessage() {
     const navigate = useNavigate();
@@ -29,26 +30,22 @@ export default function SampleMessage() {
                     overflowY="scroll"
                 >
                     <Text fontSize="15px" mb="20px">
-                        안녕하세요!
+                        {messages[currentLanguage]["안녕하세요"]}
                     </Text>
                     <Text fontSize="15px" mb="5px">
-                        우리 서비스에 관심 가져주셔서 진심으로 감사드립니다!! 🙌
+                        {messages[currentLanguage]["우리서비스"]}
                     </Text>
                     <Text fontSize="15px" mb="20px">
-                        아래 보여드리는 샘플로 우리의 스타일을 느끼실 수
-                        있습니다.
+                        {messages[currentLanguage]["보여드리는"]}
                     </Text>
                     <Text fontSize="15px" mb="20px">
-                        샘플이 마음에 들지 않으시더라도 걱정마세요, 100%
-                        원하시는대로 작업해드리고 있습니다 😆
+                        {messages[currentLanguage]["걱정마세요"]}
                     </Text>
                     <Text fontSize="15px" mb="20px">
-                        혹시 다른 요구사항이나 더 많은 정보가 필요하면 언제든
-                        아래 메일보내기 버튼을 통해 물어봐주세요!
+                        {messages[currentLanguage]["물어보세요"]}
                     </Text>
                     <Text fontSize="15px" mb="20px">
-                        저희들의 서비스로 만족과 기대를 충족시켜드리고 싶습니다
-                        ☺️
+                        {messages[currentLanguage]["서비스로만족"]}
                     </Text>
 
                     <VStack>
