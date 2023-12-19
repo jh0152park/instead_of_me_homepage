@@ -90,6 +90,7 @@ export default function PhoneMobile({ clicked }: { clicked: boolean }) {
                         borderRadius="20px"
                         bgColor="gray.200"
                         p="15px"
+                        overflowY="scroll"
                     >
                         <Text fontSize="15px" mb="20px">
                             {
@@ -147,7 +148,7 @@ export default function PhoneMobile({ clicked }: { clicked: boolean }) {
                 </VStack>
             </HStack>
 
-            <VStack mt="10px" alignItems="flex-start" ml="65px">
+            {/* <VStack mt="10px" alignItems="flex-start" ml="65px">
                 <Widget
                     page={"home"}
                     size={210}
@@ -173,7 +174,7 @@ export default function PhoneMobile({ clicked }: { clicked: boolean }) {
                     size={240}
                     title={LANGUAGE[currentLanguage]["카카오톡문의"]}
                 />
-            </VStack>
+            </VStack> */}
         </Box>
     );
 }
