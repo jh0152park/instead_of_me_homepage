@@ -9,6 +9,7 @@ import { IWidget } from "../phone";
 import Widget from "../widget";
 import { sleep } from "../../../util/utils";
 import { set } from "react-hook-form";
+import { messages } from "./samepleMessageData";
 
 export default function ShowSample() {
     const [spinner, setSpinner] = useState(true);
@@ -19,42 +20,42 @@ export default function ShowSample() {
         {
             page: "sample_cafe",
             size: 250,
-            title: "카페 ☕️",
+            title: messages[currentLanguage].카페,
         },
         {
             page: "sample_flower",
             size: 250,
-            title: "플라워샵 💐",
+            title: messages[currentLanguage].꽃,
         },
         {
             page: "sample_glamping",
             size: 250,
-            title: "캠핑, 글램핑 🏕️",
+            title: messages[currentLanguage].글램핑,
         },
         {
             page: "sample_hospital",
             size: 250,
-            title: "치과 🦷",
+            title: messages[currentLanguage].병원,
         },
         {
             page: "sample_logistics",
             size: 250,
-            title: "물류, 운송 🚚",
+            title: messages[currentLanguage].물류,
         },
         {
             page: "sample_tax",
             size: 250,
-            title: "세무사, 회계사 🖋️",
+            title: messages[currentLanguage].세금,
         },
         {
             page: "kakao",
             size: 250,
-            title: "카카오톡 문의 바로가기 😎",
+            title: LANGUAGE[currentLanguage]["카카오톡문의"],
         },
         {
             page: "back",
             size: 250,
-            title: "뒤로가기 🔙",
+            title: messages[currentLanguage].뒤로가기,
         },
     ];
 
