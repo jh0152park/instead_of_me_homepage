@@ -65,7 +65,7 @@ export default function Phone({ clicked }: { clicked: boolean }) {
         {
             page: "sample",
             size: 250,
-            title: "샘플은 없나요? 😞",
+            title: LANGUAGE[currentLanguage]["샘플은없나요"],
         },
     ];
 
