@@ -1,16 +1,35 @@
-import { Center, Text } from "@chakra-ui/react";
+import { Center, Text, keyframes } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import { useSetRecoilState } from "recoil";
+import { SampleKeys, sampleURL, showSample } from "../../global/project_common";
+import { useEffect, useState } from "react";
+import { sleep } from "../../util/utils";
+
+const appear = keyframes`
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    } to {
+        opacity: 1;;
+        transform: translateY(0px);
+    }
+`;
 
 export default function Widget({
     size,
     title,
     page,
+    index,
 }: {
     size: number;
     title: string;
     page: string;
+    index: number;
 }) {
+    const appearAnimation = `${appear} ${(index + 1) * 0.2}s linear`;
+
     const navigation = useNavigate();
+    const setShowSample = useSetRecoilState(showSample);
 
     function redirction() {
         if (page === "kakao") {
@@ -19,6 +38,15 @@ export default function Widget({
                 "Instead of me",
                 "popup=yes"
             );
+        } else if (page === "back") {
+            setShowSample(false);
+        } else if (page === "sample") {
+            setShowSample(true);
+        } else if (page.startsWith("sample_")) {
+            const sample = page.split("_")[1];
+            if (SampleKeys.includes(sample)) {
+                window.open(sampleURL[sample]);
+            }
         } else {
             navigation(page);
         }
@@ -39,6 +67,7 @@ export default function Widget({
             transition="all 0.1s linear"
             color="black"
             onClick={redirction}
+            animation={appearAnimation}
         >
             <Text fontSize="15px" fontWeight="bold">
                 {title}
