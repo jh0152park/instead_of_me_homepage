@@ -161,3 +161,8 @@ Image by <a href="https://www.freepik.com/free-psd/3d-rendering-gps-travel-icon_
 <a target="_blank" href="https://icons8.com/icon/TLI9oiMzpREF/selenium">Selenium</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 -   (selenium)
+
+# Emoji Resource
+
+-   https://ui8.net
+-   https://peeps.ui8.net
