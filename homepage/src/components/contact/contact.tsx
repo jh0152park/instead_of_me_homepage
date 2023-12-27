@@ -194,6 +194,8 @@ export default function Contact() {
                         border="2px"
                         padding={3}
                         borderColor="yellow.300"
+                        width={150}
+                        height={150}
                     >
                         <Image src={qrImage} objectFit="cover" />
                     </Box>
