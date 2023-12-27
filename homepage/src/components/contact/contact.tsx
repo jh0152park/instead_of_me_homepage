@@ -26,7 +26,11 @@ export default function Contact() {
     const navigate = useNavigate();
 
     function onClickKakaoPlusChannel() {
-        window.open("http://pf.kakao.com/_aSGjG", "Instead of me", "popup=yes");
+        window.open(
+            "http://pf.kakao.com/_sXxoPG/chat",
+            "Instead of me",
+            "popup=yes"
+        );
     }
 
     async function onClickCopy() {

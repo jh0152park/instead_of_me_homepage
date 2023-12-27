@@ -41,7 +41,7 @@ export default function Widget({
     function redirction() {
         if (page === "kakao") {
             window.open(
-                "http://pf.kakao.com/_aSGjG",
+                "http://pf.kakao.com/_sXxoPG/chat",
                 "Instead of me",
                 "popup=yes"
             );
