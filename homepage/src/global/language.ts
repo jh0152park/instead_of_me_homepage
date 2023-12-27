@@ -43,6 +43,13 @@ interface ILanguage {
     제작과정궁금해요: string;
     카카오톡문의: string;
     샘플은없나요: string;
+    사업자정보확인: string;
+    사업자정보: string;
+    사업자명: string;
+    대표: string;
+    사업자번호: string;
+    이메일: string;
+    주소: string;
 }
 
 const LANGUAGE: ILanguage[] = [
@@ -107,6 +114,13 @@ const LANGUAGE: ILanguage[] = [
         제작과정궁금해요: "제작 과정이 궁금해요 🤔",
         카카오톡문의: "카카오톡 문의 바로가기 😎",
         샘플은없나요: "샘플은 없나요? 😞",
+        사업자정보확인: "사업자 정보 확인 🧑‍💼",
+        사업자정보: "사업자 정보",
+        사업자명: "사업자명: Instead of me",
+        대표: "대표: 김유현",
+        사업자번호: "사업자번호: 442-54-00852",
+        이메일: "이메일: insteadofme.yuhyeon@gmail.com",
+        주소: "주소: 경기도 화성시 병점중앙로170번길 16-8, 202호",
     },
     {
         "외주, 그 이상의": "We are creating value",
@@ -170,6 +184,13 @@ const LANGUAGE: ILanguage[] = [
         제작과정궁금해요: "About production process 🤔",
         카카오톡문의: "Go to KakaoTalk Channel 😎",
         샘플은없나요: "Are there any samples? 😞",
+        사업자정보확인: "Check business information 🧑‍💼",
+        사업자정보: "Business information",
+        사업자명: "Business name: Instead of me",
+        대표: "CEO: Yuhyun Kim",
+        사업자번호: "Business number: 442-54-00852",
+        이메일: "Email: insteadofme.yuhyeon@gmail.com",
+        주소: "Address: Room 202, 16-8, Byeongjeomjungang-ro 170beon-gil, Hwaseong-si, Gyeonggi-do",
     },
 ];
 
