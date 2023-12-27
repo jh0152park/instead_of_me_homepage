@@ -63,7 +63,7 @@ export default function Phone({ clicked }: { clicked: boolean }) {
             title: LANGUAGE[currentLanguage]["문의하고싶어요"],
         },
         {
-            page: "homprocesse",
+            page: "process",
             size: widgetSize,
             title: LANGUAGE[currentLanguage]["제작과정궁금해요"],
         },
