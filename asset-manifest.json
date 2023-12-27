@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/instead_of_me_homepage/static/js/main.53cc60c3.js",
+    "main.js": "/instead_of_me_homepage/static/js/main.b5f97091.js",
     "index.html": "/instead_of_me_homepage/index.html",
-    "main.53cc60c3.js.map": "/instead_of_me_homepage/static/js/main.53cc60c3.js.map"
+    "main.b5f97091.js.map": "/instead_of_me_homepage/static/js/main.b5f97091.js.map"
   },
   "entrypoints": [
-    "static/js/main.53cc60c3.js"
+    "static/js/main.b5f97091.js"
   ]
 }
