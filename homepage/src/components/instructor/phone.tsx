@@ -77,6 +77,11 @@ export default function Phone({ clicked }: { clicked: boolean }) {
             size: widgetSize,
             title: LANGUAGE[currentLanguage]["샘플은없나요"],
         },
+        {
+            page: "business_information",
+            size: widgetSize,
+            title: LANGUAGE[currentLanguage]["사업자정보확인"],
+        },
     ];
 
     return (
