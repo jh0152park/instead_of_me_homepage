@@ -26,7 +26,11 @@ export default function Contact() {
     const navigate = useNavigate();
 
     function onClickKakaoPlusChannel() {
-        window.open("http://pf.kakao.com/_aSGjG", "Instead of me", "popup=yes");
+        window.open(
+            "http://pf.kakao.com/_sXxoPG/chat",
+            "Instead of me",
+            "popup=yes"
+        );
     }
 
     async function onClickCopy() {
@@ -190,6 +194,8 @@ export default function Contact() {
                         border="2px"
                         padding={3}
                         borderColor="yellow.300"
+                        width={150}
+                        height={150}
                     >
                         <Image src={qrImage} objectFit="cover" />
                     </Box>
